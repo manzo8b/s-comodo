@@ -4,8 +4,8 @@
   description: "Milano, Torino e una sentenza del 1976. Il diritto di manifestare incontra quello di chi vuole esprimersi."
   date: "2026-10-21"
   format: Dossier
-  image: /assets/images/sc001-democrazia-illustrazione.svg
-  alt: "Illustrazione concettuale provvisoria di un dibattito e un'assemblea"
+  image: /assets/images/sc001-democrazia-illustrazione.webp
+  alt: "Illustrazione editoriale: il confronto tra libertà di parola e forme del potere"
   reading_minutes: 13
   status: "In revisione"
 - article_id: SC002
@@ -14,7 +14,7 @@
   description: "Vetrine protette, negozi chiusi e piazze in allerta: Milano nel 2026, Genova nel luglio 2001."
   date: "2026-10-24"
   format: Dossier
-  image: /assets/images/sc002-citta-compensato.svg
-  alt: "Illustrazione concettuale provvisoria di un negozio con pannelli protettivi"
+  image: /assets/images/sc002-citta-compensato.webp
+  alt: "Illustrazione editoriale: un negozio con le vetrine protette da pannelli di compensato"
   reading_minutes: 9
   status: "Bozza editoriale"
