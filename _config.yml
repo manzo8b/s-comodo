@@ -1,0 +1,32 @@
+title: "S-COMODO."
+tagline: "Il presente ha una storia. Noi la cerchiamo."
+description: "S-COMODO, blog indipendente di Marcelo Fernandez. Fatti di oggi, precedenti storici e fonti verificabili."
+owner: "Marcelo Fernandez"
+author_label: "Redazione S-COMODO"
+url: "https://manzo8b.github.io"
+baseurl: "/s-comodo"
+prelaunch: true
+lang: it
+timezone: Europe/Rome
+markdown: kramdown
+permalink: /:categories/:title/
+future: false
+comments_enabled: false
+comments_endpoint: ""
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
+  - .github
+  - .gitignore
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "Redazione S-COMODO"
+      lang: it
+      ai_assisted: true

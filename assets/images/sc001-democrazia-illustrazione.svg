@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Illustrazione provvisoria: parola e confronto">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eae4d9"/><stop offset="1" stop-color="#f6f2ea"/></linearGradient></defs>
+<rect width="960" height="540" fill="url(#bg)"/><path d="M0 370H960" stroke="#cec5b7" stroke-width="2"/>
+<rect x="142" y="195" width="270" height="192" rx="8" fill="#292929"/><path d="M175 229H379M175 259H350M175 289H379M175 319H325" stroke="#f1e9de" stroke-width="6" opacity=".7"/>
+<path d="M480 0V540" stroke="#ba2b34" stroke-width="13" opacity=".85"/>
+<path d="M545 356V253H822V356M590 253V170H776V253M641 170V126H725V170" stroke="#31302d" stroke-width="12" fill="none"/>
+<circle cx="687" cy="105" r="24" fill="#31302d"/>
+<path d="M595 357h185M583 384h210" stroke="#31302d" stroke-width="9"/>
+<path d="M279 195C240 117 290 92 339 105" fill="none" stroke="#bd1f2b" stroke-width="15" stroke-linecap="round"/>
+<circle cx="339" cy="105" r="15" fill="#bd1f2b"/>
+<text x="50" y="485" font-family="Georgia,serif" fill="#8e2331" font-size="18">SC001 · DEMOCRAZIA</text>
+</svg>

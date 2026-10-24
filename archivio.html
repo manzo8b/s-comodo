@@ -1,0 +1,9 @@
+---
+layout: default
+title: Archivio
+permalink: /archivio/
+---
+<div class="page-body"><h1>Archivio</h1><p>Gli articoli pubblicati, dal più recente. La ricerca filtra titolo, sottotitolo e rubrica fra i pezzi caricati in questa pagina.</p><label for="query" class="lead-label">Cerca un articolo</label><input class="search-box" id="query" type="search" placeholder="Titolo, tema, rubrica..."><div class="list-articles" id="archive-list">
+{% for p in site.posts %}<article class="article-teaser" data-search="{{ p.title | append: ' ' | append: p.subtitle | append: ' ' | append: p.rubrica | downcase | escape }}"><p class="card-meta">{{ p.date | date: '%d/%m/%Y' }} · {{ p.lang | upcase }} · {{ p.rubrica }}</p><h2><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h2><p>{{ p.subtitle }}</p></article>{% endfor %}
+</div>{% if site.posts.size == 0 %}<p class="empty-state">Nessun articolo pubblicato.</p>{% endif %}</div>
+<script>document.getElementById('query').addEventListener('input',function(){let q=this.value.toLocaleLowerCase('it').trim();document.querySelectorAll('#archive-list [data-search]').forEach(function(el){el.hidden=!el.dataset.search.includes(q)})})</script>

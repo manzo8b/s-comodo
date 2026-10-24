@@ -1,0 +1,54 @@
+---
+layout: default
+title: Home
+description: "S-COMODO, blog indipendente: il presente letto attraverso la storia con fonti verificabili."
+permalink: /
+---
+<section class="home-heading" aria-label="Presentazione del blog">
+  <p class="section-tag">STORIA · IDEE · FATTI</p>
+  <p>La cronaca passa. Le domande restano.</p>
+</section>
+{% assign italian_posts = site.posts | where: 'lang', 'it' %}
+{% if italian_posts.size > 0 %}
+<section class="home-archive home-published" aria-labelledby="published-title">
+  <div class="section-heading"><div><p class="section-tag">ARTICOLI PUBBLICATI</p><h2 id="published-title">Da leggere</h2></div><a href="{{ '/archivio/' | relative_url }}">Tutto l’archivio ↗</a></div>
+  <div class="home-editorial-grid">
+    {% for post in italian_posts limit:2 %}
+    <article class="home-editorial-card">
+      {% if post.image %}<a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></a>{% endif %}
+      <div class="story-state">{{ post.article_id | escape }} <span aria-hidden="true">/</span> {{ post.rubrica | upcase }}</div>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+      <p>{{ post.subtitle | escape | truncatewords: 32 }}</p>
+      <span class="card-foot">{{ post.author | default: site.author_label }} · {{ post.date | date: '%d.%m.%Y' }}</span>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% assign queue_size = 0 %}
+{% for p in site.data.editorial_queue %}
+ {% assign published_match = italian_posts | where: 'article_id', p.article_id | first %}
+ {% unless published_match %}{% assign queue_size = queue_size | plus: 1 %}{% endunless %}
+{% endfor %}
+{% if queue_size > 0 %}
+<section class="home-archive home-queue" aria-labelledby="queue-title">
+ <div class="section-heading"><div><p class="section-tag">PROGETTO EDITORIALE</p><h2 id="queue-title">{% if italian_posts.size == 0 %}I primi dossier{% else %}In preparazione{% endif %}</h2></div><span class="archive-note">{{ queue_size }} {% if queue_size == 1 %}testo{% else %}testi{% endif %} in revisione</span></div>
+ <div class="home-editorial-grid">
+ {% for p in site.data.editorial_queue %}
+    {% assign published_match = italian_posts | where: 'article_id', p.article_id | first %}
+    {% unless published_match %}
+      <article class="home-editorial-card home-preview-card" aria-label="Anteprima editoriale non pubblicata: {{ p.title | escape }}">
+        <figure class="home-editorial-image"><img src="{{ p.image | relative_url }}" alt="{{ p.alt | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"><figcaption>Immagine illustrativa generata con intelligenza artificiale</figcaption></figure>
+        <div class="story-state">{{ p.article_id | escape }} <span aria-hidden="true">/</span> {{ p.rubrica | upcase }}</div>
+        <h3>{{ p.title | escape }}</h3>
+        <p>{{ p.description | escape }}</p>
+        <span class="card-foot">{{ p.status | escape }} · {{ p.reading_minutes }} min di lettura</span>
+        <p class="story-unpublished">Il dossier sarà consultabile soltanto dopo la revisione e l’approvazione editoriale.</p>
+      </article>
+    {% endunless %}
+ {% endfor %}
+ </div>
+</section>
+{% endif %}
+<section class="home-statement" aria-labelledby="mission-title"><div class="statement-overline">LA NOSTRA IDEA</div><h2 id="mission-title">Il presente ha una storia.<br><em>Noi la cerchiamo.</em></h2><div class="statement-side"><p>Partiamo da un fatto, risaliamo a un precedente documentato e mettiamo alla prova il confronto. Senza forzare le somiglianze.</p><a href="{{ '/metodo/' | relative_url }}">Come lavoriamo ↗</a></div></section>
+<section class="home-method" aria-label="Impegno editoriale"><span>LE FONTI</span><p>Ogni articolo indica i documenti consultati. Gli errori possono essere segnalati e vengono corretti in modo trasparente.</p><a href="{{ '/rettifiche/' | relative_url }}">Politica di rettifica ↗</a></section>

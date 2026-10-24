@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Illustrazione provvisoria: vetrina protetta da pannelli">
+<rect width="960" height="540" fill="#e8e1d6"/><path d="M0 470H960" stroke="#b1aba4" stroke-width="4"/>
+<rect x="140" y="80" width="650" height="390" fill="#2b3135"/>
+<rect x="161" y="109" width="175" height="316" fill="#c5a374"/><rect x="354" y="109" width="207" height="316" fill="#bd9766"/><rect x="580" y="109" width="190" height="316" fill="#c4a070"/>
+<path d="M168 110V425M329 110V425M362 110V425M552 110V425M587 110V425M759 110V425" stroke="#8b704f" stroke-width="5" opacity=".75"/>
+<path d="M165 157H768M165 227H768M165 306H768M165 381H768" stroke="#d2b187" stroke-width="3" opacity=".6"/>
+<path d="M151 92H781M151 443H781" stroke="#282a2a" stroke-width="17"/>
+<path d="M126 93V452" stroke="#a62231" stroke-width="18"/><path d="M806 93V452" stroke="#a62231" stroke-width="18"/>
+<path d="M27 460H930" stroke="#a3a09b" stroke-width="10"/><text x="35" y="511" fill="#8d2430" font-family="Georgia,serif" font-size="21">SC002 · LA CITTÀ DIETRO IL COMPENSATO</text>
+</svg>

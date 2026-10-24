@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="article" itemscope itemtype="https://schema.org/BlogPosting">
+<header><p class="section-tag">{{ page.rubrica | escape }} · {{ page.article_id | escape }}</p><h1>{{ page.title | escape }}</h1>
+{% if page.subtitle %}<p class="article-standfirst">{{ page.subtitle | escape }}</p>{% endif %}
+<p class="card-foot">{{ page.author | default: site.author_label }} · {{ page.date | date: '%d/%m/%Y' }}</p>
+{% if page.image %}<figure class="article-image"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>Immagine illustrativa generata con intelligenza artificiale</figcaption></figure>{% endif %}</header>
+<div class="article-body">{{ content }}</div>
+{% if page.sources %}<section class="sources"><h2>Fonti</h2><ol>{% for s in page.sources %}<li id="fonte-{{ forloop.index }}">{{ s.author | escape }}, <em>{{ s.title | escape }}</em>{% if s.publisher %}, {{ s.publisher | escape }}{% endif %}{% if s.date %}, {{ s.date | escape }}{% endif %}. {% if s.url %}<a href="{{ s.url | escape }}" rel="noopener noreferrer">Consulta la fonte</a>{% endif %}</li>{% endfor %}</ol></section>{% endif %}
+<section class="ai-notice"><h2>Nota di trasparenza</h2><p>{{ page.ai_disclosure | default: 'Contenuti elaborati con supporto IA e soggetti ad approvazione editoriale umana.' }}</p></section>
+<section class="comments"><h2>Commenti</h2><p>La pubblicazione dei commenti sarà disponibile dopo l'attivazione di una procedura di approvazione preventiva e dell'informativa privacy.</p></section>
+</article>
