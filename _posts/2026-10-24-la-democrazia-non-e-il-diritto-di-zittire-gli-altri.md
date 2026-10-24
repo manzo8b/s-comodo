@@ -6,6 +6,7 @@ subtitle: 'La libertà di espressione si difende soprattutto quando a parlare è
   negare agli altri gli stessi diritti che rivendica?'
 date: 2026-10-24
 article_id: SC001
+permalink: /la-democrazia-non-e-il-diritto-di-zittire-gli-altri/
 rubrica: Il potere
 format: Dossier
 lang: it
@@ -19,8 +20,6 @@ image_alt: 'Illustrazione editoriale di un dibattito universitario contemporaneo
 image_caption: 'Immagine illustrativa generata con intelligenza artificiale'
 corrections: []
 
-  ma il testo non è stato ancora approvato dal curatore. La pubblicazione richiede il completamento della revisione editoriale
-  umana.
 today_event:
   date: 26 novembre 2024
   location: Milano
