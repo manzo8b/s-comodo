@@ -5,7 +5,7 @@ owner: "Marcelo Fernandez"
 author_label: "Redazione S-COMODO"
 url: "https://manzo8b.github.io"
 baseurl: "/s-comodo"
-prelaunch: true
+prelaunch: false
 lang: it
 timezone: Europe/Rome
 markdown: kramdown
