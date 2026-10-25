@@ -6,7 +6,8 @@ subtitle: 'Dalle radici guaraní alle guerre, da Madame Lynch ad Augusto Roa Bas
 date: '2026-10-25'
 article_id: SC004
 permalink: /paraguay-il-paese-che-non-si-racconta-in-una-sola-lingua/
-rubrica: Storia, popoli e identità
+rubrica: Storia e identità
+topic_id: storia-identita
 format: Dossier
 lang: it
 author: Redazione S-COMODO

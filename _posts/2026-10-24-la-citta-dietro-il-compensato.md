@@ -5,7 +5,8 @@ subtitle: Milano, 24 ottobre 2026. Vetrine protette con pannelli di legno, negoz
   Venticinque anni fa, prima del G8 di Genova, un’altra città si preparava in modo simile.
 date: 2026-10-24
 article_id: SC002
-rubrica: Società e libertà civili
+rubrica: Società e comunità
+topic_id: societa-comunita
 format: Dossier
 lang: it
 author: Redazione S-COMODO

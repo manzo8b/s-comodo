@@ -5,7 +5,7 @@ layout: default
   <a href="{{ '/' | relative_url }}"><span aria-hidden="true">←</span> Torna alla home</a>
 </nav>
 <article class="article" itemscope itemtype="https://schema.org/BlogPosting">
-<header><p class="section-tag">{{ page.rubrica | escape }} · {{ page.article_id | escape }}</p><h1>{{ page.title | escape }}</h1>
+<header><p class="section-tag"><a class="category-link" href="{{ '/temi/' | relative_url }}#{{ page.topic_id | escape }}">{{ page.rubrica | escape }}</a></p><h1>{{ page.title | escape }}</h1>
 {% if page.subtitle %}<p class="article-standfirst">{{ page.subtitle | escape }}</p>{% endif %}
 <p class="card-foot">{{ page.author | default: site.author_label }} · {{ page.date | date: '%d/%m/%Y' }}</p>
 {% if page.image %}<figure class="article-image"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>Immagine illustrativa generata con intelligenza artificiale</figcaption></figure>{% endif %}</header>

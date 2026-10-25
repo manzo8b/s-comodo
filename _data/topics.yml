@@ -1,0 +1,12 @@
+- id: democrazia-diritti
+  label_it: "Democrazia e diritti"
+  label_en: "Democracy & Rights"
+  description: "Pluralismo, libertà civili, istituzioni, lavoro e responsabilità politiche."
+- id: societa-comunita
+  label_it: "Società e comunità"
+  label_en: "Society & Community"
+  description: "Città, vita collettiva, luoghi di incontro e trasformazioni sociali."
+- id: storia-identita
+  label_it: "Storia e identità"
+  label_en: "History & Identity"
+  description: "Popoli, culture, memoria storica e racconti oltre gli stereotipi."

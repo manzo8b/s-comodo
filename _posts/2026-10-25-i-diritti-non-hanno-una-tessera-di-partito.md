@@ -6,7 +6,8 @@ subtitle: 'La nascita delle libertà democratiche e dei diritti sociali non coin
 date: '2026-10-25'
 article_id: SC003
 permalink: /i-diritti-non-hanno-una-tessera-di-partito/
-rubrica: Società e idee
+rubrica: Democrazia e diritti
+topic_id: democrazia-diritti
 format: Dossier
 lang: it
 author: Redazione S-COMODO

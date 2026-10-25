@@ -1,0 +1,32 @@
+---
+layout: default
+title: Temi
+description: "Le categorie editoriali di S-COMODO: democrazia e diritti, società e comunità, storia e identità."
+permalink: /temi/
+---
+<div class="page-body topic-index">
+  <p class="section-tag">S-COMODO · ESPLORA</p>
+  <h1>Temi</h1>
+  <p>Le nostre categorie servono a esplorare storie e idee affini, non a chiuderle in etichette rigide. Ogni articolo conserva il proprio contesto e le proprie fonti.</p>
+  {% for topic in site.data.topics %}
+    {% assign group = site.posts | where: 'topic_id', topic.id %}
+    <section class="topic-section" id="{{ topic.id | escape }}" aria-labelledby="topic-heading-{{ topic.id | escape }}">
+      <p class="topic-en">{{ topic.label_en | escape }}</p>
+      <h2 id="topic-heading-{{ topic.id | escape }}">{{ topic.label_it | escape }}</h2>
+      <p>{{ topic.description | escape }}</p>
+      {% if group.size > 0 %}
+        <div class="topic-article-list">
+          {% for p in group %}
+            <article class="article-teaser">
+              <p class="card-meta">{{ p.date | date: '%d/%m/%Y' }} · {{ p.lang | upcase }}</p>
+              <h3><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></h3>
+              <p>{{ p.subtitle | escape }}</p>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="empty-state">Nuovi articoli in preparazione.</p>
+      {% endif %}
+    </section>
+  {% endfor %}
+</div>

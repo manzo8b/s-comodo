@@ -7,7 +7,8 @@ subtitle: 'La libertà di espressione si difende soprattutto quando a parlare è
 date: 2026-10-24
 article_id: SC001
 permalink: /la-democrazia-non-e-il-diritto-di-zittire-gli-altri/
-rubrica: Il potere
+rubrica: Democrazia e diritti
+topic_id: democrazia-diritti
 format: Dossier
 lang: it
 author: Redazione S-COMODO
