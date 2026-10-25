@@ -1,0 +1,39 @@
+name: "Segnala un errore"
+description: "Segnalazione pubblica di un possibile errore in un articolo S-COMODO"
+title: "[Rettifica] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Attenzione:** le segnalazioni su GitHub Issues sono pubbliche. Non inserire dati personali, recapiti privati o informazioni riservate. Questo modulo non è destinato alle richieste privacy né ai commenti politici.
+  - type: input
+    id: articolo
+    attributes:
+      label: "Link all'articolo"
+      description: "Incolla l'indirizzo della pagina S-COMODO"
+      placeholder: "https://manzo8b.github.io/s-comodo/..."
+    validations:
+      required: true
+  - type: textarea
+    id: passaggio
+    attributes:
+      label: "Passaggio da verificare"
+      description: "Riporta brevemente la frase e spiega che cosa ritieni inesatto"
+      placeholder: "La frase ... contiene ...; il dato corretto è ..."
+    validations:
+      required: true
+  - type: textarea
+    id: fonte
+    attributes:
+      label: "Documento o fonte"
+      description: "Indica il link, autore e data della fonte pertinente, se disponibili"
+      placeholder: "Autore, titolo, data, URL o riferimento di archivio"
+    validations:
+      required: false
+  - type: checkboxes
+    id: pubblico
+    attributes:
+      label: "Conferma"
+      options:
+        - label: "Ho capito che la segnalazione sarà pubblica e non include dati personali o riservati."
+          required: true

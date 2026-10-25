@@ -34,3 +34,19 @@ main{min-height:50vh}h1,h2,h3{line-height:1.14;letter-spacing:-.04em}h1{font-siz
 .site-navigation{flex-direction:column;align-items:flex-start;gap:12px}.site-links{gap:12px;font-size:11px}.home-heading{padding:16px 0 12px}.home-archive{padding-top:22px}.home-heading>p:last-child{display:none}
 .home-editorial-grid{grid-template-columns:1fr;gap:34px}.home-editorial-card h2,.home-editorial-card h3{font-size:clamp(2rem,8vw,2.7rem)}
 .home-statement{grid-template-columns:1fr;gap:15px}.statement-side{margin-top:12px}.home-method{display:block}.home-method p{margin:10px 0 15px}.footer-grid{grid-template-columns:1fr;gap:17px}.site-footer{margin-top:45px}.article-body{font-size:18px}}
+
+/* SC editorial reading navigation and public corrections */
+.article-return{max-width:750px;margin:28px auto 0;font:700 12px/1.5 Arial,sans-serif;letter-spacing:.065em;text-transform:uppercase}
+.article-return a{display:inline-flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none;padding:8px 0}
+.article-return a:hover,.article-return a:focus-visible{color:var(--red)}
+.article-return a span[aria-hidden="true"]{font-size:21px;line-height:1;transition:transform .15s ease}
+.article-return a:hover span[aria-hidden="true"]{transform:translateX(-3px)}
+.article-return-bottom{margin:30px auto 70px;border-top:1px solid var(--line);padding-top:13px}
+.article-return + .article{margin-top:12px}
+.reader-feedback,.correction-log{border-top:1px solid var(--line);margin:35px 0 0;padding:18px 0;font:14px/1.6 Arial,sans-serif}
+.reader-feedback h2,.correction-log h2{font:700 22px/1.2 Georgia,serif;letter-spacing:-.02em;margin:0 0 12px}
+.reader-feedback p{margin:10px 0}.reader-feedback>a{font-weight:700}.correction-log li{margin:8px 0}
+.page-body .page-eyebrow{font:700 11px/1.5 Arial,sans-serif;color:var(--red);letter-spacing:.14em;text-transform:uppercase}
+.page-body .page-note{font:14px/1.6 Arial,sans-serif;color:var(--muted);background:var(--soft);padding:17px 19px;border-left:3px solid var(--red)}
+.page-body .page-divider{margin:32px 0;border:0;border-top:1px solid var(--line)}
+@media(max-width:680px){.article-return{margin-top:16px;font-size:11px}.article-return-bottom{margin-top:24px;margin-bottom:48px}}

@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+<nav class="article-return" aria-label="Navigazione articolo">
+  <a href="{{ '/' | relative_url }}"><span aria-hidden="true">←</span> Torna alla home</a>
+</nav>
 <article class="article" itemscope itemtype="https://schema.org/BlogPosting">
 <header><p class="section-tag">{{ page.rubrica | escape }} · {{ page.article_id | escape }}</p><h1>{{ page.title | escape }}</h1>
 {% if page.subtitle %}<p class="article-standfirst">{{ page.subtitle | escape }}</p>{% endif %}
@@ -9,5 +12,22 @@ layout: default
 <div class="article-body">{{ content }}</div>
 {% if page.sources %}<section class="sources" aria-label="Fonti e documenti"><h2>Fonti e documenti</h2><ol>{% for s in page.sources %}<li id="fonte-{{ forloop.index }}">{{ s.author | escape }}, <em>{{ s.title | escape }}</em>{% if s.publisher %}, {{ s.publisher | escape }}{% endif %}{% if s.date %}, {{ s.date | escape }}{% endif %}.{% if s.accessed %} Consultato il {{ s.accessed | escape }}.{% endif %} {% if s.url %}<a href="{{ s.url | escape }}" rel="noopener noreferrer" target="_blank">Consulta la fonte ↗</a>{% endif %}</li>{% endfor %}</ol></section>{% endif %}
 <section class="ai-notice"><h2>Nota di trasparenza</h2><p>{{ page.ai_disclosure | default: 'Contenuti elaborati con supporto IA e soggetti ad approvazione editoriale umana.' }}</p></section>
-<section class="comments"><h2>Commenti</h2><p>La pubblicazione dei commenti sarà disponibile dopo l'attivazione di una procedura di approvazione preventiva e dell'informativa privacy.</p></section>
+<section class="reader-feedback" aria-labelledby="feedback-title">
+  <h2 id="feedback-title">Hai trovato un errore?</h2>
+  <p>Puoi indicare il passaggio e una fonte utile alla verifica. Le segnalazioni avvengono su GitHub e sono pubbliche: non inserire dati personali o informazioni riservate.</p>
+  <a href="https://github.com/manzo8b/s-comodo/issues/new?template=rettifica.yml" target="_blank" rel="noopener noreferrer">Segnala un errore ↗</a>
+  <p><a href="{{ '/rettifiche/' | relative_url }}">Consulta la politica delle rettifiche</a></p>
+</section>
+<section class="comments"><h2>Commenti</h2><p>I commenti agli articoli non sono ancora disponibili. Saranno attivati soltanto con una procedura di approvazione preventiva.</p></section>
+{% if page.corrections and page.corrections.size > 0 %}
+<section class="correction-log" aria-labelledby="corrections-heading">
+  <h2 id="corrections-heading">Correzioni</h2>
+  <ul>{% for correction in page.corrections %}<li>
+    <time>{{ correction.date | escape }}</time> — {{ correction.note | escape }}
+  </li>{% endfor %}</ul>
+</section>
+{% endif %}
 </article>
+<nav class="article-return article-return-bottom" aria-label="Ritorno alla homepage">
+  <a href="{{ '/' | relative_url }}"><span aria-hidden="true">←</span> Torna alla home</a>
+</nav>

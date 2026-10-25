@@ -1,18 +1,19 @@
 ---
 layout: default
-title: Privacy
-permalink: /privacy/
+title: Commenti
+permalink: /politica-commenti/
 ---
 <div class="page-body" markdown="1">
-# Privacy
+<p class="page-eyebrow">S-COMODO / PARTECIPAZIONE</p>
 
-**Sito in preparazione.** Questa pagina descrive le funzioni abilitate nella versione di anteprima di S-COMODO. L'informativa definitiva per il lancio pubblico è in revisione.
+# Commenti
 
-Il sito è statico e viene distribuito tramite **GitHub Pages**, un servizio di GitHub. In questa versione non sono attivi moduli di contatto, commenti, newsletter, registrazione degli utenti, pubblicità o strumenti di analisi del traffico configurati da S-COMODO.
+I commenti agli articoli non sono attivi. Non esiste attualmente un modulo per inviare commenti al sito.
 
-La navigazione può comportare il trattamento di dati tecnici da parte del fornitore dell'hosting. Per informazioni sui trattamenti effettuati da GitHub, consultare la [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+Vogliamo consentire il confronto tra opinioni diverse, ma senza pubblicare automaticamente messaggi che contengano insulti, minacce o dati personali di terzi. Per questo **attiveremo i commenti soltanto quando sarà disponibile un sistema di approvazione preventiva**, accompagnato da un'informativa privacy adeguata.
 
-Non utilizziamo in questa versione cookie di profilazione installati da S-COMODO. Prima di attivare funzionalità che comportano una raccolta diretta di dati personali verranno pubblicate informazioni su titolare, finalità, basi giuridiche, conservazione, destinatari e diritti degli interessati.
+Le segnalazioni documentate di errori possono invece essere inviate con il [modulo pubblico di rettifica](https://github.com/manzo8b/s-comodo/issues/new?template=rettifica.yml). Questo canale richiede GitHub e non è una discussione aperta sull'articolo.
 
-**Prima del lancio definitivo** occorre completare questa pagina con un recapito effettivo del curatore e verificare, in base alla configurazione effettiva del sito, tutti gli obblighi informativi applicabili.
+Le regole di moderazione saranno pubblicate prima dell'attivazione dei commenti.
+
 </div>
