@@ -1,0 +1,19 @@
+---
+layout: default
+title: "Topics"
+lang: en
+description: "Explore the S-COMODO English-language editorial categories."
+permalink: /en/topics/
+---
+<div class="page-body topic-index"><p class="section-tag">S-COMODO · EXPLORE</p><h1>Topics</h1>
+<p>Categories are a way to find connected stories, not a substitute for context or evidence.</p>
+{% for topic in site.data.topics %}
+{% assign group = site.posts | where: 'topic_id', topic.id | where: 'lang', 'en' %}
+<section class="topic-section" id="{{ topic.id | escape }}">
+<p class="topic-en">{{ topic.label_it | escape }}</p><h2>{{ topic.label_en | escape }}</h2>
+{% if group.size > 0 %}
+{% for p in group %}<article class="article-teaser"><p class="card-meta">{{ p.date | date: '%d %B %Y' }}</p><h3><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></h3><p>{{ p.subtitle | escape }}</p></article>{% endfor %}
+{% else %}<p class="empty-state">More English-language essays are coming.</p>{% endif %}
+</section>
+{% endfor %}
+</div>

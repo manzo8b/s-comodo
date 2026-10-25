@@ -103,3 +103,15 @@ main{min-height:50vh}h1,h2,h3{line-height:1.14;letter-spacing:-.04em}h1{font-siz
 .topic-article-list .article-teaser h3 a{color:var(--ink);text-decoration:none}
 .topic-article-list .article-teaser p:not(.card-meta){font-size:15px}
 @media(max-width:680px){.topic-article-list{grid-template-columns:1fr}.archive-topics{align-items:flex-start}}
+
+/* English edition and original SC005 artwork */
+.language-feature{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding:14px 0;font:700 11px/1.5 Arial,sans-serif;letter-spacing:.11em}
+.language-feature span{color:var(--muted)}.language-feature a{color:var(--red);text-transform:uppercase}
+.english-home{padding:44px 0 35px}.english-home h1{font:700 clamp(2.6rem,6vw,5.3rem)/1.03 Georgia,serif;letter-spacing:-.055em;margin:15px 0 20px;max-width:880px}
+.english-intro{max-width:760px;font:21px/1.65 Georgia,serif;color:#504943;margin:0 0 50px}
+.english-home .section-heading{margin-top:18px}.english-grid{padding-top:30px}
+.english-nav-note{font:14px/1.6 Arial,sans-serif;color:var(--muted);margin-top:38px}
+.language-note a{color:var(--red);font-weight:700;text-decoration:none}
+.language-note a:hover{text-decoration:underline}
+.article-image img{background:#e9e4d7}
+@media(max-width:680px){.language-feature{flex-direction:column;align-items:flex-start}.english-home{padding-top:28px}.english-intro{font-size:18px;margin-bottom:32px}}

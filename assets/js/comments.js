@@ -15,11 +15,42 @@
   trigger.addEventListener("click", function () {
     if (trigger.disabled) return;
     trigger.disabled = true;
-    status.textContent = "Caricamento dei commenti…";
+    status.textContent = section.getAttribute("data-comment-lang") === "en" ? "Loading comments…" : "Caricamento dei commenti…";
     box.hidden = false;
     var pageUrl = section.getAttribute("data-comment-page") || window.location.href.split(/[?#]/)[0];
 
-    window.hcb_user = Object.assign({}, window.hcb_user || {}, {
+    var isEnglish = section.getAttribute("data-comment-lang") === "en";
+    var ui = isEnglish ? {
+      comments_header: "Comments",
+      name_label: "Name",
+      content_label: "Write your comment",
+      submit: "Post",
+      no_comments_msg: "No comments yet. Start the conversation!",
+      add: "Add a comment",
+      again: "Write another comment",
+      anonymous: "Anonymous",
+      reply: "Reply",
+      flag: "Report",
+      like: "Like",
+      said: "said:",
+      showing: "Showing",
+      to: "to",
+      days_ago: "days ago",
+      hours_ago: "hours ago",
+      minutes_ago: "minutes ago",
+      within_the_last_minute: "less than a minute ago",
+      msg_thankyou: "Thanks for your comment!",
+      msg_approval: "Your comment is awaiting review.",
+      msg_approval_required: "Your comment will appear after the provider's checks.",
+      err_bad_html: "Your comment contains unsupported HTML.",
+      err_bad_email: "Invalid email address.",
+      err_too_frequent: "Please wait before commenting again.",
+      err_comment_empty: "Please write a comment.",
+      err_denied: "The comment was not accepted.",
+      err_unknown: "Comment blocked. Please try later.",
+      err_spam: "This message was detected as spam.",
+      err_blocked: "The provider blocked this message."
+    } : {
       PAGE: pageUrl,
       comments_header: "Commenti",
       name_label: "Nome",
@@ -50,7 +81,8 @@
       err_unknown: "Il commento è stato bloccato. Riprova più tardi.",
       err_spam: "Il messaggio è stato rilevato come spam.",
       err_blocked: "Il messaggio è stato bloccato dai filtri del servizio."
-    });
+    };
+    window.hcb_user = Object.assign({}, window.hcb_user || {}, ui, {PAGE: pageUrl});
 
     var stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
@@ -71,7 +103,7 @@
       if (prompt) prompt.hidden = true;
     };
     script.onerror = function () {
-      status.textContent = "I commenti non sono disponibili al momento. Controlla la connessione o riprova.";
+      status.textContent = isEnglish ? "Comments are unavailable right now. Please try again." : "I commenti non sono disponibili al momento. Controlla la connessione o riprova.";
       trigger.disabled = false;
       box.hidden = true;
     };

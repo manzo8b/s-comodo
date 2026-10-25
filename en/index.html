@@ -1,0 +1,26 @@
+---
+layout: default
+title: "English"
+lang: en
+description: "English-language journalism from S-COMODO, history, society and culture."
+permalink: /en/
+---
+<section class="english-home">
+<p class="section-tag">S-COMODO · ENGLISH EDITION</p>
+<h1>Stories worth staying for</h1>
+<p class="english-intro">The present has a history. We look for it. Independent essays connecting current questions with history, culture and reliable sources.</p>
+<div class="section-heading"><h2>Read in English</h2><a href="{{ '/en/archive/' | relative_url }}">All English articles ↗</a></div>
+<div class="home-editorial-grid english-grid">
+{% assign english_posts = site.posts | where: 'lang', 'en' %}
+{% for post in english_posts %}
+<article class="home-editorial-card">
+{% if post.image %}<a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | escape }}" loading="lazy"></a>{% endif %}
+<div class="story-state"><a href="{{ '/en/topics/' | relative_url }}#{{ post.topic_id | escape }}">{{ post.rubrica | upcase | escape }}</a></div>
+<h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+<p>{{ post.subtitle | escape }}</p>
+<span class="card-foot">{{ post.date | date: '%d %B %Y' }} · {{ post.reading_minutes }} min read</span>
+</article>
+{% endfor %}
+</div>
+<p class="english-nav-note">Our <a href="{{ '/' | relative_url }}" lang="it">Italian-language homepage</a> includes additional essays and historical reports.</p>
+</section>

@@ -1,0 +1,36 @@
+name: "Report a factual error (EN)"
+description: "Public report of a potential error in a S-COMODO article"
+title: "[Correction] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Public submission:** GitHub Issues are visible to everyone. Please do not share sensitive, confidential or personal information. This form is for article corrections, not private data-protection requests.
+  - type: input
+    id: article
+    attributes:
+      label: "Article URL"
+      placeholder: "https://manzo8b.github.io/s-comodo/en/..."
+    validations:
+      required: true
+  - type: textarea
+    id: passage
+    attributes:
+      label: "Passage and possible error"
+      description: "Quote the relevant sentence and explain the issue."
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: "Supporting source"
+      description: "If available, provide a document, URL, author and date."
+    validations:
+      required: false
+  - type: checkboxes
+    id: public
+    attributes:
+      label: "Confirmation"
+      options:
+        - label: "I understand this report is public and does not include personal or confidential information."
+          required: true

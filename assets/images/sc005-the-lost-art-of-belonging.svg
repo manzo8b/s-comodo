@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">The lost art of belonging</title>
+<desc id="desc">Editorial illustration of a shared table: an Italian coffee cup, a Paraguayan tereré guampa and an old London coffee pot, within a lively symbolic neighbourhood.</desc>
+<defs>
+<linearGradient id="sky" x1="0" x2=".85" y1="0" y2="1"><stop stop-color="#e8e3d7"/><stop offset="1" stop-color="#c7c8b9"/></linearGradient>
+<linearGradient id="wall" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#efe8dc"/><stop offset="1" stop-color="#d8ccbb"/></linearGradient>
+<linearGradient id="table" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a87a58"/><stop offset="1" stop-color="#653c2c"/></linearGradient>
+<linearGradient id="dark" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#41433c"/><stop offset="1" stop-color="#202d2a"/></linearGradient>
+<linearGradient id="red" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#c73a41"/><stop offset="1" stop-color="#8c1c2c"/></linearGradient>
+<pattern id="gr" width="17" height="17" patternUnits="userSpaceOnUse"><path d="M3 4l2 2M12 15l-1-1" stroke="#594536" stroke-width=".8" opacity=".14"/></pattern>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="13"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<path d="M0 0H1600V420H0Z" fill="url(#wall)"/>
+<rect x="0" y="0" width="1600" height="900" fill="url(#gr)"/>
+<!-- A civic urban streetscape connects places without treating them as culturally identical -->
+<g opacity=".83">
+<path d="M0 395V103H333V395" fill="#b1aa98"/><path d="M0 116h333V93H0Z" fill="#6b6b5c"/>
+<path d="M70 382V196a92 92 0 0 1 185 0v186" fill="#e9e6d9" stroke="#5e6157" stroke-width="14"/>
+<path d="M122 378V234a40 40 0 0 1 82 0v144" fill="#8b918b"/>
+<path d="M346 394V80h336v314" fill="#d7cec0"/>
+<path d="M375 116h267v28H375Z" fill="#ab2733"/>
+<path d="M387 366V186h107v180M529 366V186h105v180" fill="#f4eddc" stroke="#777266" stroke-width="10"/>
+<path d="M696 392V60h298v332" fill="#d2bda3"/>
+<path d="M731 112h225v230H731Z" fill="#eef0e4" stroke="#6b756d" stroke-width="14"/>
+<path d="M843 110v240M729 225h230" stroke="#6b756d" stroke-width="11"/>
+<path d="M1010 395V110h590v285" fill="#c1c7b9"/>
+<path d="M1040 164h518v31h-518z" fill="#778275"/>
+<path d="M1087 390V215a94 94 0 0 1 190 0v175" fill="#f3f0e8" stroke="#879081" stroke-width="12"/>
+<path d="M1332 390V213a90 90 0 0 1 179 0v177" fill="#ece7df" stroke="#879081" stroke-width="12"/>
+</g>
+<!-- Sun/light makes space human rather than nostalgic -->
+<circle cx="1346" cy="105" r="147" fill="#e2b78e" opacity=".65"/>
+<circle cx="1346" cy="105" r="106" fill="#f7e8d1" opacity=".56"/>
+<!-- Three stylised participants in conversation, no identities implied -->
+<g fill="url(#dark)">
+<circle cx="290" cy="358" r="64"/><path d="M170 546q25-119 121-119 100 0 131 119l34 137H132z"/>
+<circle cx="814" cy="340" r="60"/><path d="M710 539q19-132 105-132 95 0 127 132l25 129H676z"/>
+<circle cx="1333" cy="358" r="70"/><path d="M1210 547q30-131 122-131 106 0 138 131l31 131h-324z"/>
+</g>
+<path d="M356 512q156-132 304 0M945 512q151-119 326 0" fill="none" stroke="#b42232" stroke-width="8" stroke-linecap="round" opacity=".83"/>
+<!-- A long common table -->
+<ellipse cx="809" cy="715" rx="731" ry="77" fill="#24201e" opacity=".21" filter="url(#shadow)"/>
+<path d="M0 661q800-101 1600 0v99Q800 852 0 761Z" fill="url(#table)" stroke="#3b332f" stroke-width="7"/>
+<path d="M26 674q778-75 1547 0" stroke="#f0c9a4" stroke-width="10" fill="none" opacity=".65"/>
+<path d="M130 780v120h107V799M1362 790v110h113V781" fill="#4a3228"/>
+<!-- London brass coffee pot: historical referent, generic, not an artifact facsimile -->
+<g transform="translate(463 531)">
+<ellipse cx="85" cy="163" rx="109" ry="19" fill="#191a18" opacity=".3"/>
+<path d="M31 41L51 21h78l18 20-8 113q-55 25-114 0Z" fill="#c69b61" stroke="#614732" stroke-width="6"/>
+<path d="M47 39h79" stroke="#e5c596" stroke-width="7"/>
+<path d="M45 22q35-42 73 0" fill="none" stroke="#5b4837" stroke-width="9"/>
+<path d="M148 63q65-13 53 38-11 33-54 26" fill="none" stroke="#b89361" stroke-width="14"/>
+<path d="M23 61L-30 100l54 4" fill="#c79e6e" stroke="#60432f" stroke-width="6"/>
+</g>
+<!-- Italian espresso cup -->
+<g transform="translate(722 574)">
+<ellipse cx="86" cy="121" rx="109" ry="20" fill="#e7dfd0" stroke="#544f47" stroke-width="5"/>
+<path d="M28 13h123v69q-54 48-109 0Z" fill="#f9f7ef" stroke="#504942" stroke-width="7"/>
+<ellipse cx="90" cy="17" rx="64" ry="17" fill="#7e4b32" stroke="#504942" stroke-width="6"/>
+<path d="M147 40q56-28 47 16-5 36-47 19" stroke="#ece8db" stroke-width="15" fill="none"/>
+<path d="M58-13q-14-19 1-34M108-13q-15-19 2-34" fill="none" stroke="#f2ede4" stroke-width="8" opacity=".8"/>
+</g>
+<!-- Paraguayan tereré guampa with a traditional bombilla -->
+<g transform="translate(995 517)">
+<ellipse cx="103" cy="198" rx="104" ry="19" fill="#201d1a" opacity=".31"/>
+<path d="M36 36q17-25 67-25t67 25l-22 149q-47 33-97 0Z" fill="#967248" stroke="#48392b" stroke-width="8"/>
+<path d="M42 66q56 26 121 0M52 154q42 20 95 0" stroke="#d4b585" stroke-width="6" fill="none"/>
+<ellipse cx="103" cy="36" rx="66" ry="22" fill="#476548" stroke="#493c2c" stroke-width="7"/>
+<path d="M104 28L169-114" stroke="#cfccc3" stroke-width="15" stroke-linecap="round"/>
+<path d="M104 28L169-114" stroke="#626763" stroke-width="3" stroke-linecap="round"/>
+<path d="M158-104q27-11 40 9" fill="none" stroke="#626763" stroke-width="11" stroke-linecap="round"/>
+<path d="M33 198h139" stroke="#3d403b" stroke-width="4"/>
+</g>
+<!-- subtle invitation line connecting the table and the city -->
+<path d="M56 837h1488" stroke="#a42030" stroke-width="9"/>
+<path d="M56 851h1488" stroke="#f7efe3" stroke-width="2"/>
+<g font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="6" fill="#593c36">
+<text x="45" y="50">S-COMODO.</text><text x="1260" y="50">SOCIETY &amp; COMMUNITY</text>
+</g>
+</svg>

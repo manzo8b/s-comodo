@@ -1,4 +1,5 @@
 <!doctype html>
+{% assign is_english = false %}{% if page.lang == 'en' %}{% assign is_english = true %}{% endif %}
 <html lang="{{ page.lang | default: site.lang }}">
 <head>
 <meta charset="utf-8">
@@ -10,17 +11,27 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-<a class="skip-link" href="#contenuto">Vai al contenuto</a>
+<a class="skip-link" href="#contenuto">{% if is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
 <header class="site-header"><div class="container">
-<div class="site-meta"><span>BLOG INDIPENDENTE</span><span class="site-credit">by {{ site.owner }}</span></div>
-<div class="site-masthead"><a class="site-logo" href="{{ '/' | relative_url }}" aria-label="S-COMODO, homepage"><span>S-</span>COMODO</a></div>
+<div class="site-meta"><span>{% if is_english %}INDEPENDENT JOURNAL{% else %}BLOG INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
+<div class="site-masthead"><a class="site-logo" href="{% if is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage"><span>S-</span>COMODO</a></div>
 <nav class="site-navigation" aria-label="Menu principale">
-<div class="site-links"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/archivio/' | relative_url }}">Archivio</a><a href="{{ '/temi/' | relative_url }}">Temi</a><a href="{{ '/metodo/' | relative_url }}">Metodo e fonti</a><a href="{{ '/chi-siamo/' | relative_url }}">Chi siamo</a></div>
-<span class="language-note" aria-label="Italiano; spagnolo e inglese quando disponibili"><strong>IT</strong> / ES · EN su selezione</span>
+<div class="site-links">
+{% if is_english %}
+<a href="{{ '/en/' | relative_url }}">Home</a><a href="{{ '/en/archive/' | relative_url }}">Archive</a><a href="{{ '/en/topics/' | relative_url }}">Topics</a><a href="{{ '/en/method/' | relative_url }}">Method &amp; sources</a><a href="{{ '/en/about/' | relative_url }}">About</a>
+{% else %}
+<a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/archivio/' | relative_url }}">Archivio</a><a href="{{ '/temi/' | relative_url }}">Temi</a><a href="{{ '/metodo/' | relative_url }}">Metodo e fonti</a><a href="{{ '/chi-siamo/' | relative_url }}">Chi siamo</a>
+{% endif %}</div>
+<span class="language-note">{% if is_english %}<strong>EN</strong> · <a href="{{ '/' | relative_url }}" lang="it">Italiano</a>{% else %}<strong>IT</strong> · <a href="{{ '/en/' | relative_url }}" lang="en">English</a>{% endif %}</span>
 </nav></div></header>
 <main id="contenuto" class="container">{{ content }}</main>
 <footer class="site-footer"><div class="container footer-grid">
+{% if is_english %}
+<div><strong>S-COMODO.</strong><p>The present has a history. We look for it.</p><p class="footer-owner">Independent journal curated by {{ site.owner }}.</p></div>
+<div class="footer-disclosure"><p>Articles and illustrations may be created with AI assistance. Every publication requires human review and approval.</p><div class="footer-links"><a href="{{ '/en/ai-use/' | relative_url }}">AI use</a><a href="{{ '/en/comments/' | relative_url }}">Comments</a><a href="{{ '/en/corrections/' | relative_url }}">Corrections</a><a href="{{ '/en/privacy/' | relative_url }}">Privacy</a></div></div>
+{% else %}
 <div><strong>S-COMODO.</strong><p>Il presente ha una storia. Noi la cerchiamo.</p><p class="footer-owner">Blog indipendente di {{ site.owner }}.</p></div>
 <div class="footer-disclosure"><p>Articoli e illustrazioni possono essere elaborati con intelligenza artificiale. Ogni pubblicazione richiede revisione e approvazione umana.</p><div class="footer-links"><a href="{{ '/uso-ia/' | relative_url }}">Uso dell'IA</a><a href="{{ '/politica-commenti/' | relative_url }}">Commenti</a><a href="{{ '/rettifiche/' | relative_url }}">Rettifiche</a><a href="{{ '/privacy/' | relative_url }}">Privacy</a></div></div>
+{% endif %}
 </div></footer>
 </body></html>

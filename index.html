@@ -4,6 +4,7 @@ title: Home
 description: "S-COMODO, blog indipendente: il presente letto attraverso la storia con fonti verificabili."
 permalink: /
 ---
+<div class="language-feature"><span>READ S-COMODO IN ENGLISH</span><a href="{{ '/en/' | relative_url }}" lang="en">Explore the English edition →</a></div>
 <section class="home-heading" aria-label="Presentazione del blog">
   <p class="section-tag">STORIA · IDEE · FATTI</p>
   <p>Il presente ha una storia. Noi la cerchiamo.</p>
@@ -13,7 +14,7 @@ permalink: /
 <section class="home-archive home-published" aria-labelledby="published-title">
   <div class="section-heading"><div><p class="section-tag">ARTICOLI PUBBLICATI</p><h2 id="published-title">Da leggere</h2></div><a href="{{ '/archivio/' | relative_url }}">Tutto l’archivio ↗</a></div>
   <div class="home-editorial-grid">
-    {% for post in published_posts limit:4 %}
+    {% for post in published_posts limit:5 %}
     <article class="home-editorial-card">
       {% if post.image %}
       <a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></a>
