@@ -73,8 +73,14 @@ main{min-height:50vh}h1,h2,h3{line-height:1.14;letter-spacing:-.04em}h1{font-siz
 #HCB_comment_box .hcb-comment-body{line-height:1.65}
 @media(max-width:680px){.comment-privacy-prompt{padding:16px}.comment-load-button{width:100%}}
 
-/* 2026-10-25: show the first three published dossiers on the homepage */
-.home-published .home-editorial-grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:26px}
+/* Four published dossiers: two-column editorial layout */
+.home-published .home-editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px}
 .home-published .home-editorial-card h2{font-size:clamp(1.6rem,2.3vw,2.25rem)}
 @media(max-width:820px){.home-published .home-editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:680px){.home-published .home-editorial-grid{grid-template-columns:1fr}}
+
+/* Typographic cover when a dossier has no image asset */
+.home-editorial-image--type{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;padding:clamp(16px,3.5vw,32px);background:linear-gradient(145deg,#343e36,#182b26 70%);color:#f4eada;text-decoration:none;border-bottom:8px solid #ab2733;overflow:hidden}
+.home-editorial-image--type:hover{color:#fff}
+.type-cover-top,.type-cover-bottom{font:700 clamp(9px,1vw,12px)/1.5 Arial,sans-serif;letter-spacing:.18em}
+.type-cover-main{font:700 clamp(2rem,6vw,5rem)/1 Georgia,serif;letter-spacing:-.04em;max-width:100%;overflow-wrap:anywhere}
