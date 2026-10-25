@@ -11,7 +11,7 @@ timezone: Europe/Rome
 markdown: kramdown
 permalink: /:categories/:title/
 future: false
-comments_enabled: false
+comments_enabled: true
 comments_endpoint: ""
 exclude:
   - README.md

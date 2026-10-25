@@ -18,7 +18,20 @@ layout: default
   <a href="https://github.com/manzo8b/s-comodo/issues/new?template=rettifica.yml" target="_blank" rel="noopener noreferrer">Segnala un errore ↗</a>
   <p><a href="{{ '/rettifiche/' | relative_url }}">Consulta la politica delle rettifiche</a></p>
 </section>
-<section class="comments"><h2>Commenti</h2><p>I commenti agli articoli non sono ancora disponibili. Saranno attivati soltanto con una procedura di approvazione preventiva.</p></section>
+<section class="comments reader-comments" id="commenti" aria-labelledby="comments-heading" data-hcb-comments data-comment-page="{{ page.url | absolute_url }}">
+  <h2 id="comments-heading">La discussione continua</h2>
+  <p>Qual è la tua opinione? Puoi commentare senza creare un account. I messaggi sono normalmente visibili subito, salvo i controlli antispam del servizio.</p>
+  <div class="comment-privacy-prompt" id="comment-privacy-prompt">
+    <p>Per leggere o scrivere i commenti è necessario caricare <strong>HTML Comment Box</strong>, un servizio esterno che può trattare dati tecnici e utilizzare cookie. Il collegamento viene attivato soltanto se scegli di procedere.</p>
+    <button type="button" class="comment-load-button" id="comment-load-button" aria-controls="HCB_comment_box">Mostra i commenti</button>
+    <p class="comment-provider-links"><a href="{{ '/privacy/' | relative_url }}">Privacy S-COMODO</a> · <a href="https://www.htmlcommentbox.com/static/privacy.pdf" target="_blank" rel="noopener noreferrer">Privacy del servizio esterno ↗</a></p>
+  </div>
+  <p class="comment-load-status" id="comment-load-status" role="status" aria-live="polite"></p>
+  <div id="HCB_comment_box" hidden><p>Caricamento dei commenti…</p></div>
+  <noscript><p>Per visualizzare e inviare commenti occorre abilitare JavaScript nel browser.</p></noscript>
+  <p class="comment-conduct">Rispetta gli altri lettori: critica argomenti e idee senza insulti, minacce, spam o dati personali altrui. I contenuti inappropriati potranno essere rimossi. <a href="{{ '/politica-commenti/' | relative_url }}">Regole dei commenti</a>.</p>
+</section>
+<script src="{{ '/assets/js/comments.js' | relative_url }}" defer></script>
 {% if page.corrections and page.corrections.size > 0 %}
 <section class="correction-log" aria-labelledby="corrections-heading">
   <h2 id="corrections-heading">Correzioni</h2>
