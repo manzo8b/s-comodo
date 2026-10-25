@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="cover-title cover-description">
+<title id="cover-title">I diritti non hanno una tessera di partito</title>
+<desc id="cover-description">Allegoria editoriale senza simboli partitici: la Costituzione, il lavoro, i diritti civili e il pluralismo convergono in un libro aperto condiviso.</desc>
+<defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4efe2"/><stop offset="1" stop-color="#ddd4c4"/></linearGradient>
+ <linearGradient id="night" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#282b2a"/><stop offset="1" stop-color="#171a19"/></linearGradient>
+ <linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b82933"/><stop offset="1" stop-color="#8b202c"/></linearGradient>
+ <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="12"/></filter>
+ <pattern id="grain" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M1 9l1-1M8 2l1 1" stroke="#171918" opacity=".10" stroke-width=".6"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#paper)"/>
+<path d="M0 0h730v900H0z" fill="url(#night)"/>
+<path d="M745 0h855v900H745z" fill="#d8cfc0"/>
+<path d="M0 0h1600v900H0z" fill="url(#grain)"/>
+<path d="M0 78h1600" stroke="#ac2430" stroke-width="13"/>
+<path d="M0 815h1600" stroke="#ad2431" stroke-width="6"/>
+<g opacity=".21" stroke="#fff" stroke-width="4" fill="none">
+ <path d="M-180 670Q250 420 680 670M-130 727Q250 500 690 727M-170 795Q300 600 700 795"/>
+ <path d="M40 100L40 800M145 100L145 800M260 100L260 800M375 100L375 800M490 100L490 800M605 100L605 800"/>
+</g>
+<!-- left: the constitutional assembly as a civic architectural symbol -->
+<g transform="translate(54 166)">
+<path d="M10 484h575v13H10zM30 447h535v35H30z" fill="#999185" opacity=".45"/>
+<path d="M77 413h48V240H77zM188 413h48V240h-48zM299 413h48V240h-48zM410 413h48V240h-48z" fill="#ebdfc9" opacity=".52"/>
+<path d="M55 225h435v24H55zM90 205h365v22H90zM45 203l225-112 230 112z" fill="#d4c6b0" opacity=".70"/>
+<path d="M105 105l161-80 167 80" stroke="#aa2933" stroke-width="9" fill="none"/>
+<path d="M70 427h427" stroke="#ac2932" stroke-width="7"/>
+</g>
+<!-- abstract industrial silhouettes: worker rights -->
+<g transform="translate(85 630)" fill="#cebbb0" opacity=".9">
+<path d="M0 146h600v-74l-105 37-90-51-83 48-118-47-96 50L0 76z" fill="#a9a294" opacity=".28"/>
+<path d="M58 60h62v-96H91v-30H75v30H58zM182 61h57V-17h-57zM300 68h67v-112h-67zM456 55h45v-93h-45z" fill="#8c8f86" opacity=".36"/>
+</g>
+<!-- red human-centered band connects eras -->
+<path d="M0 829C236 738 456 799 693 755 951 711 1263 790 1600 695" stroke="#ac2932" stroke-width="29" fill="none" opacity=".86"/>
+<path d="M0 846C236 755 456 816 693 772 951 728 1263 807 1600 712" stroke="#e4b89a" stroke-width="2" fill="none"/>
+<!-- right: civic doorway, open rather than partisan enclosure -->
+<g transform="translate(1048 160)">
+ <path d="M0 570V176Q0 0 195 0 390 0 390 176v394z" fill="#b0a694" opacity=".76"/>
+ <path d="M38 570V180Q38 39 195 39 352 39 352 180v390z" fill="#f2ede2"/>
+ <path d="M74 570V187Q74 75 195 75 316 75 316 187v383z" fill="#d6d2c9"/>
+ <path d="M195 75v495" stroke="#b9afa2" stroke-width="4"/>
+ <path d="M77 356h236" stroke="#a52532" stroke-width="8" opacity=".82"/>
+</g>
+<!-- shared opened book, bridging both sides -->
+<ellipse cx="830" cy="701" rx="515" ry="66" fill="#171818" opacity=".21" filter="url(#sh)"/>
+<g transform="translate(484 251)">
+<path d="M332 403C234 360 124 347 0 366V91C123 55 233 76 332 136z" fill="#a62333"/>
+<path d="M336 403C435 361 547 344 670 364V91C540 59 430 78 336 136z" fill="#6e272d"/>
+<path d="M336 381C230 335 120 324 19 345V109C124 73 237 104 336 154z" fill="#faf5e9" stroke="#171918" stroke-width="5"/>
+<path d="M336 381C443 333 555 321 650 342V108C550 75 444 100 336 154z" fill="#f1e6d4" stroke="#171918" stroke-width="5"/>
+<path d="M336 154v227" stroke="#84222c" stroke-width="7"/>
+<path d="M52 178Q192 150 307 208M52 221Q192 196 307 248M52 267Q192 242 307 292M52 307Q192 285 307 337" stroke="#93897c" stroke-width="7" fill="none" opacity=".6"/>
+<path d="M369 201Q476 149 618 176M369 245Q476 193 618 220M369 291Q476 239 618 266M369 336Q476 284 618 311" stroke="#948879" stroke-width="7" fill="none" opacity=".6"/>
+<text x="177" y="149" fill="#982a32" font-family="Georgia,'Times New Roman',serif" font-size="22" letter-spacing="4" text-anchor="middle">1946–48</text>
+<text x="505" y="149" fill="#982a32" font-family="Georgia,'Times New Roman',serif" font-size="22" letter-spacing="4" text-anchor="middle">1970–74</text>
+<rect x="320" y="385" width="31" height="20" fill="#c8a17d" rx="2"/>
+</g>
+<!-- thin circular public commons, no ideological insignia -->
+<circle cx="817" cy="469" r="342" stroke="#bd8c7b" stroke-width="3" fill="none" opacity=".53"/>
+<circle cx="817" cy="469" r="381" stroke="#b29181" stroke-width="2" fill="none" opacity=".20"/>
+<rect x="1115" y="102" width="420" height="58" fill="#252725" opacity=".9"/>
+<text x="1325" y="141" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" letter-spacing="7" fill="#f5eee4">S-COMODO · SC003</text>
+<text x="118" y="128" font-family="Arial,sans-serif" font-size="24" letter-spacing="7" fill="#f2eadf">STORIA · IDEE · FATTI</text>
+<text x="117" y="753" font-family="Georgia,serif" font-size="52" font-style="italic" fill="#f6efe6" opacity=".95">Diritti di tutti.</text>
+<text x="1150" y="760" font-family="Georgia,serif" font-size="42" font-style="italic" fill="#312f2c">Non proprietà di pochi.</text>
+</svg>
