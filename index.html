@@ -13,7 +13,7 @@ permalink: /
 <section class="home-archive home-published" aria-labelledby="published-title">
   <div class="section-heading"><div><p class="section-tag">ARTICOLI PUBBLICATI</p><h2 id="published-title">Da leggere</h2></div><a href="{{ '/archivio/' | relative_url }}">Tutto l’archivio ↗</a></div>
   <div class="home-editorial-grid">
-    {% for post in italian_posts limit:2 %}
+    {% for post in italian_posts limit:3 %}
     <article class="home-editorial-card">
       {% if post.image %}<a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></a>{% endif %}
       <div class="story-state">{{ post.article_id | escape }} <span aria-hidden="true">/</span> {{ post.rubrica | upcase }}</div>

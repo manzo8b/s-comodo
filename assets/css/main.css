@@ -72,3 +72,9 @@ main{min-height:50vh}h1,h2,h3{line-height:1.14;letter-spacing:-.04em}h1{font-siz
 #HCB_comment_box .submit:hover{background-color:#861625}
 #HCB_comment_box .hcb-comment-body{line-height:1.65}
 @media(max-width:680px){.comment-privacy-prompt{padding:16px}.comment-load-button{width:100%}}
+
+/* 2026-10-25: show the first three published dossiers on the homepage */
+.home-published .home-editorial-grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:26px}
+.home-published .home-editorial-card h2{font-size:clamp(1.6rem,2.3vw,2.25rem)}
+@media(max-width:820px){.home-published .home-editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.home-published .home-editorial-grid{grid-template-columns:1fr}}
