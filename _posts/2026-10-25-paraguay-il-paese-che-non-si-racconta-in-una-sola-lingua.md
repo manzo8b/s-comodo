@@ -14,8 +14,9 @@ editorial_status: pubblicato
 reviewed: true
 ai_assisted: true
 ai_disclosure: 'Dossier elaborato con il supporto di strumenti di intelligenza artificiale. Testo sottoposto alla revisione e approvazione del curatore editoriale il 25 ottobre 2026; fonti riportate in bibliografia.'
-image: null
-image_alt: null
+image: /assets/images/sc004-paraguay-bandiera-lapacho.webp
+image_alt: "Illustrazione digitale della bandiera del Paraguay sventolante tra i rami fioriti di un lapacho rosa, davanti a un paesaggio fluviale al tramonto"
+image_caption: "Bandiera del Paraguay e lapacho rosa: composizione illustrativa generata con intelligenza artificiale, non fotografia documentale."
 reading_minutes: 18
 corrections: []
 sources:
