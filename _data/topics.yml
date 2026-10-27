@@ -10,3 +10,7 @@
   label_it: "Storia e identità"
   label_en: "History & Identity"
   description: "Popoli, culture, memoria storica e racconti oltre gli stereotipi."
+- id: tecnologia-risorse
+  label_it: "Tecnologia e risorse"
+  label_en: "Technology & Resources"
+  description: "Intelligenza artificiale, infrastrutture digitali, energia, acqua, costi e responsabilità economiche."

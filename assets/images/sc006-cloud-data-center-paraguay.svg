@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">The real weight of the cloud: Paraguay's energy, water and data</title>
+<desc id="d">Symbolic illustration linking a hydroelectric dam, a water reservoir, power transmission lines and a data center in Paraguay. Not a photograph or drawing of a specific installation.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0e2730"/><stop offset=".72" stop-color="#345b5d"/><stop offset="1" stop-color="#d9b197"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#3a7d85"/><stop offset=".52" stop-color="#79a9aa"/><stop offset="1" stop-color="#25566e"/></linearGradient>
+  <linearGradient id="rack" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#263a40"/><stop offset="1" stop-color="#101b23"/></linearGradient>
+  <linearGradient id="dam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e4d6be"/><stop offset="1" stop-color="#968f82"/></linearGradient>
+  <linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#da3e48"/><stop offset="1" stop-color="#9c1f32"/></linearGradient>
+  <pattern id="grain" width="43" height="41" patternUnits="userSpaceOnUse"><path d="M4 14l2 2M29 33l3-2M14 4l2 3" stroke="#f3e8d5" stroke-width="1" opacity=".12"/></pattern>
+  <pattern id="ripples" width="120" height="70" patternUnits="userSpaceOnUse"><path d="M-20 44q42-17 82 0t80 0" fill="none" stroke="#bbddd6" stroke-width="4" opacity=".32"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="108" cy="99" r="225" fill="#e1b997" opacity=".12"/>
+<circle cx="108" cy="99" r="125" fill="#e1b997" opacity=".18"/>
+<!-- River and watershed: symbolic, not a real map -->
+<path d="M0 615q242-78 399-34t354 39q199-6 333-59t514 31v308H0Z" fill="url(#water)"/>
+<path d="M0 615q242-78 399-34t354 39q199-6 333-59t514 31v308H0Z" fill="url(#ripples)"/>
+<path d="M0 598q226-83 454-36 223 45 427 8 251-47 469-48t250 17" stroke="#c3c7b3" stroke-width="11" fill="none" opacity=".5"/>
+<!-- Stylized hydroelectric plant on left -->
+<path d="M0 422L668 322l119 331-787 20Z" fill="#bfb7a3" stroke="#f2e7d6" stroke-width="6"/>
+<path d="M0 475l695-101 14 67L0 540Z" fill="url(#dam)" stroke="#9a9589" stroke-width="4"/>
+<g fill="#677a76" stroke="#394b4a" stroke-width="5">
+<path d="M60 538l80-10v109l-80 4Z"/><path d="M183 520l80-11v116l-80 5Z"/>
+<path d="M308 503l82-11v122l-82 5Z"/><path d="M434 486l86-11v124l-86 6Z"/>
+</g>
+<g stroke="#eff4df" stroke-width="9" opacity=".83">
+<path d="M92 646q-25 95-45 165M220 630q-14 99-15 185M344 615q12 92 31 183M469 601q30 93 62 182"/>
+</g>
+<!-- Grid and electrical transmission -->
+<g stroke="#f3d7a5" stroke-width="7" fill="none" opacity=".9">
+<path d="M600 351q157-111 332-16"/>
+<path d="M648 428q150-111 300-24"/>
+<path d="M684 504q123-99 251-19"/>
+</g>
+<g stroke="#d4baa1" stroke-width="9" fill="none">
+<path d="M761 171l-73 345M761 171l72 345M707 443h109M719 371h86M728 303h67"/>
+<path d="M754 169v-69M697 251h124M710 294h97"/>
+</g>
+<g stroke="#f3d7a5" stroke-width="3" fill="none"><path d="M0 258q354-75 697-7M815 251q149 9 281-9"/></g>
+<!-- Data center building and its six visible racks -->
+<path d="M921 325l574-47 105 100v348l-681-47Z" fill="#1a2c34" stroke="#96b4ae" stroke-width="7"/>
+<path d="M921 325l574-47 105 100-679 41Z" fill="#b5b9ab" stroke="#ece4d3" stroke-width="6"/>
+<path d="M918 420l682-43v344l-682-47Z" fill="url(#rack)" stroke="#3e5c5c" stroke-width="7"/>
+<g fill="#10232a" stroke="#7caca8" stroke-width="5">
+<rect x="955" y="451" width="92" height="203" rx="3"/>
+<rect x="1061" y="444" width="92" height="216" rx="3"/>
+<rect x="1167" y="438" width="92" height="225" rx="3"/>
+<rect x="1273" y="431" width="92" height="235" rx="3"/>
+<rect x="1379" y="425" width="92" height="244" rx="3"/>
+<rect x="1485" y="416" width="76" height="256" rx="3"/>
+</g>
+<g fill="#aad9c7">
+<circle cx="976" cy="481" r="5"/><circle cx="1082" cy="474" r="5"/><circle cx="1188" cy="468" r="5"/><circle cx="1294" cy="461" r="5"/><circle cx="1400" cy="455" r="5"/><circle cx="1504" cy="449" r="5"/>
+</g>
+<g stroke="#a6c9bd" stroke-width="3" opacity=".7">
+<path d="M973 518h58m-58 25h58m-58 26h58m-58 24h58"/>
+<path d="M1078 511h59m-59 27h59m-59 26h59m-59 25h59"/>
+<path d="M1185 507h59m-59 27h59m-59 26h59m-59 25h59"/>
+<path d="M1291 501h58m-58 27h58m-58 26h58m-58 25h58"/>
+<path d="M1397 494h58m-58 27h58m-58 26h58m-58 25h58"/>
+<path d="M1503 487h41m-41 27h41m-41 26h41m-41 25h41"/>
+</g>
+<!-- A truthful Paraguay flag symbol (front side simplified, no fabricated arms) -->
+<g transform="translate(1007 64)">
+<path d="M0 0v183" stroke="#eee4ce" stroke-width="7"/>
+<path d="M3 2q62-17 126 8v34q-64-19-126-8Z" fill="#bf233a"/>
+<path d="M3 36q62-11 126 8v32q-67-19-126-6Z" fill="#f7f4e9"/>
+<path d="M3 70q62-13 126 6v36q-67-16-126-8Z" fill="#2861a1"/>
+<circle cx="71" cy="56" r="11" fill="none" stroke="#a69864" stroke-width="2"/>
+</g>
+<!-- editorial sidebar to make category legible -->
+<rect x="0" y="0" width="598" height="175" fill="#0a2027" opacity=".8"/>
+<path d="M42 39H174" stroke="#dd3f52" stroke-width="6"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#f5eee1">
+<text x="42" y="81" font-size="21" letter-spacing="3.2" font-weight="700">S-COMODO.</text>
+<text x="42" y="120" font-size="23" letter-spacing="1.8" font-weight="700">TECNOLOGIA E RISORSE</text>
+<text x="42" y="152" font-size="16" letter-spacing="2.3">ENERGIA · ACQUA · DATI</text>
+</g>
+<!-- foreground darkens below the subject with an editorial footer -->
+<path d="M0 803q435-60 845-20t755-29v146H0Z" fill="#0b2027" opacity=".85"/>
+<path d="M50 841h1500" stroke="#e9d0b2" stroke-width="2" opacity=".75"/>
+<text x="51" y="874" fill="#f2e9de" font-size="17" font-family="Arial,Helvetica,sans-serif" letter-spacing="2.8">PARAGUAY · THE REAL COST OF THE CLOUD</text>
+<rect width="1600" height="900" fill="url(#grain)"/>
+</svg>
