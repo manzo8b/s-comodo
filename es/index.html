@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Edición en español"
+lang: es
+description: "S-COMODO en español: democracia, cultura e historia con fuentes verificables."
+permalink: /es/
+---
+<section class="es-home"><p class="section-tag">S-COMODO · EDICIÓN EN ESPAÑOL</p>
+<h1>Historias que merecen ser contadas</h1><p class="es-intro">El presente tiene una historia. Nosotros la investigamos. Ensayos independientes sobre democracia, sociedad y cultura, con fuentes que puedes consultar.</p>
+<div class="section-heading"><div><p class="section-tag">PUBLICACIONES</p><h2>Leer en español</h2></div><a href="{{ '/es/archivo/' | relative_url }}">Todo el archivo ↗</a></div>
+<div class="home-editorial-grid">
+{% assign spanish_posts = site.posts | where: 'lang', 'es' %}
+{% for post in spanish_posts %}
+<article class="home-editorial-card">
+{% if post.image %}<a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></a>{% endif %}
+<div class="story-state"><a class="category-link" href="{{ '/es/temas/' | relative_url }}#{{ post.topic_id | escape }}">{{ post.rubrica | upcase | escape }}</a></div><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+<p>{{ post.subtitle | escape }}</p><span class="card-foot">{{ post.date | date: '%d/%m/%Y' }} · {{ post.reading_minutes }} min de lectura</span></article>
+{% endfor %}</div><p class="es-other">También puedes leer S-COMODO en <a href="{{ '/' | relative_url }}" lang="it">italiano</a> y en <a href="{{ '/en/' | relative_url }}" lang="en">inglés</a>.</p></section>

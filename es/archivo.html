@@ -1,0 +1,11 @@
+---
+layout: default
+title: "Archivo"
+lang: es
+description: "Artículos publicados en español por S-COMODO."
+permalink: /es/archivo/
+---
+<div class="page-body"><p class="section-tag">S-COMODO · ARTÍCULOS</p><h1>Archivo</h1><p>Ensayos y reportajes en español, del más reciente al más antiguo.</p><div class="list-articles">
+{% assign spanish_posts = site.posts | where: 'lang', 'es' %}{% for p in spanish_posts %}
+<article class="article-teaser"><p class="card-meta">{{ p.date | date: '%d/%m/%Y' }} · <a href="{{ '/es/temas/' | relative_url }}#{{ p.topic_id | escape }}">{{ p.rubrica | escape }}</a></p>
+<h2><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></h2><p>{{ p.subtitle | escape }}</p></article>{% endfor %}</div></div>

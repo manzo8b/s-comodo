@@ -115,3 +115,11 @@ main{min-height:50vh}h1,h2,h3{line-height:1.14;letter-spacing:-.04em}h1{font-siz
 .language-note a:hover{text-decoration:underline}
 .article-image img{background:#e9e4d7}
 @media(max-width:680px){.language-feature{flex-direction:column;align-items:flex-start}.english-home{padding-top:28px}.english-intro{font-size:18px;margin-bottom:32px}}
+
+/* Spanish editorial edition */
+.language-feature-links{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
+.es-home{padding:42px 0 38px}.es-home h1{font:700 clamp(2.8rem,5.6vw,5rem)/1.08 Georgia,serif;letter-spacing:-.055em;margin:14px 0 22px}
+.es-intro{font:21px/1.65 Georgia,serif;max-width:780px;color:#4c4740;margin:0 0 40px}
+.es-home .home-editorial-grid{padding-top:32px}
+.es-other{font:14px/1.6 Arial,sans-serif;color:var(--muted);margin:38px 0 0}
+@media(max-width:680px){.es-home{padding-top:25px}.es-intro{font-size:18px}.language-feature-links{gap:9px 16px}}

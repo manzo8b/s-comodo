@@ -1,5 +1,6 @@
 <!doctype html>
 {% assign is_english = false %}{% if page.lang == 'en' %}{% assign is_english = true %}{% endif %}
+{% assign is_spanish = false %}{% if page.lang == 'es' %}{% assign is_spanish = true %}{% endif %}
 <html lang="{{ page.lang | default: site.lang }}">
 <head>
 <meta charset="utf-8">
@@ -11,22 +12,27 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-<a class="skip-link" href="#contenuto">{% if is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
+<a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
 <header class="site-header"><div class="container">
-<div class="site-meta"><span>{% if is_english %}INDEPENDENT JOURNAL{% else %}BLOG INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
-<div class="site-masthead"><a class="site-logo" href="{% if is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage"><span>S-</span>COMODO</a></div>
-<nav class="site-navigation" aria-label="Menu principale">
+<div class="site-meta"><span>{% if is_spanish %}REVISTA INDEPENDIENTE{% elsif is_english %}INDEPENDENT JOURNAL{% else %}BLOG INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
+<div class="site-masthead"><a class="site-logo" href="{% if is_spanish %}{{ '/es/' | relative_url }}{% elsif is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage"><span>S-</span>COMODO</a></div>
+<nav class="site-navigation" aria-label="{% if is_spanish %}Navegación principal{% elsif is_english %}Main navigation{% else %}Menu principale{% endif %}">
 <div class="site-links">
-{% if is_english %}
+{% if is_spanish %}
+<a href="{{ '/es/' | relative_url }}">Inicio</a><a href="{{ '/es/archivo/' | relative_url }}">Archivo</a><a href="{{ '/es/temas/' | relative_url }}">Temas</a><a href="{{ '/es/metodo/' | relative_url }}">Método y fuentes</a><a href="{{ '/es/sobre-nosotros/' | relative_url }}">Quiénes somos</a>
+{% elsif is_english %}
 <a href="{{ '/en/' | relative_url }}">Home</a><a href="{{ '/en/archive/' | relative_url }}">Archive</a><a href="{{ '/en/topics/' | relative_url }}">Topics</a><a href="{{ '/en/method/' | relative_url }}">Method &amp; sources</a><a href="{{ '/en/about/' | relative_url }}">About</a>
 {% else %}
 <a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/archivio/' | relative_url }}">Archivio</a><a href="{{ '/temi/' | relative_url }}">Temi</a><a href="{{ '/metodo/' | relative_url }}">Metodo e fonti</a><a href="{{ '/chi-siamo/' | relative_url }}">Chi siamo</a>
 {% endif %}</div>
-<span class="language-note">{% if is_english %}<strong>EN</strong> · <a href="{{ '/' | relative_url }}" lang="it">Italiano</a>{% else %}<strong>IT</strong> · <a href="{{ '/en/' | relative_url }}" lang="en">English</a>{% endif %}</span>
+<span class="language-note">{% if is_spanish %}<strong>ES</strong> · <a href="{{ '/' | relative_url }}" lang="it">Italiano</a> · <a href="{{ '/en/' | relative_url }}" lang="en">English</a>{% elsif is_english %}<strong>EN</strong> · <a href="{{ '/' | relative_url }}" lang="it">Italiano</a> · <a href="{{ '/es/' | relative_url }}" lang="es">Español</a>{% else %}<strong>IT</strong> · <a href="{{ '/en/' | relative_url }}" lang="en">English</a> · <a href="{{ '/es/' | relative_url }}" lang="es">Español</a>{% endif %}</span>
 </nav></div></header>
 <main id="contenuto" class="container">{{ content }}</main>
 <footer class="site-footer"><div class="container footer-grid">
-{% if is_english %}
+{% if is_spanish %}
+<div><strong>S-COMODO.</strong><p>El presente tiene una historia. Nosotros la investigamos.</p><p class="footer-owner">Proyecto editorial independiente de {{ site.owner }}.</p></div>
+<div class="footer-disclosure"><p>Los artículos e ilustraciones pueden elaborarse con asistencia de IA. Toda publicación requiere aprobación humana.</p><div class="footer-links"><a href="{{ '/es/uso-de-ia/' | relative_url }}">Uso de IA</a><a href="{{ '/es/comentarios/' | relative_url }}">Comentarios</a><a href="{{ '/es/rectificaciones/' | relative_url }}">Rectificaciones</a><a href="{{ '/es/privacidad/' | relative_url }}">Privacidad</a></div></div>
+{% elsif is_english %}
 <div><strong>S-COMODO.</strong><p>The present has a history. We look for it.</p><p class="footer-owner">Independent journal curated by {{ site.owner }}.</p></div>
 <div class="footer-disclosure"><p>Articles and illustrations may be created with AI assistance. Every publication requires human review and approval.</p><div class="footer-links"><a href="{{ '/en/ai-use/' | relative_url }}">AI use</a><a href="{{ '/en/comments/' | relative_url }}">Comments</a><a href="{{ '/en/corrections/' | relative_url }}">Corrections</a><a href="{{ '/en/privacy/' | relative_url }}">Privacy</a></div></div>
 {% else %}

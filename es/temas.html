@@ -1,0 +1,12 @@
+---
+layout: default
+title: "Temas"
+lang: es
+description: "Categorías editoriales de S-COMODO en español."
+permalink: /es/temas/
+---
+<div class="page-body topic-index"><p class="section-tag">S-COMODO · EXPLORAR</p><h1>Temas</h1>
+<p>Las categorías relacionan historias e ideas sin sustituir su contexto.</p>
+{% for topic in site.data.topics %}{% assign group = site.posts | where: 'topic_id', topic.id | where: 'lang', 'es' %}
+<section class="topic-section" id="{{ topic.id | escape }}"><p class="topic-en">{{ topic.label_it | escape }}</p><h2>{{ topic.label_es | escape }}</h2>
+{% if group.size > 0 %}{% for p in group %}<article class="article-teaser"><p class="card-meta">{{ p.date | date: '%d/%m/%Y' }}</p><h3><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></h3><p>{{ p.subtitle | escape }}</p></article>{% endfor %}{% else %}<p class="empty-state">Próximas publicaciones.</p>{% endif %}</section>{% endfor %}</div>

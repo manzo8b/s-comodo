@@ -1,0 +1,33 @@
+name: "Rectificación factual (ES)"
+description: "Informar de un posible error en un artículo de S-COMODO"
+title: "[Rectificación] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este informe es público. No incluyas datos personales, sensibles o confidenciales.
+  - type: input
+    id: articulo
+    attributes:
+      label: "URL del artículo"
+    validations:
+      required: true
+  - type: textarea
+    id: pasaje
+    attributes:
+      label: "Pasaje y motivo de la corrección"
+    validations:
+      required: true
+  - type: textarea
+    id: fuente
+    attributes:
+      label: "Fuente que respalda tu aviso"
+    validations:
+      required: false
+  - type: checkboxes
+    id: aviso
+    attributes:
+      label: "Confirmación"
+      options:
+        - label: "Entiendo que mi informe será público y no incluye información confidencial."
+          required: true

@@ -4,7 +4,7 @@ title: Home
 description: "S-COMODO, blog indipendente: il presente letto attraverso la storia con fonti verificabili."
 permalink: /
 ---
-<div class="language-feature"><span>READ S-COMODO IN ENGLISH</span><a href="{{ '/en/' | relative_url }}" lang="en">Explore the English edition →</a></div>
+<div class="language-feature"><span>EDIZIONI INTERNAZIONALI</span><div class="language-feature-links"><a href="{{ '/en/' | relative_url }}" lang="en">English edition →</a><a href="{{ '/es/' | relative_url }}" lang="es">Edición en español →</a></div></div>
 <section class="home-heading" aria-label="Presentazione del blog">
   <p class="section-tag">STORIA · IDEE · FATTI</p>
   <p>Il presente ha una storia. Noi la cerchiamo.</p>
@@ -14,7 +14,7 @@ permalink: /
 <section class="home-archive home-published" aria-labelledby="published-title">
   <div class="section-heading"><div><p class="section-tag">ARTICOLI PUBBLICATI</p><h2 id="published-title">Da leggere</h2></div><a href="{{ '/archivio/' | relative_url }}">Tutto l’archivio ↗</a></div>
   <div class="home-editorial-grid">
-    {% for post in published_posts limit:7 %}
+    {% for post in published_posts limit:9 %}
     <article class="home-editorial-card">
       {% if post.image %}
       <a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></a>
@@ -25,7 +25,7 @@ permalink: /
         <span class="type-cover-bottom">LE VOCI DI UN PAESE</span>
       </a>
       {% endif %}
-      <div class="story-state"><a class="category-link" href="{{ '/temi/' | relative_url }}#{{ post.topic_id | escape }}">{{ post.rubrica | upcase | escape }}</a>{% if post.lang == 'en' %} <span aria-hidden="true">·</span> EN{% endif %}</div>
+      <div class="story-state"><a class="category-link" href="{{ '/temi/' | relative_url }}#{{ post.topic_id | escape }}">{{ post.rubrica | upcase | escape }}</a>{% if post.lang == 'en' or post.lang == 'es' %} <span aria-hidden="true">·</span> {{ post.lang | upcase }}{% endif %}</div>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
       <p>{{ post.subtitle | escape | truncatewords: 32 }}</p>
       <span class="card-foot">{{ post.author | default: site.author_label }} · {{ post.date | date: '%d.%m.%Y' }}</span>

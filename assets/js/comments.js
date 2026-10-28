@@ -15,12 +15,13 @@
   trigger.addEventListener("click", function () {
     if (trigger.disabled) return;
     trigger.disabled = true;
-    status.textContent = section.getAttribute("data-comment-lang") === "en" ? "Loading comments…" : "Caricamento dei commenti…";
+    status.textContent = section.getAttribute("data-comment-lang") === "es" ? "Cargando comentarios…" : (section.getAttribute("data-comment-lang") === "en" ? "Loading comments…" : "Caricamento dei commenti…");
     box.hidden = false;
     var pageUrl = section.getAttribute("data-comment-page") || window.location.href.split(/[?#]/)[0];
 
     var isEnglish = section.getAttribute("data-comment-lang") === "en";
-    var ui = isEnglish ? {
+    var isSpanish = section.getAttribute("data-comment-lang") === "es";
+    var ui = isSpanish ? {"comments_header":"Comentarios","name_label":"Nombre","content_label":"Escribe tu comentario","submit":"Publicar","no_comments_msg":"Todavía no hay comentarios. ¡Inicia la conversación!","add":"Añadir comentario","again":"Escribir otro comentario","anonymous":"Anónimo","reply":"Responder","flag":"Denunciar","like":"Me gusta","said":"dijo:","showing":"Mostrando","to":"a","days_ago":"días atrás","hours_ago":"horas atrás","minutes_ago":"minutos atrás","within_the_last_minute":"hace menos de un minuto","msg_thankyou":"¡Gracias por tu comentario!","msg_approval":"Tu comentario está pendiente de revisión.","msg_approval_required":"El comentario aparecerá después de los controles del servicio.","err_bad_html":"El comentario contiene HTML no permitido.","err_bad_email":"Correo electrónico no válido.","err_too_frequent":"Espera unos segundos antes de comentar.","err_comment_empty":"Escribe un mensaje antes de publicarlo.","err_denied":"No se ha aceptado el comentario.","err_unknown":"El comentario fue bloqueado. Inténtalo más tarde.","err_spam":"Mensaje detectado como spam.","err_blocked":"El servicio ha bloqueado este mensaje."} : isEnglish ? {
       comments_header: "Comments",
       name_label: "Name",
       content_label: "Write your comment",
@@ -103,7 +104,7 @@
       if (prompt) prompt.hidden = true;
     };
     script.onerror = function () {
-      status.textContent = isEnglish ? "Comments are unavailable right now. Please try again." : "I commenti non sono disponibili al momento. Controlla la connessione o riprova.";
+      status.textContent = isSpanish ? "Los comentarios no están disponibles ahora. Inténtalo más tarde." : (isEnglish ? "Comments are unavailable right now. Please try again." : "I commenti non sono disponibili al momento. Controlla la connessione o riprova.");
       trigger.disabled = false;
       box.hidden = true;
     };
