@@ -20,9 +20,9 @@ permalink: /
       <a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></a>
       {% else %}
       <a href="{{ post.url | relative_url }}" class="home-editorial-image home-editorial-image--type" aria-label="Leggi {{ post.title | escape }}">
-        <span class="type-cover-top">STORIA · CULTURA · MEMORIA</span>
-        <span class="type-cover-main">{{ post.cover_word | default: 'PARAGUAY' | escape }}</span>
-        <span class="type-cover-bottom">LE VOCI DI UN PAESE</span>
+        <span class="type-cover-top">STORIE · IDEE · FATTI</span>
+        <span class="type-cover-main">{{ post.cover_word | default: 'S-COMODO' | escape }}</span>
+        <span class="type-cover-bottom">IL PRESENTE HA UNA STORIA</span>
       </a>
       {% endif %}
       <div class="story-state"><a class="category-link" href="{{ '/temi/' | relative_url }}#{{ post.topic_id | escape }}">{{ post.rubrica | upcase | escape }}</a>{% if post.lang == 'en' or post.lang == 'es' %} <span aria-hidden="true">·</span> {{ post.lang | upcase }}{% endif %}</div>
