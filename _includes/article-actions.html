@@ -1,0 +1,11 @@
+<section class="article-actions" aria-label="{% if page.lang == 'es' %}Compartir el artículo{% elsif page.lang == 'en' %}Share this article{% else %}Condividi l'articolo{% endif %}" data-article-actions data-share-url="{{ page.url | absolute_url | escape }}" data-share-title="{{ page.title | escape }}" data-share-lang="{{ page.lang | default: site.lang }}">
+  <h2>{% if page.lang == 'es' %}¿Te ha interesado esta lectura?{% elsif page.lang == 'en' %}Was this worth sharing?{% else %}Ti è sembrata una lettura interessante?{% endif %}</h2>
+  <p>{% if page.lang == 'es' %}Comparte el artículo o deja tu opinión en los comentarios.{% elsif page.lang == 'en' %}Share the article or join the conversation below.{% else %}Condividi l'articolo oppure raccontaci cosa ne pensi nei commenti.{% endif %}</p>
+  <div class="article-actions-row">
+    <button type="button" class="article-share-button article-share-primary" data-share-button><span aria-hidden="true">↗</span> {% if page.lang == 'es' %}Compartir artículo{% elsif page.lang == 'en' %}Share article{% else %}Condividi articolo{% endif %}</button>
+    <button type="button" class="article-share-button" data-copy-button><span aria-hidden="true">⧉</span> {% if page.lang == 'es' %}Copiar enlace{% elsif page.lang == 'en' %}Copy link{% else %}Copia link{% endif %}</button>
+    <a class="article-actions-comment" href="#commenti">{% if page.lang == 'es' %}Ir a los comentarios{% elsif page.lang == 'en' %}Join the discussion{% else %}Vai ai commenti{% endif %} ↓</a>
+  </div>
+  <p class="article-share-status" role="status" aria-live="polite" data-share-status></p>
+</section>
+<script src="{{ '/assets/js/article-actions.js' | relative_url }}" defer></script>
