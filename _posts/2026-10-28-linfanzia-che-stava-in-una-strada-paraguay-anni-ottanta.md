@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "L’infanzia che stava in una strada: Paraguay negli anni Ottanta"
+title: "L’infanzia che stava tutta in una strada: Paraguay negli anni Ottanta"
 subtitle: "La hondita, gli amici, la Settimana Santa, il Natale e una nonna che sembrava sostenere il mondo. Ricordi di un’infanzia libera, imperfetta e profondamente familiare."
 description: "L’infanzia paraguayana negli anni Ottanta: amici, giochi in strada, lavoro al mercato, Settimana Santa, Natale e una nonna al centro della famiglia."
 date: 2026-10-28
