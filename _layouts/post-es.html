@@ -11,6 +11,11 @@ layout: default
 {% if page.image %}<figure class="article-image"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>Ilustración editorial digital original. No es una fotografía documental ni un fotograma de una serie.</figcaption></figure>{% endif %}
 </header>
 <div class="article-body">{{ content }}</div>
+{% if page.translation_url %}
+<nav class="article-translation" aria-label="Artículo en otro idioma">
+<span>Lee este artículo también en</span> <a href="{{ page.translation_url | relative_url }}" hreflang="{{ page.translation_lang | escape }}" lang="{{ page.translation_lang | escape }}">{% if page.translation_lang == 'it' %}Italiano{% elsif page.translation_lang == 'en' %}English{% else %}Español{% endif %} ↗</a>
+</nav>
+{% endif %}
 {% include article-actions.html %}
 {% if page.sources %}<section class="sources" aria-label="Fuentes y referencias"><h2>Fuentes y referencias</h2><ol>{% for s in page.sources %}<li id="fonte-{{ forloop.index }}">{{ s.author | escape }}, <em>{{ s.title | escape }}</em>{% if s.publisher %}, {{ s.publisher | escape }}{% endif %}{% if s.date %}, {{ s.date | escape }}{% endif %}.{% if s.accessed %} Consultado el {{ s.accessed | escape }}.{% endif %} {% if s.url %}<a href="{{ s.url | escape }}" rel="noopener noreferrer" target="_blank">Consultar la fuente ↗</a>{% endif %}</li>{% endfor %}</ol></section>{% endif %}
 <section class="ai-notice"><h2>Transparencia editorial</h2><p>{{ page.ai_disclosure | default: 'Texto preparado con asistencia de IA y aprobado mediante revisión editorial humana.' }}</p></section>

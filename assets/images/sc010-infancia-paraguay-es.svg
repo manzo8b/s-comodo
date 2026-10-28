@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">INFANCIA EN PARAGUAY · AÑOS OCHENTA</title><desc id="d">Illustrazione concettuale di una strada paraguayana degli anni Ottanta, con mercato e cortile familiare. Non raffigura persone o luoghi reali.</desc>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e4c9a1"/><stop offset=".75" stop-color="#f5e1b9"/><stop offset="1" stop-color="#ecd2a2"/></linearGradient><linearGradient id="road" x1="0" y1="0" x2=".3" y2="1"><stop stop-color="#d1a275"/><stop offset="1" stop-color="#966d58"/></linearGradient><linearGradient id="shadow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#455b51"/><stop offset="1" stop-color="#253b3d"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<!-- symbolic neighbourhood: no precise street or known people -->
+<path d="M0 265L340 230l130 427L0 743Z" fill="#c8a280"/><path d="M40 315L225 299l28 288L0 608Z" fill="#e4d4ad"/><path d="M266 300l172 4 53 296-208 15Z" fill="#a9a580"/>
+<path d="M1600 243L1282 221l-195 434 513 86Z" fill="#e1ba86"/><path d="M1539 322l-168-22-60 290 289 51Z" fill="#c38162"/><path d="M1270 280l-155 23-50 285 170 10Z" fill="#9aa17f"/>
+<path d="M415 524L652 423l344-18 242 133L1600 849H0Z" fill="url(#road)"/>
+<path d="M790 446L0 866M792 446l808 410" stroke="#e7bd8d" stroke-width="10" fill="none" opacity=".65"/>
+<path d="M0 740q340-71 579-48M1123 698q235-48 477 14" stroke="#a88164" stroke-width="8" fill="none" opacity=".75"/>
+<!-- doors, windows, tiny market scales -->
+<path d="M31 415l124-12 12 194-153 16Z" fill="#575d4b"/><path d="M277 399l93 7 12 169-118 10Z" fill="#5b5c45"/>
+<path d="M1453 418l101 7v180l-140-23Z" fill="#575f50"/>
+<path d="M1308 352h80v119h-87Z" fill="#eedcb6" stroke="#785948" stroke-width="8"/>
+<path d="M1090 377h80v105h-85Z" fill="#e9dcbb" stroke="#725a48" stroke-width="8"/>
+<path d="M225 263l110-70 100 35" fill="none" stroke="#99795a" stroke-width="10"/>
+<!-- paraguayan market stall with sacks: entirely generic, no real shop -->
+<path d="M53 473l300-17 12 30-310 19Z" fill="#d4a36d"/>
+<path d="M64 450l18-62 245-15 22 76Z" fill="#ead2a4" stroke="#925e4f" stroke-width="7"/>
+<g fill="#f5e2bb" stroke="#967861" stroke-width="5"><path d="M88 489l53-8 14 65-74 8Z"/><path d="M155 484l59-6 15 69-70 6Z"/><path d="M233 482l57-8 15 70-64 6Z"/></g>
+<g fill="#b6815d"><circle cx="271" cy="466" r="17"/><path d="M271 483l-19 58h47Z"/></g>
+<!-- carrying groceries suggested by a suspended basket, not a biographical scene -->
+<path d="M680 593l92-8-18 71h-50Z" fill="#c09865" stroke="#765c45" stroke-width="6"/>
+<path d="M703 595q-10-49 21-51t34 45" stroke="#765c45" stroke-width="6" fill="none"/>
+<path d="M703 594h65" stroke="#f5dbb2" stroke-width="4"/>
+<!-- shadow of a front porch and human presence only as abstract silhouettes -->
+<path d="M1403 384q-91 15-149 82t-73 176l224 20Z" fill="#60755c" opacity=".4"/>
+<g fill="#4c6658"><circle cx="1375" cy="560" r="24"/><path d="M1341 590q34-28 68 0l25 110h-119Z"/></g>
+<path d="M1344 693l-25 82M1404 686l22 87" stroke="#4c6658" stroke-width="14" stroke-linecap="round"/>
+<!-- shaded tree -->
+<path d="M904 467l-22 235" stroke="#745b42" stroke-width="24"/>
+<g fill="#65835c"><circle cx="883" cy="353" r="87"/><circle cx="944" cy="387" r="70"/><circle cx="805" cy="397" r="68"/><circle cx="846" cy="325" r="62"/></g>
+<path d="M890 491l-41-85M889 493l48-86" stroke="#745b42" stroke-width="11"/>
+<!-- editorial banner -->
+<rect y="772" width="1600" height="128" fill="url(#shadow)"/>
+<path d="M40 796h1520" stroke="#dba972" stroke-width="6"/>
+<text x="50" y="842" font-family="Arial,sans-serif" font-weight="700" font-size="28" fill="#f8eee3" letter-spacing="4">S-COMODO.</text>
+<text x="50" y="879" font-family="Arial,sans-serif" font-size="19" fill="#e7cba6" letter-spacing="2.5">INFANCIA EN PARAGUAY · AÑOS OCHENTA</text>
+<text x="1549" y="852" text-anchor="end" font-family="Georgia,serif" font-style="italic" font-size="30" fill="#fff0db">Memoria · Familia · Tiempo</text>
+</svg>
