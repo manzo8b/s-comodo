@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="956" viewBox="0 0 900 956" role="img" aria-label="UN PAESE, CINQUE GEOGRAFIE"><title>UN PAESE, CINQUE GEOGRAFIE</title><style>text{font-family:DejaVu Sans,Arial,sans-serif}</style><rect x="0" y="0" width="900" height="956" rx="0" fill="#f7f1e9"/>
+<rect x="0" y="0" width="900" height="11" rx="0" fill="#a52f38"/>
+<text x="48" y="56" fill="#a52f38"  font-size="19" font-weight="800" text-anchor="start" letter-spacing="2.3">S-COMODO.   /   DATA DESK</text>
+<text x="48" y="119" fill="#242326"  font-size="37" font-weight="750" text-anchor="start">UN PAESE, CINQUE GEOGRAFIE</text>
+<text x="48" y="158" fill="#635d57"  font-size="20" font-weight="400" text-anchor="start">Ballottaggio • percentuali dei voti validi per regione</text>
+<rect x="48" y="202" width="18" height="18" rx="3" fill="#a52f38"/>
+<text x="75" y="220" fill="#242326"  font-size="22" font-weight="700" text-anchor="start">Lula</text>
+<rect x="206" y="202" width="18" height="18" rx="3" fill="#283d50"/>
+<text x="234" y="220" fill="#242326"  font-size="22" font-weight="700" text-anchor="start">Flávio Bolsonaro</text>
+<text x="48" y="268" fill="#242326"  font-size="25" font-weight="750" text-anchor="start">Nordest</text>
+<rect x="48" y="287" width="557.7348000000001" height="31" rx="0" fill="#a52f38"/>
+<rect x="605.7348000000001" y="287" width="246.2652" height="31" rx="0" fill="#283d50"/>
+<text x="49" y="344" fill="#a52f38"  font-size="20" font-weight="700" text-anchor="start">69,37% Lula</text>
+<text x="851" y="344" fill="#283d50"  font-size="20" font-weight="700" text-anchor="end">30,63% Flávio</text>
+<text x="48" y="380" fill="#242326"  font-size="25" font-weight="750" text-anchor="start">Nord</text>
+<rect x="48" y="399" width="402.0804" height="31" rx="0" fill="#a52f38"/>
+<rect x="450.0804" y="399" width="401.9196" height="31" rx="0" fill="#283d50"/>
+<text x="49" y="456" fill="#a52f38"  font-size="20" font-weight="700" text-anchor="start">50,01% Lula</text>
+<text x="851" y="456" fill="#283d50"  font-size="20" font-weight="700" text-anchor="end">49,99% Flávio</text>
+<text x="48" y="492" fill="#242326"  font-size="25" font-weight="750" text-anchor="start">Sudest</text>
+<rect x="48" y="511" width="379.8096" height="31" rx="0" fill="#a52f38"/>
+<rect x="427.8096" y="511" width="424.1904" height="31" rx="0" fill="#283d50"/>
+<text x="49" y="568" fill="#a52f38"  font-size="20" font-weight="700" text-anchor="start">47,24% Lula</text>
+<text x="851" y="568" fill="#283d50"  font-size="20" font-weight="700" text-anchor="end">52,76% Flávio</text>
+<text x="48" y="604" fill="#242326"  font-size="25" font-weight="750" text-anchor="start">Sud</text>
+<rect x="48" y="623" width="300.8568" height="31" rx="0" fill="#a52f38"/>
+<rect x="348.8568" y="623" width="503.1432" height="31" rx="0" fill="#283d50"/>
+<text x="49" y="680" fill="#a52f38"  font-size="20" font-weight="700" text-anchor="start">37,42% Lula</text>
+<text x="851" y="680" fill="#283d50"  font-size="20" font-weight="700" text-anchor="end">62,58% Flávio</text>
+<text x="48" y="716" fill="#242326"  font-size="25" font-weight="750" text-anchor="start">Centro-Ovest</text>
+<rect x="48" y="735" width="321.5196" height="31" rx="0" fill="#a52f38"/>
+<rect x="369.5196" y="735" width="482.48040000000003" height="31" rx="0" fill="#283d50"/>
+<text x="49" y="792" fill="#a52f38"  font-size="20" font-weight="700" text-anchor="start">39,99% Lula</text>
+<text x="851" y="792" fill="#283d50"  font-size="20" font-weight="700" text-anchor="end">60,01% Flávio</text>
+<text x="48" y="866" fill="#635d57"  font-size="18" font-weight="400" text-anchor="start">Ogni barra somma il 100% dei voti validi nella singola regione.</text>
+<line x1="48" y1="889" x2="852" y2="889" stroke="#d6cbc0" stroke-width="2"/>
+<text x="48" y="920" fill="#635d57"  font-size="17" font-weight="400" text-anchor="start">Fonte: dati TSE aggregati da Vototeca • dossier, fonte 11  •  28.10.2026</text>
+<text x="853" y="920" fill="#a52f38"  font-size="16" font-weight="750" text-anchor="end">SC011 / 04</text></svg>
