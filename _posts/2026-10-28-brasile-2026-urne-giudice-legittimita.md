@@ -18,8 +18,8 @@ reviewed: true
 ai_assisted: true
 ai_disclosure: "Inchiesta elaborata con il supporto dell’intelligenza artificiale, basata su atti, statistiche e fonti giornalistiche elencate. Le sei infografiche sono elaborazioni originali; la redazione distingue fatti, ipotesi e giudizi. Versione approvata dal curatore editoriale il 28 ottobre 2026; restano dichiarati i limiti delle verifiche, con possibilità di rettifiche documentate."
 reading_minutes: 47
-image: null
-image_alt: ''
+image: /assets/images/sc011-brasile-voto-e-giustizia.svg
+image_alt: "Illustrazione editoriale del Brasile con bandiera, profilo di Rio de Janeiro e urna elettronica: rappresentazione simbolica, non una fotografia di un evento reale."
 corrections: []
 sources:
 - author: Tribunal Superior Eleitoral
