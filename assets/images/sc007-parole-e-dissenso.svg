@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">Se non sei d'accordo, sei fascista: parole e dissenso</title>
+<desc id="d">Illustrazione concettuale di due podi con microfoni che si fronteggiano, due grandi fumetti senza parole e una piccola linea che li collega. Non rappresenta persone o manifestazioni reali.</desc>
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f0e3"/><stop offset="1" stop-color="#dcd0c0"/></linearGradient>
+<linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#36434a"/><stop offset="1" stop-color="#15232a"/></linearGradient>
+<linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d33d4a"/><stop offset="1" stop-color="#901c31"/></linearGradient>
+<pattern id="grain" width="38" height="37" patternUnits="userSpaceOnUse"><path d="M5 7l2 3M22 29l3-1M33 14l2 1" stroke="#4b4541" stroke-width="1" opacity=".18" fill="none"/></pattern>
+<filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="13"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#paper)"/>
+<path d="M0 0h750l-110 900H0Z" fill="#ece2d2"/>
+<path d="M870 0h730v900H945Z" fill="#e3d7c7"/>
+<path d="M760 0h90l-35 900h-30Z" fill="#fcf6e9"/>
+<rect width="1600" height="900" fill="url(#grain)"/>
+<!-- giant abstract disagreement bubbles, not quotations -->
+<path d="M150 122Q150 70 210 70H606Q690 70 690 160V276Q690 345 613 345H500L459 401L447 345H216Q150 345 150 277Z" fill="url(#red)"/>
+<path d="M203 146h442M204 197h353M204 246h395" stroke="#f8ece0" stroke-width="20" stroke-linecap="round" opacity=".91"/>
+<path d="M908 98Q908 55 975 55H1360Q1438 55 1438 126V269Q1438 330 1367 330H1185L1140 387L1120 330H980Q908 330 908 273Z" fill="url(#ink)"/>
+<path d="M959 142h430M959 192h355M959 242h396" stroke="#f8ece0" stroke-width="20" stroke-linecap="round" opacity=".89"/>
+<!-- balanced opposing lecterns -->
+<g transform="translate(160 405)">
+ <ellipse cx="250" cy="407" rx="215" ry="42" fill="#18252a" opacity=".18" filter="url(#blur)"/>
+ <path d="M65 157l355-46v78l-355 43Z" fill="#54514b" stroke="#253137" stroke-width="8"/>
+ <path d="M135 230l218-32-27 234H168Z" fill="url(#ink)" stroke="#1a262b" stroke-width="7"/>
+ <path d="M171 263l160-22M176 301l145-22" stroke="#808882" stroke-width="5"/>
+ <path d="M229 129Q180 20 271 36Q344 46 313 124" fill="none" stroke="#27343a" stroke-width="20"/>
+ <path d="M318 50q45-38 76 21" fill="none" stroke="#27343a" stroke-width="12"/>
+ <rect x="368" y="62" width="83" height="59" rx="22" fill="#25343a" stroke="#96a6a2" stroke-width="6"/>
+ <path d="M453 91l84 1" stroke="#b82337" stroke-width="8"/>
+</g>
+<g transform="translate(1440 405) scale(-1 1)">
+ <ellipse cx="250" cy="407" rx="215" ry="42" fill="#18252a" opacity=".18" filter="url(#blur)"/>
+ <path d="M65 157l355-46v78l-355 43Z" fill="#54514b" stroke="#253137" stroke-width="8"/>
+ <path d="M135 230l218-32-27 234H168Z" fill="url(#ink)" stroke="#1a262b" stroke-width="7"/>
+ <path d="M171 263l160-22M176 301l145-22" stroke="#808882" stroke-width="5"/>
+ <path d="M229 129Q180 20 271 36Q344 46 313 124" fill="none" stroke="#27343a" stroke-width="20"/>
+ <path d="M318 50q45-38 76 21" fill="none" stroke="#27343a" stroke-width="12"/>
+ <rect x="368" y="62" width="83" height="59" rx="22" fill="#25343a" stroke="#96a6a2" stroke-width="6"/>
+ <path d="M453 91l84 1" stroke="#b82337" stroke-width="8"/>
+</g>
+<!-- fragile connecting line = the possibility of dialogue -->
+<path d="M677 500q59-35 119 0t126 0" stroke="#a62332" stroke-width="9" fill="none" stroke-linecap="round"/>
+<circle cx="800" cy="503" r="28" stroke="#ac2636" stroke-width="3" fill="#eadfce"/>
+<circle cx="800" cy="503" r="8" fill="#a62332"/>
+<rect y="789" width="1600" height="111" fill="#1c2a30"/>
+<path d="M43 811H1557" stroke="#ba283b" stroke-width="6"/>
+<text x="51" y="849" fill="#fff7ed" font-family="Arial, sans-serif" font-size="27" font-weight="700" letter-spacing="4">S-COMODO.</text>
+<text x="52" y="876" fill="#dfbcb1" font-family="Arial,sans-serif" font-size="18" letter-spacing="2.5">DEMOCRAZIA E DIRITTI</text>
+<text x="1549" y="852" text-anchor="end" fill="#eee1d5" font-family="Georgia,serif" font-size="27" font-style="italic">Il dissenso non è un reato</text>
+</svg>
