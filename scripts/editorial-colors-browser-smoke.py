@@ -16,7 +16,7 @@ with sync_playwright() as p:
             assert page.locator(".site-masthead").count() == 1, route
             assert page.locator("main").count() == 1, route
             assert page.locator('a[href="mailto:marcelo2020.it@gmail.com"]').count() >= 1, route
-            assert page.locator("a.manzo-footer-credit").count() == 0, "footer structure changed?"
+            assert page.locator(".manzo-footer-credit img").count() == 1, "Brand-footer image missing"
             color = page.locator(".site-masthead").evaluate("(e)=>getComputedStyle(e).borderBottomColor")
             assert color == "rgb(12, 97, 93)", (route, color)
         page.goto(BASE + "/", wait_until="domcontentloaded")
@@ -26,7 +26,7 @@ with sync_playwright() as p:
         assert len(set(borders)) >= 3, borders
         link = page.locator(".site-navigation .site-links a").first
         assert link.is_visible()
-        page.locator("link[href*='editorial-colors.css']").count() == 1
+        assert page.locator("link[href*='editorial-colors.css']").count() == 1
         assert not errors, errors
 
         mobile = browser.new_page(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True)
