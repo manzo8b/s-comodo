@@ -140,3 +140,14 @@ main{min-height:50vh}h1,h2,h3{line-height:1.14;letter-spacing:-.04em}h1{font-siz
 .article-share-status:empty{display:none}
 @media(max-width:680px){.article-actions-row{display:grid;grid-template-columns:1fr 1fr}.article-share-button{padding-inline:10px}.article-actions-comment{grid-column:1/-1;margin:0}}
 @media(max-width:360px){.article-actions-row{grid-template-columns:1fr}.article-actions-comment{grid-column:auto}}
+
+
+/* MANZO AI ecosystem signature: editorial independence stays explicit. */
+.manzo-footer-credit{grid-column:1/-1;border-top:1px solid #494949;padding-top:18px;margin-top:2px}
+.manzo-footer-credit a{display:inline-flex;align-items:center;gap:10px;min-height:46px;color:#FFFFFF;text-decoration:none;font:600 12px/1.5 Arial,Helvetica,sans-serif;max-width:300px;border-radius:8px;padding:5px 9px;border:1px solid #555;background:#252525}
+.manzo-footer-credit a:hover{border-color:#c4c4c4;background:#333;color:#fff}
+.manzo-footer-credit a:focus-visible{outline:3px solid #FFFFFF;outline-offset:3px}
+.manzo-footer-credit img{width:34px;height:33px;object-fit:contain;flex-shrink:0;filter:invert(1)}
+.manzo-footer-credit span{display:block;color:#e6e6e6}
+@media(max-width:680px){.manzo-footer-credit{margin-top:8px;padding-top:16px}.manzo-footer-credit a{max-width:100%}}
+@media print{.manzo-footer-credit{display:none}}

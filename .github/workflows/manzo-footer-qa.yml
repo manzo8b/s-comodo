@@ -1,0 +1,36 @@
+name: MANZO AI Footer QA — S-COMODO
+on:
+  pull_request:
+    paths:
+      - '_layouts/default.html'
+      - 'assets/css/main.css'
+      - 'assets/images/manzo-ai-mark.svg'
+      - '.github/workflows/manzo-footer-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - run: python3 scripts/check_publication.py
+      - run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+      - name: Validate independent editorial footer signature IT/ES/EN
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s _site/assets/images/manzo-ai-mark.svg
+          for page in _site/index.html _site/es/index.html _site/en/index.html; do
+            test -s "$page"
+            grep -q 'class="manzo-footer-credit"' "$page"
+            grep -q 'manzo-ai-mark.svg' "$page"
+          done
+          grep -q 'MANZO AI' _site/index.html
