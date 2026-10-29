@@ -19,6 +19,7 @@
 <a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
 <header class="site-header"><div class="container">
 <div class="site-meta"><span>{% if is_spanish %}REVISTA INDEPENDIENTE{% elsif is_english %}INDEPENDENT JOURNAL{% else %}BLOG INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
+<div class="editorial-contact-strip"><a href="mailto:marcelo2020.it@gmail.com" aria-label="{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact and services{% else %}Contatti e servizi{% endif %}: marcelo2020.it@gmail.com"><span>{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact &amp; services{% else %}Contatti e servizi{% endif %}</span><strong>marcelo2020.it@gmail.com</strong></a></div>
 <div class="site-masthead"><a class="site-logo" href="{% if is_spanish %}{{ '/es/' | relative_url }}{% elsif is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage"><span>S-</span>COMODO</a></div>
 <nav class="site-navigation" aria-label="{% if is_spanish %}Navegación principal{% elsif is_english %}Main navigation{% else %}Menu principale{% endif %}">
 <div class="site-links">
