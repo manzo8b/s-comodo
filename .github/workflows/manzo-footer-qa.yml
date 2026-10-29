@@ -32,5 +32,7 @@ jobs:
             test -s "$page"
             grep -q 'class="manzo-footer-credit"' "$page"
             grep -q 'manzo-ai-mark.svg' "$page"
+            grep -q 'mailto:marcelo2020.it@gmail.com' "$page"
+            grep -q 'editorial-contact-strip' "$page"
           done
           grep -q 'MANZO AI' _site/index.html
