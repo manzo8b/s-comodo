@@ -1,0 +1,78 @@
+name: S-COMODO Editorial Colors QA
+
+on:
+  pull_request:
+    paths:
+      - 'assets/css/editorial-colors.css'
+      - '_layouts/default.html'
+      - 'scripts/editorial-colors-browser-smoke.py'
+      - '.github/workflows/editorial-colors-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Existing publication policy
+        run: python3 scripts/check_publication.py
+      - name: Build IT, ES and EN static website
+        run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+      - name: Check printed sources, email, signature and new CSS
+        shell: bash
+        run: |
+          set -euo pipefail
+          for p in _site/index.html _site/es/index.html _site/en/index.html; do
+            test -s "$p"
+            grep -q editorial-colors.css "$p"
+            grep -q 'mailto:marcelo2020.it@gmail.com' "$p"
+            grep -q 'manzo-footer-credit' "$p"
+          done
+          test -s _site/assets/css/editorial-colors.css
+          test -s _site/assets/images/manzo-ai-mark.svg
+      - name: WCAG AA color semantics and layout-safety check
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          css = Path('assets/css/editorial-colors.css').read_text()
+          assert css.count('{') == css.count('}')
+          def lum(color):
+              v=[int(color[i:i+2],16)/255 for i in (1,3,5)]
+              v=[x/12.92 if x<=.04045 else ((x+.055)/1.055)**2.4 for x in v]
+              return .2126*v[0]+.7152*v[1]+.0722*v[2]
+          def contrast(a,b):
+              x,y=lum(a),lum(b)
+              return (max(x,y)+.05)/(min(x,y)+.05)
+          for color in ('#A62332','#244F9B','#0C615D','#B13F28','#67439A','#7B4B10'):
+              assert contrast(color,'#FFFFFF')>=4.5,color
+              assert contrast(color,'#FFFAF5')>=4.5,color
+          for section in ('.site-masthead','.site-links a','.home-editorial-card','.topic-section','.article-body','.sources','.ai-notice','.reader-feedback','.comment-privacy-prompt','.article-share-primary','.site-footer','@media print','prefers-reduced-motion'):
+              assert section in css,section
+          print("Editorial contrast and stylesheet safety PASS")
+          PY
+      - name: Install Chromium smoke dependencies
+        run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+      - name: Browser smoke — desktop, IT ES EN, mobile
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .preview
+          ln -s "$GITHUB_WORKSPACE/_site" .preview/s-comodo
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory .preview >/tmp/scomodo-preview.log 2>&1 &
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            curl -fsS http://127.0.0.1:8765/s-comodo/ >/dev/null && break
+            sleep 1
+          done
+          python3 scripts/editorial-colors-browser-smoke.py
