@@ -33,6 +33,10 @@ jobs:
             echo "::error::404 in sitemap"
             exit 1
           fi
+      - name: Validate Google Search Console verification file
+        run: |
+          test -s _site/googlee8540704606dd6ec.html
+          test "$(cat _site/googlee8540704606dd6ec.html)" = "google-site-verification: googlee8540704606dd6ec.html"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
