@@ -1,0 +1,46 @@
+name: Public SEO QA — S-COMODO
+on:
+  pull_request:
+    paths:
+      - '_layouts/default.html'
+      - 'sitemap.xml'
+      - '.github/workflows/pages.yml'
+      - '.github/workflows/seo-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Editorial publication gate
+        run: python3 scripts/check_publication.py
+      - name: Build Jekyll production site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace
+      - name: Validate generated SEO
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          sm=Path('_site/sitemap.xml')
+          assert sm.is_file(), 'Sitemap missing'
+          root=ET.parse(sm).getroot()
+          ns={'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[x.text for x in root.findall('sm:url/sm:loc',ns)]
+          assert len(urls)>12, f'Unexpected sitemap size: {len(urls)}'
+          assert len(urls)==len(set(urls)), 'Duplicate sitemap entries'
+          assert all(u.startswith('https://manzo8b.github.io/s-comodo/') for u in urls)
+          assert not any('/404' in u or 'sitemap.xml' in u for u in urls)
+          home=Path('_site/index.html').read_text()
+          assert '<link rel="canonical"' in home
+          missing=Path('_site/404.html').read_text()
+          assert 'noindex,follow' in missing
+          print('S-COMODO SEO QA passed:',len(urls),'URLs')
+          PY
