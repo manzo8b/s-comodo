@@ -161,3 +161,11 @@ main{min-height:50vh}h1,h2,h3{line-height:1.14;letter-spacing:-.04em}h1{font-siz
 .editorial-contact-strip a:focus-visible{outline:3px solid #B13F28;outline-offset:3px}
 @media(max-width:680px){.editorial-contact-strip{justify-content:center;padding:8px}.editorial-contact-strip a{justify-content:center;font-size:11px}}
 @media print{.editorial-contact-strip{display:none!important}}
+
+/* Dossier infografiche e tabelle: lettura accessibile su mobile */
+.article-body table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;font:15px/1.55 Arial,sans-serif;margin:22px 0 28px;-webkit-overflow-scrolling:touch}
+.article-body th,.article-body td{border:1px solid #d5d0c7;padding:12px 14px;text-align:left;vertical-align:top;min-width:150px}
+.article-body th{background:#f5f0e9;color:#282728;font-weight:700}
+.article-body tr:nth-child(even) td{background:#fbfaf7}
+.article-body img{width:100%;height:auto;border-radius:5px}
+@media(max-width:680px){.article-body table{font-size:14px}.article-body th,.article-body td{min-width:145px;padding:10px}}

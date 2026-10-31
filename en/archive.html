@@ -10,7 +10,7 @@ permalink: /en/archive/
 <h1>Archive</h1>
 <p>Essays and historical reflections, newest first.</p>
 <div class="list-articles">
-{% assign posts_en = site.posts | where: 'lang', 'en' %}
+{% assign posts_en = site.posts | where: 'lang', 'en' | sort: 'date' | reverse %}
 {% for p in posts_en %}
 <article class="article-teaser">
 <p class="card-meta">{{ p.date | date: '%d %B %Y' }} · <a href="{{ '/en/topics/' | relative_url }}#{{ p.topic_id | escape }}">{{ p.rubrica | escape }}</a></p>

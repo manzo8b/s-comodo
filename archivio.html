@@ -14,7 +14,8 @@ permalink: /archivio/
   <label for="query" class="lead-label">Cerca un articolo</label>
   <input class="search-box" id="query" type="search" placeholder="Cerca titolo, tema o parola...">
   <div class="list-articles" id="archive-list">
-    {% for p in site.posts %}
+    {% assign recent_posts = site.posts | where: 'editorial_status', 'pubblicato' | sort: 'date' | reverse %}
+    {% for p in recent_posts %}
       <article class="article-teaser" data-search="{{ p.title | append: ' ' | append: p.subtitle | append: ' ' | append: p.rubrica | downcase | escape }}">
         <p class="card-meta">{{ p.date | date: '%d/%m/%Y' }} · {{ p.lang | upcase }} · <a class="category-link" href="{{ '/temi/' | relative_url }}#{{ p.topic_id | escape }}">{{ p.rubrica | escape }}</a></p>
         <h2><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></h2>
@@ -22,7 +23,7 @@ permalink: /archivio/
       </article>
     {% endfor %}
   </div>
-  {% if site.posts.size == 0 %}<p class="empty-state">Nessun articolo pubblicato.</p>{% endif %}
+  {% if recent_posts.size == 0 %}<p class="empty-state">Nessun articolo pubblicato.</p>{% endif %}
 </div>
 <script>
 document.getElementById('query').addEventListener('input',function(){

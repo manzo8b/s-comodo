@@ -8,7 +8,7 @@ permalink: /en/topics/
 <div class="page-body topic-index"><p class="section-tag">S-COMODO · EXPLORE</p><h1>Topics</h1>
 <p>Categories are a way to find connected stories, not a substitute for context or evidence.</p>
 {% for topic in site.data.topics %}
-{% assign group = site.posts | where: 'topic_id', topic.id | where: 'lang', 'en' %}
+{% assign group = site.posts | where: 'topic_id', topic.id | where: 'lang', 'en' | sort: 'date' | reverse %}
 <section class="topic-section" id="{{ topic.id | escape }}">
 <p class="topic-en">{{ topic.label_it | escape }}</p><h2>{{ topic.label_en | escape }}</h2>
 {% if group.size > 0 %}

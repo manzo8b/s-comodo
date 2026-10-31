@@ -9,7 +9,7 @@ permalink: /temi/
   <h1>Temi</h1>
   <p>Le nostre categorie servono a esplorare storie e idee affini, non a chiuderle in etichette rigide. Ogni articolo conserva il proprio contesto e le proprie fonti.</p>
   {% for topic in site.data.topics %}
-    {% assign group = site.posts | where: 'topic_id', topic.id %}
+    {% assign group = site.posts | where: 'topic_id', topic.id | where: 'editorial_status', 'pubblicato' | sort: 'date' | reverse %}
     <section class="topic-section" id="{{ topic.id | escape }}" aria-labelledby="topic-heading-{{ topic.id | escape }}">
       <p class="topic-en">{{ topic.label_en | escape }}</p>
       <h2 id="topic-heading-{{ topic.id | escape }}">{{ topic.label_it | escape }}</h2>

@@ -11,7 +11,7 @@ permalink: /en/
 <p class="english-intro">The present has a history. We look for it. Independent essays connecting current questions with history, culture and reliable sources.</p>
 <div class="section-heading"><h2>Read in English</h2><a href="{{ '/en/archive/' | relative_url }}">All English articles ↗</a></div>
 <div class="home-editorial-grid english-grid">
-{% assign english_posts = site.posts | where: 'lang', 'en' %}
+{% assign english_posts = site.posts | where: 'lang', 'en' | sort: 'date' | reverse %}
 {% for post in english_posts %}
 <article class="home-editorial-card">
 {% if post.image %}<a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | escape }}" loading="lazy"></a>{% endif %}

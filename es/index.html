@@ -9,7 +9,7 @@ permalink: /es/
 <h1>Historias que merecen ser contadas</h1><p class="es-intro">El presente tiene una historia. Nosotros la investigamos. Ensayos independientes sobre democracia, sociedad y cultura, con fuentes que puedes consultar.</p>
 <div class="section-heading"><div><p class="section-tag">PUBLICACIONES</p><h2>Leer en español</h2></div><a href="{{ '/es/archivo/' | relative_url }}">Todo el archivo ↗</a></div>
 <div class="home-editorial-grid">
-{% assign spanish_posts = site.posts | where: 'lang', 'es' %}
+{% assign spanish_posts = site.posts | where: 'lang', 'es' | sort: 'date' | reverse %}
 {% for post in spanish_posts %}
 <article class="home-editorial-card">
 {% if post.image %}<a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></a>{% endif %}

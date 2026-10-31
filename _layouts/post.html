@@ -8,7 +8,7 @@ layout: default
 <header><p class="section-tag"><a class="category-link" href="{% if page.lang == 'en' %}{{ '/en/topics/' | relative_url }}{% else %}{{ '/temi/' | relative_url }}{% endif %}#{{ page.topic_id | escape }}">{{ page.rubrica | escape }}</a></p><h1>{{ page.title | escape }}</h1>
 {% if page.subtitle %}<p class="article-standfirst">{{ page.subtitle | escape }}</p>{% endif %}
 <p class="card-foot">{{ page.author | default: site.author_label }} · {% if page.lang == 'en' %}{{ page.date | date: '%d %B %Y' }}{% else %}{{ page.date | date: '%d/%m/%Y' }}{% endif %}</p>
-{% if page.image %}<figure class="article-image"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>{% if page.lang == 'en' %}AI-assisted editorial illustration — not a documentary photograph{% else %}Immagine illustrativa generata con intelligenza artificiale{% endif %}</figcaption></figure>{% endif %}</header>
+{% if page.image %}<figure class="article-image"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>{% if page.image_caption %}{{ page.image_caption | escape }}{% elsif page.lang == 'en' %}AI-assisted editorial illustration — not a documentary photograph{% else %}Immagine illustrativa generata con intelligenza artificiale{% endif %}</figcaption></figure>{% endif %}</header>
 <div class="article-body">{{ content }}</div>
 {% if page.translation_url %}
 <nav class="article-translation" aria-label="Versione in un'altra lingua">

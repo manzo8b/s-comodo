@@ -9,7 +9,7 @@ permalink: /
   <p class="section-tag">STORIA · IDEE · FATTI</p>
   <p>Il presente ha una storia. Noi la cerchiamo.</p>
 </section>
-{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' %}
+{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | sort: 'date' | reverse %}
 {% if published_posts.size > 0 %}
 <section class="home-archive home-published" aria-labelledby="published-title">
   <div class="section-heading"><div><p class="section-tag">ARTICOLI PUBBLICATI</p><h2 id="published-title">Da leggere</h2></div><a href="{{ '/archivio/' | relative_url }}">Tutto l’archivio ↗</a></div>
