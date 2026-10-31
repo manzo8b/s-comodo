@@ -11,7 +11,7 @@
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
 <meta property="og:description" content="{{ page.description | default: site.description | strip_html | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url | escape }}">
-<meta name="theme-color" content="#b81926">
+<meta name="theme-color" content="#faf8f3">
 <meta name="description" content="{{ page.description | default: site.description | strip_html | escape }}">
 <title>{% if page.title and page.title != 'Home' %}{{ page.title | escape }} | {% endif %}{{ site.title }}</title>
 {% if page.article_id == 'SC010' %}
@@ -20,13 +20,21 @@
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/editorial-colors.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/newspaper.css' | relative_url }}">
 </head>
 <body>
 <a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
 <header class="site-header"><div class="container">
 <div class="site-meta"><span>{% if is_spanish %}REVISTA INDEPENDIENTE{% elsif is_english %}INDEPENDENT JOURNAL{% else %}BLOG INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
 <div class="editorial-contact-strip"><a href="mailto:marcelo2020.it@gmail.com" aria-label="{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact and services{% else %}Contatti e servizi{% endif %}: marcelo2020.it@gmail.com"><span>{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact &amp; services{% else %}Contatti e servizi{% endif %}</span><strong>marcelo2020.it@gmail.com</strong></a></div>
-<div class="site-masthead"><a class="site-logo" href="{% if is_spanish %}{{ '/es/' | relative_url }}{% elsif is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage"><span>S-</span>COMODO</a></div>
+<div class="site-masthead" role="banner">
+  <div class="masthead-side masthead-side--left" aria-hidden="true"><span>INCHIESTE</span><span>ANALISI</span><span>CONTESTO</span><span>STORIA</span></div>
+  <div class="masthead-center">
+    <a class="site-logo" href="{% if is_spanish %}{{ '/es/' | relative_url }}{% elsif is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage"><span>S-</span>COMODO</a>
+    <p class="masthead-tagline">{% if is_spanish %}El presente tiene una historia. Nosotros la investigamos.{% elsif is_english %}The present has a history. We look for it.{% else %}Il presente ha una storia. Noi la cerchiamo.{% endif %}</p>
+  </div>
+  <div class="masthead-side masthead-side--right" aria-hidden="true"><span>SOCIETÀ</span><span>POLITICA</span><span>POTERE</span><span>CITTÀ</span></div>
+</div>
 <nav class="site-navigation" aria-label="{% if is_spanish %}Navegación principal{% elsif is_english %}Main navigation{% else %}Menu principale{% endif %}">
 <div class="site-links">
 {% if is_spanish %}

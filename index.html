@@ -1,63 +1,139 @@
 ---
 layout: default
 title: Home
-description: "S-COMODO, blog indipendente: il presente letto attraverso la storia con fonti verificabili."
+description: "S-COMODO: giornalismo indipendente, analisi e dossier documentati. Il presente ha una storia. Noi la cerchiamo."
 permalink: /
 ---
-<div class="language-feature"><span>EDIZIONI INTERNAZIONALI</span><div class="language-feature-links"><a href="{{ '/en/' | relative_url }}" lang="en">English edition →</a><a href="{{ '/es/' | relative_url }}" lang="es">Edición en español →</a></div></div>
-<section class="home-heading" aria-label="Presentazione del blog">
-  <p class="section-tag">STORIA · IDEE · FATTI</p>
-  <p>Il presente ha una storia. Noi la cerchiamo.</p>
-</section>
 {% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | sort: 'date' | reverse %}
-{% if published_posts.size > 0 %}
-<section class="home-archive home-published" aria-labelledby="published-title">
-  <div class="section-heading"><div><p class="section-tag">ARTICOLI PUBBLICATI</p><h2 id="published-title">Da leggere</h2></div><a href="{{ '/archivio/' | relative_url }}">Tutto l’archivio ↗</a></div>
-  <div class="home-editorial-grid">
-    {% for post in published_posts limit:11 %}
-    <article class="home-editorial-card">
-      {% if post.image %}
-      <a href="{{ post.url | relative_url }}" class="home-editorial-image"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"></a>
+{% assign lead_post = published_posts | first %}
+<div class="front-edition-strip" aria-label="Informazioni sull'edizione">
+  <span>GIORNALE INDIPENDENTE · INCHIESTE, ANALISI, CONTESTO</span>
+  {% if lead_post %}<span>ULTIMO ARTICOLO · {{ lead_post.date | date: '%d.%m.%Y' }}</span>{% endif %}
+  <span class="front-edition-langs"><a href="{{ '/en/' | relative_url }}" lang="en">ENGLISH</a><span aria-hidden="true">/</span><a href="{{ '/es/' | relative_url }}" lang="es">ESPAÑOL</a></span>
+</div>
+{% if lead_post %}
+<section class="front-lead" aria-label="Articolo di apertura">
+  <div class="front-lead-copy">
+    <p class="front-eyebrow"><span>IN PRIMO PIANO</span> · {{ lead_post.rubrica | escape }}</p>
+    <h1><a href="{{ lead_post.url | relative_url }}">{{ lead_post.title | escape }}</a></h1>
+    <p class="front-lead-standfirst">{{ lead_post.subtitle | escape }}</p>
+    <p class="front-lead-summary">{{ lead_post.excerpt | strip_html | normalize_whitespace | truncatewords: 43 | escape }}</p>
+    <a class="front-read" href="{{ lead_post.url | relative_url }}">LEGGI IL DOSSIER <span aria-hidden="true">→</span></a>
+    <p class="front-byline">{{ lead_post.author | default: site.author_label | escape }} · {{ lead_post.date | date: '%d.%m.%Y' }}{% if lead_post.reading_minutes %} · {{ lead_post.reading_minutes }} min{% endif %}</p>
+  </div>
+  <figure class="front-lead-image">
+    <a href="{{ lead_post.url | relative_url }}" aria-label="Leggi: {{ lead_post.title | escape }}">
+      {% if lead_post.article_id == 'SC012' %}
+        <img src="{{ '/assets/images/editorial-city-day.svg' | relative_url }}" width="1400" height="740" alt="Illustrazione editoriale di una città in luce diurna, con edifici e una figura in lontananza; non è una fotografia documentaria" fetchpriority="high">
+      {% elsif lead_post.image %}
+        <img src="{{ lead_post.image | relative_url }}" alt="{{ lead_post.image_alt | default: 'Illustrazione editoriale' | escape }}" fetchpriority="high">
       {% else %}
-      <a href="{{ post.url | relative_url }}" class="home-editorial-image home-editorial-image--type" aria-label="Leggi {{ post.title | escape }}">
-        <span class="type-cover-top">STORIE · IDEE · FATTI</span>
-        <span class="type-cover-main">{{ post.cover_word | default: 'S-COMODO' | escape }}</span>
-        <span class="type-cover-bottom">IL PRESENTE HA UNA STORIA</span>
-      </a>
+        <span class="front-image-fallback">S-COMODO<span>IL PRESENTE HA UNA STORIA</span></span>
       {% endif %}
-      <div class="story-state"><a class="category-link" href="{{ '/temi/' | relative_url }}#{{ post.topic_id | escape }}">{{ post.rubrica | upcase | escape }}</a>{% if post.lang == 'en' or post.lang == 'es' %} <span aria-hidden="true">·</span> {{ post.lang | upcase }}{% endif %}</div>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-      <p>{{ post.subtitle | escape | truncatewords: 32 }}</p>
-      <span class="card-foot">{{ post.author | default: site.author_label }} · {{ post.date | date: '%d.%m.%Y' }}</span>
-    </article>
+    </a>
+    <figcaption>Illustrazione editoriale · non fotografia documentaria</figcaption>
+  </figure>
+</section>
+{% endif %}
+<div class="front-newsboard">
+  <div class="front-news-main">
+    <section class="front-secondaries" aria-label="Ultimi articoli">
+      {% for post in published_posts offset:1 limit:3 %}
+      <article class="front-secondary">
+        <p class="front-kicker">{{ post.rubrica | upcase | escape }}{% if post.lang != 'it' %} · {{ post.lang | upcase }}{% endif %}</p>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        <p class="front-secondary-intro">{{ post.subtitle | escape | truncatewords: 25 }}</p>
+        <a href="{{ post.url | relative_url }}" class="front-secondary-image" aria-label="Leggi: {{ post.title | escape }}">
+          {% if post.image %}<img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="lazy">{% else %}<span class="front-secondary-fallback">S-COMODO</span>{% endif %}
+        </a>
+        <p class="front-secondary-date">{{ post.date | date: '%d.%m.%Y' }}</p>
+      </article>
+      {% endfor %}
+    </section>
+    <section class="front-explainer" aria-labelledby="front-explainer-title">
+      <div class="front-explainer-art" aria-hidden="true">
+        <span class="front-explainer-heading">STESSI DATI</span>
+        <span class="front-explainer-track"><span class="front-explainer-on"></span><span class="front-explainer-off"></span></span>
+        <span class="front-explainer-scale"><span>80 puntuali</span><span>20 in ritardo</span></span>
+        <span class="front-explainer-foot">SU 100 TRENI · ESEMPIO IPOTETICO</span>
+      </div>
+      <div class="front-explainer-content">
+        <p class="front-kicker">IL CONTESTO</p>
+        <h2 id="front-explainer-title">Dati, parole, interpretazioni</h2>
+        <p>«Un treno su cinque è in ritardo» e «quattro treni su cinque sono puntuali» descrivono lo stesso esempio ipotetico. La differenza sta nella cornice narrativa: che cosa mette in evidenza?</p>
+        <a class="front-read" href="{{ '/le-parole-prima-dei-fatti/' | relative_url }}">SCOPRI COME FUNZIONA <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+    <section class="front-archive" aria-labelledby="front-archive-title">
+      <div class="front-section-heading"><h2 id="front-archive-title">Articoli pubblicati</h2><a href="{{ '/archivio/' | relative_url }}">TUTTO L’ARCHIVIO <span aria-hidden="true">→</span></a></div>
+      <div class="front-archive-list">
+        {% for post in published_posts offset:4 limit:7 %}
+        <article class="front-archive-entry">
+          {% if post.image %}<a class="front-archive-thumb" href="{{ post.url | relative_url }}" aria-label="Apri {{ post.title | escape }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="lazy"></a>{% endif %}
+          <div class="front-archive-text">
+            <p class="front-kicker">{{ post.rubrica | upcase | escape }}{% if post.lang != 'it' %} · {{ post.lang | upcase }}{% endif %}</p>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+            <p>{{ post.subtitle | escape | truncatewords: 20 }}</p>
+          </div>
+          <time class="front-archive-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d.%m' }}</time>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+  <aside class="front-rail" aria-label="Approfondimenti e navigazione editoriale">
+    <section class="front-rail-block front-rail-number">
+      <p class="front-rail-label">IN TRE PASSAGGI</p>
+      <div class="front-rail-big">03</div>
+      <p>Un titolo può attivare <strong>attenzione</strong>, suggerire un <strong>divario di conoscenza</strong> e proporre una <strong>certezza</strong>. Non è una sequenza universale: è un esercizio di lettura critica.</p>
+      <a href="{{ '/le-parole-prima-dei-fatti/' | relative_url }}">LEGGI L’ANALISI →</a>
+    </section>
+    <section class="front-rail-block front-rail-guide">
+      <p class="front-rail-label">LEGGERE OLTRE IL TITOLO</p>
+      <h2>Tre domande prima di condividere</h2>
+      <ol>
+        <li><strong>Il fatto.</strong> Quale affermazione è verificabile?</li>
+        <li><strong>Le parole.</strong> Quale emozione vuole evocare il titolo?</li>
+        <li><strong>Le fonti.</strong> Dove si trova una conferma indipendente?</li>
+      </ol>
+      <a href="{{ '/metodo/' | relative_url }}">IL NOSTRO METODO →</a>
+    </section>
+    <section class="front-rail-block front-rail-topics">
+      <p class="front-rail-label">LE RUBRICHE</p>
+      <ul>
+      {% for topic in site.data.topics %}
+        <li><a href="{{ '/temi/' | relative_url }}#{{ topic.id | escape }}">{{ topic.label_it | escape }} <span aria-hidden="true">↗</span></a></li>
+      {% endfor %}
+      </ul>
+    </section>
+    <section class="front-rail-block front-rail-note">
+      <p class="front-rail-label">TRASPARENZA</p>
+      <h2>Le fonti vengono prima delle conclusioni</h2>
+      <p>Ogni dossier conserva i riferimenti documentali e segnala l'uso dell'IA. Le correzioni sono pubbliche.</p>
+      <a href="{{ '/rettifiche/' | relative_url }}">SEGNALA UNA RETTIFICA →</a>
+    </section>
+  </aside>
+</div>
+{% assign queue_size = 0 %}
+{% for p in site.data.editorial_queue %}
+  {% assign published_match = published_posts | where: 'article_id', p.article_id | first %}
+  {% unless published_match %}{% assign queue_size = queue_size | plus: 1 %}{% endunless %}
+{% endfor %}
+{% if queue_size > 0 %}
+<section class="front-upcoming" aria-labelledby="front-upcoming-title">
+  <div class="front-section-heading"><h2 id="front-upcoming-title">In preparazione</h2><span>Bozze non ancora pubblicate</span></div>
+  <div class="front-upcoming-items">
+    {% for p in site.data.editorial_queue %}
+      {% assign published_match = published_posts | where: 'article_id', p.article_id | first %}
+      {% unless published_match %}
+      <div class="front-upcoming-item"><p class="front-kicker">{{ p.rubrica | escape }}</p><h3>{{ p.title | escape }}</h3><p>{{ p.description | escape }}</p><span>{{ p.status | escape }}</span></div>
+      {% endunless %}
     {% endfor %}
   </div>
 </section>
 {% endif %}
-{% assign queue_size = 0 %}
-{% for p in site.data.editorial_queue %}
- {% assign published_match = published_posts | where: 'article_id', p.article_id | first %}
- {% unless published_match %}{% assign queue_size = queue_size | plus: 1 %}{% endunless %}
-{% endfor %}
-{% if queue_size > 0 %}
-<section class="home-archive home-queue" aria-labelledby="queue-title">
- <div class="section-heading"><div><p class="section-tag">PROGETTO EDITORIALE</p><h2 id="queue-title">{% if published_posts.size == 0 %}I primi dossier{% else %}In preparazione{% endif %}</h2></div><span class="archive-note">{{ queue_size }} {% if queue_size == 1 %}testo{% else %}testi{% endif %} in revisione</span></div>
- <div class="home-editorial-grid">
- {% for p in site.data.editorial_queue %}
-    {% assign published_match = published_posts | where: 'article_id', p.article_id | first %}
-    {% unless published_match %}
-      <article class="home-editorial-card home-preview-card" aria-label="Anteprima editoriale non pubblicata: {{ p.title | escape }}">
-        <figure class="home-editorial-image"><img src="{{ p.image | relative_url }}" alt="{{ p.alt | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"><figcaption>Immagine illustrativa generata con intelligenza artificiale</figcaption></figure>
-        <div class="story-state">{{ p.rubrica | upcase | escape }}</div>
-        <h3>{{ p.title | escape }}</h3>
-        <p>{{ p.description | escape }}</p>
-        <span class="card-foot">{{ p.status | escape }} · {{ p.reading_minutes }} min di lettura</span>
-        <p class="story-unpublished">Il dossier sarà consultabile soltanto dopo la revisione e l’approvazione editoriale.</p>
-      </article>
-    {% endunless %}
- {% endfor %}
- </div>
+<section class="front-manifesto" aria-labelledby="front-manifesto-title">
+  <p class="front-kicker">LA NOSTRA IDEA</p>
+  <h2 id="front-manifesto-title">Il presente ha una storia.<br><em>Noi la cerchiamo.</em></h2>
+  <div><p>Partiamo da un fatto, risaliamo ai documenti e verifichiamo il contesto. La forza di un titolo non sostituisce la forza delle prove.</p><a class="front-read" href="{{ '/metodo/' | relative_url }}">COME LAVORIAMO <span aria-hidden="true">→</span></a></div>
 </section>
-{% endif %}
-<section class="home-statement" aria-labelledby="mission-title"><div class="statement-overline">LA NOSTRA IDEA</div><h2 id="mission-title">Il presente ha una storia.<br><em>Noi la cerchiamo.</em></h2><div class="statement-side"><p>Partiamo da un fatto, risaliamo a un precedente documentato e mettiamo alla prova il confronto. Senza forzare le somiglianze.</p><a href="{{ '/metodo/' | relative_url }}">Come lavoriamo ↗</a></div></section>
-<section class="home-method" aria-label="Impegno editoriale"><span>LE FONTI</span><p>Ogni articolo indica i documenti consultati. Gli errori possono essere segnalati e vengono corretti in modo trasparente.</p><a href="{{ '/rettifiche/' | relative_url }}">Politica di rettifica ↗</a></section>
