@@ -16,9 +16,9 @@ reviewed: true
 ai_assisted: true
 ai_disclosure: 'Dossier in otto atti preparato con ricerca, analisi statistica e scrittura assistite da IA. Pubblicazione autorizzata dal responsabile editoriale il 1 novembre 2026. Si distinguono dati ufficiali, testimonianze, interpretazioni e previsioni. Le otto infografiche sono rielaborazioni originali dei dati indicati, mentre le cinque fotografie provengono da Wikimedia Commons con credito e licenza nella didascalia. Il ricordo del programma Italia Hoy in Paraguay non è stato confermato da un palinsesto locale d’epoca.'
 reading_minutes: 38
-image: /assets/images/sc014-paraguay-cover.svg
-image_alt: 'Copertina editoriale illustrativa del Paraguay: fiume stilizzato, fiori colorati e titolo del dossier; non è una fotografia documentaria'
-image_caption: 'Illustrazione editoriale originale S-COMODO, non fotografia di un luogo o evento reale.'
+image: /assets/images/sc014-paraguay-salto-cristal-cover.webp
+image_alt: 'Copertina illustrata del dossier Paraguay: una grande cascata ispirata al Salto Cristal, bandiera nazionale e titolo; immagine generata con IA'
+image_caption: 'Illustrazione editoriale generata con IA, ispirata al Salto Cristal e alla bandiera del Paraguay; non è una fotografia documentaria del luogo.'
 corrections: []
 sources:
 - author: 'Fonte F01'
