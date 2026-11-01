@@ -45,11 +45,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8420
 .front-edition-strip a{color:#4c4540;text-decoration:none}
 .front-edition-strip a:hover{color:#8c1d29;text-decoration:underline}
 .front-edition-langs{white-space:nowrap;display:flex;gap:9px}
-.front-lead{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.12fr);gap:clamp(22px,3.1vw,45px);padding:25px 0 28px;border-bottom:3px double #36302d;align-items:stretch}
+.front-lead{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,1fr);gap:clamp(22px,3.1vw,45px);padding:25px 0 28px;border-bottom:3px double #36302d;align-items:center}
 .front-lead-copy{display:flex;flex-direction:column;justify-content:center;min-width:0}
 .front-eyebrow{margin:0 0 13px}
 .front-eyebrow span{background:#8c1d29;color:white;padding:6px 9px;margin-right:4px}
-.front-lead h1{font:700 clamp(3.35rem,5.75vw,6.35rem)/.99 Georgia,"Times New Roman",serif;letter-spacing:-.065em;margin:5px 0 16px;overflow-wrap:break-word}
+.front-lead h1{font:700 clamp(3rem,4.6vw,5rem)/1.02 Georgia,"Times New Roman",serif;letter-spacing:-.055em;margin:5px 0 16px;overflow-wrap:break-word}
 .front-lead h1 a{color:#161411;text-decoration:none}
 .front-lead h1 a:hover{text-decoration:underline;text-decoration-color:#8c1d29;text-decoration-thickness:2px}
 .front-lead-standfirst{font:italic clamp(1.24rem,2.05vw,1.65rem)/1.34 Georgia,serif;color:#36322e;margin:0 0 17px}
@@ -58,9 +58,9 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8420
 .front-read:hover{text-decoration:underline}
 .front-read span{font-size:20px;line-height:1}
 .front-byline{color:#615b54;font:11px Arial,sans-serif;margin:17px 0 0}
-.front-lead-image{margin:0;display:flex;flex-direction:column;min-width:0}
-.front-lead-image>a{display:block;flex:1;overflow:hidden;background:#e9e6df;min-height:370px}
-.front-lead-image img{width:100%;height:100%;object-fit:cover;object-position:center center;min-height:370px}
+.front-lead-image{margin:0;display:flex;flex-direction:column;min-width:0;width:100%;align-self:center}
+.front-lead-image>a{display:block;flex:none;overflow:hidden;background:#e9e6df;aspect-ratio:16/9;min-height:0}
+.front-lead-image img{display:block;width:100%;height:100%;object-fit:contain;object-position:center center;min-height:0}
 .front-lead-image figcaption{color:#716c64;text-align:right;font:11px/1.5 Arial,sans-serif;padding-top:7px}
 .front-image-fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#252323;background:#eae5dc;font:700 clamp(28px,5vw,54px) Georgia,serif;height:100%}
 .front-image-fallback span{font:12px Arial,sans-serif;letter-spacing:.08em;margin-top:10px}
@@ -75,8 +75,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8420
 .front-secondary h2 a,.front-archive-entry h3 a{color:#1e1b18;text-decoration:none}
 .front-secondary h2 a:hover,.front-archive-entry h3 a:hover{color:#8c1d29;text-decoration:underline}
 .front-secondary-intro{font:italic 14px/1.4 Georgia,serif;color:#4e4742;margin:0 0 13px;flex:1}
-.front-secondary-image{display:block;height:148px;background:#e8e5df;overflow:hidden}
-.front-secondary-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.65)}
+.front-secondary-image{display:block;height:auto;aspect-ratio:16/9;background:#e8e5df;overflow:hidden}
+.front-secondary-image img{display:block;width:100%;height:100%;object-fit:contain;filter:saturate(.65)}
 .front-secondary-image img:hover{filter:saturate(.93)}
 .front-secondary-fallback{height:100%;display:grid;place-items:center;font:bold 28px Georgia,serif;color:#44403b}
 .front-secondary-date{margin:7px 0 0;font:10px Arial,sans-serif;color:#817a72}
@@ -115,7 +115,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8420
 .front-section-heading a:hover{text-decoration:underline}
 .front-archive-entry{display:grid;grid-template-columns:128px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid #c6bfb6;min-width:0}
 .front-archive-thumb{display:block;overflow:hidden;background:#dedbd4}
-.front-archive-thumb img{width:128px;height:86px;object-fit:cover;filter:saturate(.64)}
+.front-archive-thumb img{display:block;width:128px;height:86px;object-fit:contain;filter:saturate(.64)}
 .front-archive-text{min-width:0}
 .front-archive-text .front-kicker{margin:0 0 5px}
 .front-archive-entry h3{font:700 1.35rem/1.09 Georgia,serif;letter-spacing:-.035em;margin:0 0 4px}
@@ -200,7 +200,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8420
  .front-newsboard{grid-template-columns:minmax(0,2.5fr) minmax(210px,1fr);gap:19px}
  .front-secondary{padding-inline:12px}
  .front-secondary h2{font-size:1.46rem}
- .front-lead h1{font-size:clamp(2.95rem,5.8vw,5.1rem)}
+ .front-lead h1{font-size:clamp(2.8rem,4.65vw,4.35rem)}
 }
 @media(max-width:850px){
  .site-masthead{grid-template-columns:minmax(0,1fr);min-height:0;padding:22px 0}
@@ -209,7 +209,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8420
  .front-newsboard{grid-template-columns:1fr}
  .front-rail{border-left:0;border-top:2px solid #33302b;padding:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
  .front-rail-block{margin-bottom:0}
- .front-lead-image>a,.front-lead-image img{min-height:290px}
+ .front-lead{grid-template-columns:1fr;gap:18px}
+ .front-lead-image>a,.front-lead-image img{min-height:0}
 }
 @media(max-width:680px){
  .container{width:calc(100% - 30px)}
@@ -224,9 +225,9 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8420
  .editorial-contact-strip a span{display:none}
  .front-edition-strip{flex-wrap:wrap;gap:5px 13px;font-size:9px}
  .front-lead{grid-template-columns:1fr;gap:16px;padding:23px 0 20px}
- .front-lead h1{font-size:clamp(2.7rem,12vw,4.7rem)}
+ .front-lead h1{font-size:clamp(2.65rem,9.5vw,3.9rem)}
  .front-lead-summary{font-size:15px}
- .front-lead-image>a,.front-lead-image img{min-height:230px;max-height:360px}
+ .front-lead-image>a,.front-lead-image img{min-height:0;max-height:none}
  .front-secondaries{grid-template-columns:1fr;gap:17px}
  .front-secondary,.front-secondary:first-child,.front-secondary:last-child{padding:0 0 17px;border:0;border-bottom:1px solid #c6c0b8}
  .front-secondary:last-child{border-bottom:0}
@@ -255,3 +256,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8420
  .front-rail{border-left:1px solid #888}
  .front-explainer-art{background:#f5f5f5}
 }
+
+/* Cover-safe image system · 2026-11-01
+ * Unlike photographs used as decorative backgrounds, editorial covers often include
+ * titles and emblems. Contain, never crop, in all home/archive/article templates.
+ */
+.home-editorial-image img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#e9e6df}
+.article-image img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
