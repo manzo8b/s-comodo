@@ -141,3 +141,192 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
 @media(max-width:420px){.front-rail{grid-template-columns:1fr}.site-links{gap:0 17px}.front-lead h1,.article h1{font-size:32px}.article-body{font-size:18px;line-height:1.8}.article-body>p:first-of-type{font-size:19px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*{transition:none!important}}
 @media print{.site-header,.site-footer,.reading-index,.reading-progress,.article-actions,.reader-comments,.reader-feedback,.article-return{display:none!important}.article{display:block;max-width:none;margin:0}.article-body{max-width:none;font-size:11pt;line-height:1.6}.article h1{font-size:28pt}.article-body h2{break-after:avoid}.article-body figure{break-inside:avoid}.sources{font-size:9pt}}
+
+
+/* S-COMODO mobile image flow fix — 2026-11-03 */
+/*
+ * Safari/iPhone: avoid percent-height images inside auto-sized aspect-ratio
+ * wrappers. Let loaded images contribute their intrinsic block height, while
+ * preserving the 16:9 ratio for image-less placeholder cards.
+ * Desktop layout remains unchanged.
+ */
+@media (max-width: 760px) {
+  .front-lead,
+  .front-newsboard,
+  .front-secondaries,
+  .front-secondary,
+  .front-archive-entry,
+  .article,
+  .article-body {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .front-lead {
+    display: block;
+  }
+  .front-lead-copy {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+  .front-lead-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0 0;
+    clear: both;
+    overflow: visible;
+  }
+  .front-lead-image > a:has(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+  .front-lead-image > a > img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    min-height: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+    position: static;
+    vertical-align: middle;
+  }
+  .front-lead-image figcaption {
+    display: block;
+    clear: both;
+    position: static;
+    margin: 0;
+    padding-top: 8px;
+  }
+
+  .front-secondaries {
+    display: block;
+  }
+  .front-secondary,
+  .front-secondary:first-child,
+  .front-secondary:last-child {
+    display: flow-root;
+    width: 100%;
+    min-width: 0;
+    padding: 18px 0 !important;
+    margin: 0;
+    border-right: 0;
+    border-bottom: 1px solid #dfe5e8;
+  }
+  .front-secondary:first-child {
+    padding-top: 0 !important;
+  }
+  .front-secondary:last-child {
+    border-bottom: 0;
+  }
+  .front-secondary-image {
+    display: block;
+    clear: both;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    margin-top: 14px;
+    overflow: hidden;
+  }
+  .front-secondary-image:has(img) {
+    aspect-ratio: auto;
+  }
+  .front-secondary-image > img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    position: static;
+    object-fit: contain;
+    vertical-align: middle;
+  }
+  .front-secondary-image:has(.front-secondary-fallback),
+  .front-lead-image > a:has(.front-image-fallback) {
+    aspect-ratio: 16 / 9;
+  }
+
+  .front-archive-entry {
+    min-height: 0;
+    align-items: start;
+    overflow: visible;
+  }
+  .front-archive-thumb {
+    width: 84px;
+    max-width: 100%;
+    align-self: start;
+    overflow: hidden;
+  }
+  .front-archive-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 84 / 65;
+    object-fit: contain;
+  }
+
+  /* Full articles: images and infographics must remain in the document flow. */
+  .article > header,
+  .article-image,
+  .article-body,
+  .article-body figure,
+  .article-body .article-infographic {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .article-image {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .article-image img,
+  .article-body figure img,
+  .article-body .article-infographic img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0;
+    position: static;
+    object-fit: contain;
+    float: none;
+    margin-inline: auto;
+    box-sizing: border-box;
+  }
+  .article-body figure,
+  .article-body .article-infographic {
+    display: flow-root;
+    clear: both;
+    width: 100%;
+    height: auto;
+    position: static;
+    float: none;
+  }
+  .article-body figure > a {
+    display: block;
+    max-width: 100%;
+  }
+  .article-body figure figcaption,
+  .article-image figcaption {
+    display: block;
+    clear: both;
+    position: static;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
