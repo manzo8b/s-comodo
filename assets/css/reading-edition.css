@@ -330,3 +330,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
     overflow-wrap: anywhere;
   }
 }
+
+/* SC015 home: full-width text when lead has no cover */
+.front-lead.front-lead--text-only{display:block;max-width:100%}
+.front-lead--text-only .front-lead-copy{max-width:920px}
