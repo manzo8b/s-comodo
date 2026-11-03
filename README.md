@@ -15,3 +15,9 @@ Non caricare file di `_drafts/` né fascicoli documentali riservati; il controll
 
 ## Illustrazioni
 Le due immagini SVG attuali sono **provvisorie**: sostituirle con le illustrazioni WebP approvate, conservate nel pacchetto privato v1.6, prima del lancio pubblico.
+
+## Impaginazione editoriale — novembre 2026
+
+`assets/css/reading-edition.css` applica il tema chiaro: testata serif, filetti sottili e colonna di lettura da 700 px. Logo e favicon coordinati sono in `assets/brand/`. `assets/js/reading-edition.js` aggiunge l'indice dei capitoli ai dossier con almeno tre sezioni, l'avanzamento della lettura e contenitori scorrevoli per le tabelle. Gli articoli rimangono leggibili anche senza JavaScript.
+
+La prima pagina italiana mostra gli articoli italiani; l'archivio conserva tutte le lingue e le edizioni inglese e spagnola restano disponibili. La modifica dell'impaginazione non cambia testi, fonti o approvazioni degli articoli.

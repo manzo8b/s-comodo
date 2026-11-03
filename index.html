@@ -4,7 +4,7 @@ title: Home
 description: "S-COMODO: giornalismo indipendente, analisi e dossier documentati. Il presente ha una storia. Noi la cerchiamo."
 permalink: /
 ---
-{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | sort: 'date' | reverse %}
+{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'it' | sort: 'date' | reverse %}
 {% assign lead_post = published_posts | first %}
 <div class="front-edition-strip" aria-label="Informazioni sull'edizione">
   <span>GIORNALE INDIPENDENTE · INCHIESTE, ANALISI, CONTESTO</span>
