@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="790" viewBox="0 0 1400 790" role="img" aria-labelledby="title desc">
+<title id="title">Il cervello non basta — nuova copertina S-COMODO</title>
+<desc id="desc">Copertina editoriale con tipografia nera e rossa a sinistra, una figura classica stilizzata che riflette a destra, un cerchio rosso e un punto interrogativo. Nuova composizione senza cervello.</desc>
+<defs>
+ <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffefd"/><stop offset="1" stop-color="#f3f0eb"/></linearGradient>
+ <linearGradient id="stone" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#d5d1ca"/><stop offset=".5" stop-color="#faf8f3"/><stop offset="1" stop-color="#a19f9b"/></linearGradient>
+ <linearGradient id="stoneDark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efede7"/><stop offset="1" stop-color="#8c8a86"/></linearGradient>
+ <linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d0272c"/><stop offset="1" stop-color="#941b23"/></linearGradient>
+ <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.1" fill="#ddd9d2"/></pattern>
+ <filter id="shadow" x="-20%" y="-20%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#4f4140" flood-opacity=".19"/></filter>
+</defs>
+<rect width="1400" height="790" fill="url(#paper)"/>
+<rect width="1400" height="790" fill="url(#dots)" opacity=".35"/>
+<path d="M63 56H1337M63 732H1337" stroke="#222" stroke-width="2"/>
+<text x="95" y="111" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="29" letter-spacing="3.5" fill="#ab202b">S-COMODO</text>
+<path d="M325 85V117" stroke="#b22a33" stroke-width="3"/>
+<text x="350" y="108" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="5" fill="#4a4240">IDEE E PREGIUDIZI</text>
+<text x="90" y="260" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="95" letter-spacing="-2.5" fill="#1d1b19">Il cervello</text>
+<text x="90" y="367" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="103" letter-spacing="-3" fill="#b8242d">non basta</text>
+<path d="M96 404H332" stroke="#b8242d" stroke-width="7"/>
+<text x="95" y="475" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" fill="#3d3634">Puoi essere un genio</text>
+<text x="95" y="527" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" fill="#3d3634">e dire enormi stupidaggini</text>
+<text x="96" y="683" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="2.7" fill="#69615c">SC015 · DIVULGAZIONE SCIENTIFICA</text>
+<circle cx="1027" cy="427" r="282" fill="url(#red)"/>
+<!-- Bust: editorial interpretation, not an actual historical person -->
+<g filter="url(#shadow)">
+<path d="M853 724 Q823 659 863 616 Q912 566 932 532 Q875 478 883 398 Q873 290 928 241 Q985 187 1077 192 Q1183 196 1238 285 Q1266 337 1240 399 Q1252 471 1190 519 Q1184 570 1221 606 Q1265 643 1304 724Z" fill="url(#stone)" stroke="#66635f" stroke-width="5"/>
+<path d="M930 298 Q944 216 1023 208 Q1105 181 1179 260 Q1116 233 1082 270 Q1046 242 1004 287 Q969 277 930 298Z" fill="#bcb9b3" stroke="#777571" stroke-width="5"/>
+<path d="M906 365 Q889 401 923 434 L956 444 Q936 472 955 494 Q973 510 1004 515" fill="none" stroke="#77736f" stroke-width="8" stroke-linecap="round"/>
+<path d="M968 362 Q1007 336 1052 354 M1100 351 Q1148 329 1180 359" fill="none" stroke="#77736f" stroke-width="10" stroke-linecap="round"/>
+<path d="M974 380 Q1015 400 1053 377 M1107 377 Q1143 392 1175 371" fill="none" stroke="#66615f" stroke-width="4" stroke-linecap="round"/>
+<path d="M1090 366 Q1074 427 1089 449 Q1105 462 1124 454" fill="none" stroke="#77726f" stroke-width="5" stroke-linecap="round"/>
+<path d="M1034 485 Q1086 501 1144 480" fill="none" stroke="#645d5c" stroke-width="6" stroke-linecap="round"/>
+<path d="M1115 490 Q1134 512 1103 534" fill="none" stroke="#aaa49f" stroke-width="8" stroke-linecap="round"/>
+<path d="M951 536 Q1046 590 1170 548" stroke="#b5b1ac" stroke-width="7" fill="none"/>
+<path d="M985 704 Q1000 605 1059 557 Q1098 528 1113 555 Q1116 580 1094 599 Q1124 578 1143 595 Q1158 614 1126 639 Q1162 614 1178 639 Q1186 661 1162 689 Q1149 701 1159 724" fill="url(#stoneDark)" stroke="#74716e" stroke-width="5" stroke-linejoin="round"/>
+<path d="M1059 557 Q1095 550 1094 599 M1095 599 Q1136 599 1126 639" fill="none" stroke="#77716c" stroke-width="3"/>
+</g>
+<!-- Open thought: a single question-mark, not a brain image -->
+<g transform="translate(1004 98) rotate(-11)">
+<text x="0" y="0" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="206" font-weight="700" fill="#b9252e" stroke="#fff7f3" stroke-width="4" paint-order="stroke fill">?</text>
+</g>
+</svg>
