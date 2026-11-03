@@ -23,7 +23,7 @@ quizData.forEach((item,i)=>{
  const span=document.createElement("span");span.textContent=String.fromCharCode(65+j)+". "+choice;
  label.append(input,span);set.appendChild(label);
  });
- form.appendChild(set);
+ form.insertBefore(set,form.querySelector('.lab-buttons'));
 });
 form.addEventListener("submit",function(e){
  e.preventDefault();
