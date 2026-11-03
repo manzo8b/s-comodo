@@ -12,7 +12,7 @@ permalink: /
   <span class="front-edition-langs"><a href="{{ '/en/' | relative_url }}" lang="en">ENGLISH</a><span aria-hidden="true">/</span><a href="{{ '/es/' | relative_url }}" lang="es">ESPAÑOL</a></span>
 </div>
 {% if lead_post %}
-<section class="front-lead" aria-label="Articolo di apertura">
+<section class="front-lead{% unless lead_post.image %} front-lead--text-only{% endunless %}" aria-label="Articolo di apertura">
   <div class="front-lead-copy">
     <p class="front-eyebrow"><span>IN PRIMO PIANO</span> · {{ lead_post.rubrica | escape }}</p>
     <h1><a href="{{ lead_post.url | relative_url }}">{{ lead_post.title | escape }}</a></h1>
@@ -21,6 +21,7 @@ permalink: /
     <a class="front-read" href="{{ lead_post.url | relative_url }}">LEGGI IL DOSSIER <span aria-hidden="true">→</span></a>
     <p class="front-byline">{{ lead_post.author | default: site.author_label | escape }} · {{ lead_post.date | date: '%d.%m.%Y' }}{% if lead_post.reading_minutes %} · {{ lead_post.reading_minutes }} min{% endif %}</p>
   </div>
+{% if lead_post.image %}
   <figure class="front-lead-image">
     <a href="{{ lead_post.url | relative_url }}" aria-label="Leggi: {{ lead_post.title | escape }}">
       {% if lead_post.article_id == 'SC012' %}
@@ -33,6 +34,7 @@ permalink: /
     </a>
     <figcaption>Illustrazione editoriale · non fotografia documentaria</figcaption>
   </figure>
+{% endif %}
 </section>
 {% endif %}
 <div class="front-newsboard">
