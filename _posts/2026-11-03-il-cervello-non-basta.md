@@ -16,8 +16,8 @@ reviewed: true
 ai_assisted: true
 ai_disclosure: 'Articolo di divulgazione e commento, preparato con supporto IA per ricerca delle fonti, redazione e sviluppo dei giochi; pubblicazione richiesta e approvata dal responsabile editoriale il 3 novembre 2026. Riferimenti bibliografici verificati presso editori accademici e archivi PubMed o universitari. Le vignette quotidiane sono scene narrative illustrative; il test e il cruciverba sono giochi originali, non strumenti psicometrici. Test interattivo eseguito localmente nel browser, senza invio delle risposte a un server. Eventuali errori possono essere segnalati per rettifica.'
 reading_minutes: 18
-image: /assets/images/sc015-il-cervello-non-basta.svg
-image_alt: 'Illustrazione editoriale astratta con due emisferi cerebrali, reticoli e un punto interrogativo rosso. Non è una rappresentazione anatomica o un dato scientifico.'
+image: /assets/images/sc015-il-cervello-non-basta.svg?v=20261103-2
+image_alt: 'Copertina editoriale con la frase Intelligenza diversa da saggezza a sinistra e illustrazione di un cervello con punto interrogativo rosso a destra.'
 image_caption: 'Illustrazione editoriale originale S-COMODO: rete, griglia e dubbio sono simboli narrativi, non una visualizzazione anatomica.'
 corrections: []
 sources:
