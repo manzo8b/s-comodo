@@ -17,7 +17,7 @@ permalink: /
     <p class="front-eyebrow"><span>IN PRIMO PIANO</span> · {{ lead_post.rubrica | escape }}</p>
     <h1><a href="{{ lead_post.url | relative_url }}">{{ lead_post.title | escape }}</a></h1>
     <p class="front-lead-standfirst">{{ lead_post.subtitle | escape }}</p>
-    <p class="front-lead-summary">{{ lead_post.excerpt | strip_html | normalize_whitespace | truncatewords: 43 | escape }}</p>
+    <p class="front-lead-summary">{{ lead_post.description | default: lead_post.excerpt | strip_html | normalize_whitespace | truncatewords: 43 | escape }}</p>
     <a class="front-read" href="{{ lead_post.url | relative_url }}">LEGGI IL DOSSIER <span aria-hidden="true">→</span></a>
     <p class="front-byline">{{ lead_post.author | default: site.author_label | escape }} · {{ lead_post.date | date: '%d.%m.%Y' }}{% if lead_post.reading_minutes %} · {{ lead_post.reading_minutes }} min{% endif %}</p>
   </div>
