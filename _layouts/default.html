@@ -19,6 +19,12 @@
 <link rel="alternate" hreflang="es" href="{{ '/es/la-infancia-que-cabia-en-una-calle/' | absolute_url }}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% if page.article_id == 'SC019' %}
+<link rel="stylesheet" href="{{ '/assets/css/sc019-midterm.css' | relative_url }}?v=20261106">
+<meta property="og:image" content="{{ page.image | absolute_url | escape }}">
+<meta property="og:image:alt" content="{{ page.image_alt | escape }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endif %}
 {% if page.article_id == 'SC018' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc018-audit.css' | relative_url }}?v=20261106-2">
 <link rel="alternate" hreflang="it" href="{{ '/ueno-bank-audit-macro/' | absolute_url }}">
