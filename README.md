@@ -1,9 +1,11 @@
 # S-COMODO
 Blog indipendente by Marcelo Fernandez.
 
-**Stato: pubblicazione avviata il 24 ottobre 2026.** SC001 e SC002 sono pubblicati con le relative fonti e dichiarazioni IA.
+**S-COMODO è un blog editoriale indipendente in evoluzione**, con articoli italiani e contenuti in altre lingue, riferimenti alle fonti e dichiarazioni sull'uso dell'IA. L'elenco dei contenuti effettivamente disponibili è quello pubblicato sul sito; le prime note storiche SC001/SC002 non rappresentano più l'intero catalogo.
 
-Sito di anteprima: https://manzo8b.github.io/s-comodo/
+**[Leggi gli articoli](https://manzo8b.github.io/s-comodo/)** · [Metodo editoriale](https://manzo8b.github.io/s-comodo/metodo/) · [Segnala un problema](https://github.com/manzo8b/s-comodo/issues)
+
+Sito pubblico: https://manzo8b.github.io/s-comodo/
 
 L'italiano è la lingua principale. Articoli con firma *Redazione S-COMODO* e supporto dichiarato dell'intelligenza artificiale.
 
