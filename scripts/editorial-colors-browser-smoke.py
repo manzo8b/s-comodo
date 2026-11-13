@@ -20,10 +20,11 @@ with sync_playwright() as p:
             color = page.locator(".site-masthead").evaluate("(e)=>getComputedStyle(e).borderBottomColor")
             assert color == "rgb(23, 28, 32)", (route, color)  # Reading Edition overrides older teal skin
         page.goto(BASE + "/", wait_until="domcontentloaded")
-        cards = page.locator(".home-editorial-card")
-        assert cards.count() >= 3, "Homepage editorial covers missing"
-        borders = cards.evaluate_all("(es)=>es.slice(0,4).map(e=>getComputedStyle(e).borderTopColor)")
-        assert len(set(borders)) >= 3, borders
+        assert page.locator(".front-lead").count() == 1, "Homepage lead story missing"
+        cards = page.locator(".front-secondary")
+        assert cards.count() >= 3, "Homepage secondary stories missing"
+        assert page.locator(".front-lead h1 a").is_visible(), "Lead story link missing"
+        assert page.locator(".front-secondary h2 a").count() >= 3, "Secondary links missing"
         link = page.locator(".site-navigation .site-links a").first
         assert link.is_visible()
         assert page.locator("link[href*='editorial-colors.css']").count() == 1
