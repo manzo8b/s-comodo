@@ -57,6 +57,22 @@ with sync_playwright() as p:
         assert mobile_resp and mobile_resp.status == 200
         assert mobile.locator("h1").first.is_visible()
         assert not mobile.evaluate("document.documentElement.scrollWidth>window.innerWidth+2"), "Horizontal overflow SC020"
+        # SC020 readability and MANZO footer contrast, desktop and mobile.
+        toc_link = page.locator(".sc020 .sc020-toc a").first
+        assert toc_link.evaluate("(e)=>getComputedStyle(e).color") == "rgb(8, 8, 8)", "SC020 contents link not black"
+        assert page.locator(".sc020 .sc020-toc").evaluate("(e)=>parseFloat(getComputedStyle(e).paddingLeft)") >= 22, "Contents padding too small"
+        assert page.locator(".sc020 .sc020-flow > div").first.evaluate("(e)=>parseFloat(getComputedStyle(e).paddingLeft)") >= 18, "Mechanism card too tight"
+        assert page.locator(".sc020 figure.sc020-figure").evaluate("(e)=>parseFloat(getComputedStyle(e).paddingLeft)") >= 22, "Illustration panel padding overridden"
+        assert page.locator(".sc020 figure.sc020-chart").evaluate("(e)=>parseFloat(getComputedStyle(e).paddingLeft)") >= 22, "Chart panel padding overridden"
+        index = page.locator(".reading-index")
+        if index.locator("a").count():
+            assert index.locator("a").first.evaluate("(e)=>getComputedStyle(e).color") == "rgb(8, 8, 8)", "Sidebar index is too faint"
+        manzo = page.locator(".manzo-footer-credit")
+        assert manzo.locator("span").evaluate("(e)=>getComputedStyle(e).color") == "rgb(16, 16, 16)", "MANZO footer text lacks contrast"
+        assert manzo.locator("img").evaluate("(e)=>getComputedStyle(e).filter") == "none", "MANZO logo wrongly inverted"
+        assert manzo.locator("a").evaluate("(e)=>getComputedStyle(e).backgroundColor") == "rgb(255, 255, 255)", "MANZO footer panel must be white"
+        assert mobile.locator(".sc020 .sc020-flow > div").first.evaluate("(e)=>parseFloat(getComputedStyle(e).paddingLeft)") >= 14, "Mobile cards too tight"
+        assert mobile.locator(".manzo-footer-credit img").evaluate("(e)=>getComputedStyle(e).filter") == "none", "Mobile logo wrongly inverted"
         assert not errors and not mobile_errors, (errors, mobile_errors)
         print("S-COMODO editorial colors: desktop, IT/ES/EN, cards, nav, mobile PASS")
     finally:
