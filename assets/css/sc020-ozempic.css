@@ -1,6 +1,6 @@
 /* SC020 — S-COMODO / New Editorial Science Edition. Isolato al dossier Ozempic. */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap');
-:root{--sc20-ink:#181818;--sc20-muted:#67615c;--sc20-paper:#faf8f4;--sc20-rule:#d5d0c7;--sc20-red:#a52935;--sc20-dark:#1c1c1d;--sc20-serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sc20-sans:'DM Sans',Arial,sans-serif}
+:root{--sc20-ink:#181818;--sc20-muted:#67615c;--sc20-paper:#ffffff;--sc20-rule:#111111;--sc20-red:#b51c2c;--sc20-orange:#ff6b00;--sc20-dark:#1c1c1d;--sc20-serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sc20-sans:'DM Sans',Arial,sans-serif}
 .article>header{border-top:3px double var(--sc20-ink);padding-top:35px;margin-top:26px;text-align:center}
 .article>header .section-tag{font:700 11px/1.3 var(--sc20-sans);letter-spacing:.23em;text-transform:uppercase;color:var(--sc20-red);margin:0 auto 19px}
 .article>header .section-tag a{color:inherit;text-decoration:none}
@@ -92,3 +92,62 @@
 @media(max-width:720px){.article>header{padding-top:19px}.article>header h1{font-size:clamp(69px,19vw,112px)!important}.sc020{font-size:17px}.sc020 .sc020-toc nav{grid-template-columns:1fr}.sc020 .sc020-flow,.sc020 .sc020-compare{grid-template-columns:1fr}.sc020 .sc020-figure,.sc020 .sc020-chart{padding:20px 16px}.sc020 .sc020-risk{padding:23px 19px}.sc020 .sc020-ethics{grid-template-columns:1fr}.sc020 .risk-grid strong{font-size:48px}.sc020 .intro{font-size:29px}}
 @media(prefers-reduced-motion:no-preference){.sc020 a{transition:color .2s ease}}
 @media print{.article>header h1{font-size:72px!important}.sc020 .sc020-risk,.sc020 .sc020-finale{print-color-adjust:exact;-webkit-print-color-adjust:exact}.sc020 .sc020-chapter{break-inside:avoid}.sc020 .sc020-toc{display:none}}
+
+/* SC020 v2: bianco puro, testo nero, arancione acceso e rosso; nessun pannello scuro */
+html,body,body .site-header,body main#contenuto,body .article,body .article-body{background:#fff!important;color:#090909}
+.article>header{background:#fff!important;border-top:3px solid #090909!important}
+.article>header .section-tag{display:inline-block;background:#ff6b00;padding:8px 13px;color:#090909!important;font-weight:800}
+.article>header .section-tag a{color:#090909!important}
+.article>header h1,.article>header h1::first-letter{color:#090909!important;text-shadow:none!important}
+.article>header .article-standfirst,.article>header .card-foot{color:#090909!important}
+.article>header .card-foot{border-color:#090909!important}
+.article>header .article-image figcaption{color:#111!important;font-size:12px}
+.sc020{background:#fff!important;color:#090909;font-size:19px}
+.sc020 p,.sc020 strong,.sc020 h3{color:#090909}
+.sc020 .eyebrow{display:inline-block;background:#ff6b00;color:#090909!important;padding:7px 12px}
+.sc020 .intro strong{color:#b51c2c}
+.sc020 .intro-note{color:#090909;border-color:#090909}
+.sc020 .sc020-toc,.sc020 .sc020-figure,.sc020 .sc020-chart,.sc020 .sc020-warning,.sc020 .sc020-callout{background:#fff!important;color:#090909}
+.sc020 .sc020-toc{border:2px solid #090909}
+.sc020 .sc020-toc a{border-color:#090909;color:#090909;font-size:14px}
+.sc020 .sc020-toc b{background:#ff6b00;color:#090909;padding:4px 7px}
+.sc020 section.sc020-chapter>h2{color:#090909}
+.sc020 .chapter-no{display:inline-block;background:#b51c2c;color:#fff!important;padding:7px 11px}
+.sc020 .sc020-pull{color:#090909;background:#fff;border-top:5px solid #ff6b00;border-bottom:2px solid #090909}
+.sc020 .sc020-pull small{color:#090909}
+.sc020 .sc020-figure{border:2px solid #090909;border-top:7px solid #ff6b00}
+.sc020 .sc020-figure figcaption strong,.sc020 .sc020-chart h3{color:#090909}
+.sc020 .sc020-figure figcaption span,.sc020 .sc020-chart .meta,.sc020 .note{color:#242424;font-size:12px}
+.sc020 .sc020-mechanism-head{background:#fff;color:#090909;border:2px solid #090909;border-top:7px solid #ff6b00}
+.sc020 .sc020-mechanism-head span{color:#090909}
+.sc020 .sc020-flow>div{background:#fff!important;border:2px solid #090909;border-top:6px solid #ff6b00}
+.sc020 .sc020-flow>div:nth-child(2){border-top-color:#b51c2c}
+.sc020 .sc020-flow b{display:inline-block;background:#ff6b00;color:#090909;padding:4px 7px}
+.sc020 .sc020-flow p,.sc020 .sc020-compare p,.sc020 .sc020-ethics p{color:#090909}
+.sc020 .sc020-result{background:#fff;color:#090909;border:2px solid #090909;border-left:7px solid #ff6b00}
+.sc020 .sc020-chart{border:2px solid #090909}
+.sc020 .bar-track{background:#fff;border:1px solid #090909}
+.sc020 .bar-fill.red{background:#ff6b00}
+.sc020 .bar-fill{background:#090909}
+.sc020 .sc020-compare>div{background:#fff;border:2px solid #090909}
+.sc020 .sc020-compare>div:nth-child(2){border-top:7px solid #ff6b00}
+.sc020 .sc020-compare b{color:#fff;background:#b51c2c;display:inline-block;padding:5px 8px}
+.sc020 .sc020-risk{background:#fff!important;color:#090909!important;border:2px solid #090909;border-top:7px solid #ff6b00}
+.sc020 .sc020-risk h3,.sc020 .sc020-risk p,.sc020 .sc020-risk .micro{color:#090909!important}
+.sc020 .risk-grid>div{border:2px solid #090909;padding:18px 16px}
+.sc020 .risk-grid>div:first-child{border-top:6px solid #ff6b00}
+.sc020 .risk-grid>div:last-child{border-top:6px solid #b51c2c}
+.sc020 .risk-grid strong,.sc020 .risk-grid>div:first-child strong,.sc020 .risk-grid span{color:#090909!important}
+.sc020 .sc020-delta{background:#ff6b00!important;color:#090909!important;font-weight:700}
+.sc020 .sc020-delta b,.sc020 .sc020-risk .note{color:#090909!important}
+.sc020 .sc020-risk .note{border-color:#090909}
+.sc020 .sc020-ethics>div{background:#fff;border:2px solid #090909;border-top:6px solid #ff6b00}
+.sc020 .sc020-ethics>div:last-child{border-top-color:#b51c2c}
+.sc020 .sc020-callout{border:2px solid #090909;border-left:8px solid #ff6b00}
+.sc020 .sc020-callout p,.sc020 .sc020-warning li{color:#090909}
+.sc020 .sc020-warning{border:2px solid #090909;border-top:7px solid #b51c2c}
+.sc020 .sc020-finale{background:#fff!important;color:#090909!important;border:3px solid #090909;border-top:10px solid #ff6b00}
+.sc020 .sc020-finale h2,.sc020 .sc020-finale p,.sc020 .sc020-finale .final-line{color:#090909!important}
+.sc020 .sc020-finale .final-line{border-top:3px solid #b51c2c;padding-top:23px}
+.sc020 .source-ref,.sc020 a{color:#9d1524}
+@media(max-width:720px){.sc020{font-size:18px}.sc020 .sc020-toc a{font-size:14px}}
