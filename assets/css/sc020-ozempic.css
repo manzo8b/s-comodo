@@ -151,3 +151,100 @@ html,body,body .site-header,body main#contenuto,body .article,body .article-body
 .sc020 .sc020-finale .final-line{border-top:3px solid #b51c2c;padding-top:23px}
 .sc020 .source-ref,.sc020 a{color:#9d1524}
 @media(max-width:720px){.sc020{font-size:18px}.sc020 .sc020-toc a{font-size:14px}}
+
+/* SC020 contrast and interior spacing refinements — 13 November 2026.
+   Keep headline and scientific figures white, black, orange and red. */
+.sc020 .sc020-toc {
+  background:#fff !important;
+  color:#080808 !important;
+  border:2px solid #090909 !important;
+  padding:clamp(22px,3vw,32px) !important;
+}
+.sc020 .sc020-toc h2,
+.sc020 .sc020-toc a {
+  color:#080808 !important;
+}
+.sc020 .sc020-toc a {
+  padding:14px 0 !important;
+  font-size:15px !important;
+  font-weight:700 !important;
+  line-height:1.5 !important;
+  border-top-color:#090909 !important;
+}
+.sc020 .sc020-toc a:hover,
+.sc020 .sc020-toc a:focus-visible {
+  color:#080808 !important;
+  text-decoration:underline !important;
+  text-decoration-thickness:2px !important;
+  text-underline-offset:4px;
+}
+.sc020 .sc020-toc b {
+  flex:none;
+  color:#080808 !important;
+  background:#ff6b00 !important;
+  padding:5px 8px !important;
+}
+.article:has(.sc020) .reading-index {
+  color:#080808;
+  border-top-color:#090909;
+}
+.article:has(.sc020) .reading-index summary,
+.article:has(.sc020) .reading-index a {
+  color:#080808 !important;
+  font-weight:700;
+  font-size:14px;
+  line-height:1.55;
+}
+.article:has(.sc020) .reading-index a:hover,
+.article:has(.sc020) .reading-index a:focus-visible {
+  color:#080808 !important;
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+  text-underline-offset:3px;
+}
+/* Generic boxes are divs; figures need specificity to override a global
+   reading-edition rule that sets padding:0 !important on all figures. */
+.article-body .sc020 figure.sc020-figure,
+.article-body .sc020 figure.sc020-chart {
+  background:#fff !important;
+  border:2px solid #090909 !important;
+  border-top:7px solid #ff6b00 !important;
+  padding:clamp(23px,3.2vw,34px) !important;
+}
+.sc020 .sc020-risk,
+.sc020 .sc020-callout,
+.sc020 .sc020-warning,
+.sc020 .sc020-finale {
+  padding:clamp(24px,3.2vw,34px) !important;
+}
+.sc020 .sc020-flow > div,
+.sc020 .sc020-compare > div,
+.sc020 .sc020-ethics > div,
+.sc020 .risk-grid > div {
+  padding:22px 19px !important;
+}
+.sc020 .sc020-result,
+.sc020 .sc020-delta {
+  padding:18px 20px !important;
+}
+.sc020 .sc020-flow p,
+.sc020 .sc020-compare p,
+.sc020 .sc020-ethics p,
+.sc020 .sc020-callout p,
+.sc020 .sc020-warning li,
+.sc020 .risk-grid span {
+  line-height:1.7 !important;
+}
+@media(max-width:720px) {
+  .sc020 .sc020-toc { padding:22px 18px !important; }
+  .article-body .sc020 figure.sc020-figure,
+  .article-body .sc020 figure.sc020-chart {padding:24px 18px !important;}
+  .sc020 .sc020-risk,
+  .sc020 .sc020-callout,
+  .sc020 .sc020-warning,
+  .sc020 .sc020-finale {padding:24px 18px !important;}
+  .sc020 .sc020-flow > div,
+  .sc020 .sc020-compare > div,
+  .sc020 .sc020-ethics > div,
+  .sc020 .risk-grid > div {padding:18px 15px !important;}
+}
