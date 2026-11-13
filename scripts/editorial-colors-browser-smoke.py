@@ -18,12 +18,13 @@ with sync_playwright() as p:
             assert page.locator('a[href="mailto:marcelo2020.it@gmail.com"]').count() >= 1, route
             assert page.locator(".manzo-footer-credit img").count() == 1, "Brand-footer image missing"
             color = page.locator(".site-masthead").evaluate("(e)=>getComputedStyle(e).borderBottomColor")
-            assert color == "rgb(12, 97, 93)", (route, color)
+            assert color == "rgb(23, 28, 32)", (route, color)  # Reading Edition overrides older teal skin
         page.goto(BASE + "/", wait_until="domcontentloaded")
-        cards = page.locator(".home-editorial-card")
-        assert cards.count() >= 3, "Homepage editorial covers missing"
-        borders = cards.evaluate_all("(es)=>es.slice(0,4).map(e=>getComputedStyle(e).borderTopColor)")
-        assert len(set(borders)) >= 3, borders
+        assert page.locator(".front-lead").count() == 1, "Homepage lead story missing"
+        cards = page.locator(".front-secondary")
+        assert cards.count() >= 3, "Homepage secondary stories missing"
+        assert page.locator(".front-lead h1 a").is_visible(), "Lead story link missing"
+        assert page.locator(".front-secondary h2 a").count() >= 3, "Secondary links missing"
         link = page.locator(".site-navigation .site-links a").first
         assert link.is_visible()
         assert page.locator("link[href*='editorial-colors.css']").count() == 1
@@ -39,6 +40,24 @@ with sync_playwright() as p:
             overflow = mobile.evaluate("document.documentElement.scrollWidth>window.innerWidth+2")
             assert not overflow, "Horizontal overflow " + route
         assert not mobile_errors, mobile_errors
+        # SC020 has an independent stylesheet, but must keep the host edition healthy.
+        sc020_route = "/ozempic-scienza-fame-liberta-scelta/"
+        resp = page.goto(BASE + sc020_route, wait_until="domcontentloaded")
+        assert resp and resp.status == 200, ("SC020 article", resp.status if resp else None)
+        assert page.locator("h1").first.inner_text().strip() == "Ozempic"
+        assert page.locator(".sc020 .sc020-chapter").count() == 8
+        assert page.locator(".sc020 .sc020-chart").count() == 1
+        assert page.locator(".sc020 .sc020-risk").count() == 1
+        assert page.locator(".sources ol li").count() == 9
+        assert page.locator('link[href*="sc020-ozempic.css"]').count() == 1
+        assert page.locator(".sc020 .sc020-chart").evaluate("(e)=>getComputedStyle(e).backgroundColor") == "rgb(255, 255, 255)"
+        assert page.locator(".sc020 .sc020-risk").evaluate("(e)=>getComputedStyle(e).backgroundColor") == "rgb(255, 255, 255)"
+        assert page.locator(".sc020 .sc020-delta").evaluate("(e)=>getComputedStyle(e).backgroundColor") == "rgb(255, 107, 0)"
+        mobile_resp = mobile.goto(BASE + sc020_route, wait_until="domcontentloaded")
+        assert mobile_resp and mobile_resp.status == 200
+        assert mobile.locator("h1").first.is_visible()
+        assert not mobile.evaluate("document.documentElement.scrollWidth>window.innerWidth+2"), "Horizontal overflow SC020"
+        assert not errors and not mobile_errors, (errors, mobile_errors)
         print("S-COMODO editorial colors: desktop, IT/ES/EN, cards, nav, mobile PASS")
     finally:
         browser.close()
