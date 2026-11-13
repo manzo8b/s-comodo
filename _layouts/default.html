@@ -37,6 +37,12 @@
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/brand/scomodo-favicon.svg' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/reading-edition.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script src="{{ '/assets/js/reading-edition.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+{% if page.article_id == 'SC020' %}
+<link rel="stylesheet" href="{{ '/assets/css/sc020-ozempic.css' | relative_url }}?v=20261113">
+<meta property="og:image" content="{{ page.image | absolute_url | escape }}">
+<meta property="og:image:alt" content="{{ page.image_alt | escape }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endif %}
 </head>
 <body>
 <a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
