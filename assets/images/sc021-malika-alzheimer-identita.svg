@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 740" role="img" aria-labelledby="title desc">
+<title id="title">Se Malika dimentica di essere Malika</title>
+<desc id="desc">Copertina editoriale astratta: due profili disegnati con linee rosse e arancio, una trama frammentata e la domanda sui dati mancanti. Illustrazione concettuale, non fotografia.</desc>
+<rect width="1400" height="740" fill="#fff"/>
+<rect x="0" y="0" width="22" height="740" fill="#cc212b"/>
+<g opacity=".09" stroke="#202020" stroke-width="1"><path d="M40 110H1360M40 210H1360M40 310H1360M40 410H1360M40 510H1360M40 610H1360"/><path d="M110 40V700M220 40V700M330 40V700M440 40V700M550 40V700M660 40V700M770 40V700M880 40V700M990 40V700M1100 40V700M1210 40V700M1320 40V700"/></g>
+<rect x="75" y="66" width="222" height="36" rx="18" fill="#cc212b"/>
+<text x="96" y="91" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#fff">S-COMODO / SC021</text>
+<text x="75" y="170" font-family="Georgia,serif" font-size="65" fill="#111" font-weight="700">Se Malika dimentica</text>
+<text x="75" y="247" font-family="Georgia,serif" font-size="65" fill="#111" font-weight="700">di essere Malika</text>
+<rect x="77" y="283" width="660" height="7" fill="#ed4b1e"/>
+<text x="76" y="340" font-family="Arial,sans-serif" font-size="27" fill="#272727">ALZHEIMER, IDENTITÀ, PRIVACY</text>
+<text x="76" y="381" font-family="Arial,sans-serif" font-size="27" fill="#272727">E IL DIRITTO A ESSERE CURATI</text>
+<text x="76" y="610" font-family="Georgia,serif" font-size="29" font-style="italic" fill="#cc212b">Conosciamo la malattia.</text>
+<text x="76" y="649" font-family="Georgia,serif" font-size="29" font-style="italic" fill="#cc212b">Ma conosciamo tutte le persone?</text>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M1060 124C960 134 920 220 945 290C960 331 1000 350 1005 396C1010 435 985 460 970 501C955 550 981 614 1037 652" stroke="#be1e2d" stroke-width="18"/><path d="M1169 128C1270 157 1308 239 1263 307C1234 348 1193 356 1190 398C1183 444 1217 471 1229 519C1236 557 1218 610 1163 643" stroke="#f15a24" stroke-width="18"/><path d="M1099 181C1084 248 1070 316 1082 373" stroke="#b21e28" stroke-width="6" stroke-dasharray="11 23"/><path d="M1132 410C1110 448 1116 484 1130 520" stroke="#f15a24" stroke-width="6" stroke-dasharray="11 23"/></g>
+<g fill="#ed4b1e"><circle cx="1110" cy="173" r="8"/><circle cx="1083" cy="276" r="7"/><circle cx="1084" cy="361" r="5"/><circle cx="1130" cy="530" r="8"/></g>
+<g fill="#bd202b"><circle cx="1229" cy="281" r="8"/><circle cx="1201" cy="388" r="8"/><circle cx="1219" cy="492" r="6"/></g>
+<text x="1331" y="707" text-anchor="end" font-family="Arial,sans-serif" font-size="16" fill="#555">Illustrazione concettuale · 2026</text>
+</svg>
