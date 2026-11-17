@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="740" viewBox="0 0 1400 740" role="img" aria-labelledby="title desc">
+<title id="title">Report e le uova, verifica delle evidenze</title>
+<desc id="desc">Copertina illustrativa editoriale astratta: due richiami ministeriali documentati distinti dalle altre accuse ancora da verificare. Sfondo bianco, caratteri neri, accenti blu, rosso e arancione.</desc>
+<rect width="1400" height="740" fill="#ffffff"/>
+<path d="M0 10H1400" stroke="#18232d" stroke-width="20"/>
+<path d="M73 89H1327" stroke="#dbe2e6" stroke-width="2"/>
+<g opacity=".12" fill="none" stroke="#de8f36" stroke-width="20"><ellipse cx="1127" cy="177" rx="75" ry="96" transform="rotate(-18 1127 177)"/><ellipse cx="1250" cy="170" rx="62" ry="84" transform="rotate(13 1250 170)"/></g>
+<rect x="73" y="37" width="210" height="31" rx="3" fill="#aa1831"/>
+<text x="89" y="58" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#fff" letter-spacing="2">S-COMODO / FACT-CHECK</text>
+<text x="75" y="182" font-family="Georgia,serif" font-size="78" font-weight="700" fill="#161d23" letter-spacing="-2">Le uova di Report</text>
+<text x="78" y="229" font-family="Helvetica,Arial,sans-serif" font-size="23" fill="#53616b">Un documento prova un fatto. Non necessariamente un sistema.</text>
+<rect x="74" y="280" width="605" height="289" rx="14" fill="#ffffff" stroke="#cad6de" stroke-width="2"/>
+<rect x="74" y="280" width="605" height="9" rx="4" fill="#a91e33"/>
+<text x="105" y="341" font-family="Helvetica,Arial,sans-serif" font-size="20" fill="#a91e33" font-weight="700" letter-spacing="1">FATTI DOCUMENTATI</text>
+<text x="104" y="419" font-family="Georgia,serif" font-size="70" fill="#141b22" font-weight="700">2 richiami</text>
+<text x="107" y="469" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#3f505b">2024 · 2026</text>
+<text x="107" y="516" font-family="Helvetica,Arial,sans-serif" font-size="19" fill="#475b66">Albumi pastorizzati / Salmonella spp.</text>
+<rect x="712" y="280" width="614" height="289" rx="14" fill="#eff5f8" stroke="#cad6de" stroke-width="2"/>
+<rect x="712" y="280" width="614" height="9" rx="4" fill="#19577f"/>
+<text x="746" y="341" font-family="Helvetica,Arial,sans-serif" font-size="20" fill="#19577f" font-weight="700" letter-spacing="1">QUESTIONI ANCORA APERTE</text>
+<text x="743" y="406" font-family="Georgia,serif" font-size="54" fill="#141b22" font-weight="700">Le accuse</text>
+<text x="746" y="454" font-family="Helvetica,Arial,sans-serif" font-size="24" fill="#293b47">richiedono riscontri</text>
+<text x="746" y="518" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#526572">Testimonianze ≠ responsabilità accertate</text>
+<path d="M73 621H1327" stroke="#d6dfe4" stroke-width="2"/>
+<circle cx="87" cy="659" r="8" fill="#aa1831"/><text x="108" y="667" font-family="Helvetica,Arial,sans-serif" font-size="19" fill="#26323a">Fonti primarie</text>
+<circle cx="390" cy="659" r="8" fill="#19577f"/><text x="410" y="667" font-family="Helvetica,Arial,sans-serif" font-size="19" fill="#26323a">Accuse e repliche</text>
+<circle cx="750" cy="659" r="8" fill="#e77d10"/><text x="770" y="667" font-family="Helvetica,Arial,sans-serif" font-size="19" fill="#26323a">Limiti del metodo</text>
+<text x="1324" y="666" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#5e6970" text-anchor="end">17.11.2026</text>
+</svg>
