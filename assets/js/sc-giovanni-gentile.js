@@ -2,7 +2,7 @@
 (function(){
   "use strict";
   function init(){
-    var root=document.querySelector("[data-scg]");if(!root)return;
+    var root=document.querySelector("article.article");if(!root)return;
     var filterbar=root.querySelector("[data-scg-filters]");
     if(filterbar){
       filterbar.hidden=false;
