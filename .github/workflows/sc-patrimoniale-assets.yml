@@ -1,0 +1,56 @@
+name: "S-COMODO · Importazione fotografica una tantum"
+on:
+  push:
+    paths:
+      - ".github/workflows/sc-patrimoniale-assets.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download source images and commit a permanent optimized WebP atlas
+        env:
+          IMAGE_URLS: '["https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F8e0c8bdc-2020-4863-a250-eace464070bc/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAABJEUMUcyH3-L4-_s9AHKL9Nlbbm62XcaPNzaHPdCw0j&exp=1795362150&osig=AAAAAAAAAAAAAAAAAAAAAMxI86Pxo7EVDqJEzQlFwzDe28H8K71nnl6JOZko7S8Q&signer=media-rpc&token=AAIAAU0AJDhlMGM4YmRjLTIwMjAtNDg2My1hMjUwLWVhY2U0NjQwNzBiYwAAAAABogPsVnC2BdnvrUAktKTGs26sqhsiXKSmjdOcisckAz9XHPciig&x-canva-quality=thumbnail","https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F49072f0b-2449-4514-baa1-51479e74b8d9/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAALv7-nn4kgtChWAxXc2po7TQsryU6zf_jaTpbxTrlmVH&exp=1795362364&osig=AAAAAAAAAAAAAAAAAAAAAMM-2QeJtX_sYcmeQzVawi1p6pNTGucLCNNur2McANrl&signer=media-rpc&token=AAIAAU0AJDQ5MDcyZjBiLTI0NDktNDUxNC1iYWExLTUxNDc5ZTc0YjhkOQAAAAABogPvmmAam3V8P7qYvNZTo3hPuIDybcndPjZXDuLpOc-Y0FUsuA&x-canva-quality=thumbnail","https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2Fd048100f-a1cc-4758-8519-c10df818c819/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAABQpxWC14xLgGKWAF_RyV_xagnyKK3rHOgJ97QUP9XdF&exp=1795364829&osig=AAAAAAAAAAAAAAAAAAAAANYSXjkhW5c2dBDbCOP-CdyqG2JdmulrgInU_t2qEn_C&signer=media-rpc&token=AAIAAU0AJGQwNDgxMDBmLWExY2MtNDc1OC04NTE5LWMxMGRmODE4YzgxOQAAAAABogQVN0hVY8vSrDaAMDI_2NJr12uLr9VBx_i1b9hrvFfOCXobqA&x-canva-quality=thumbnail","https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2Fbe560d92-75ca-46b5-9b60-5401f06bb6fe/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAPcEDKPN58dVXEDQbsUvxOV9MDjvicDgaQjzc9HH-GLM&exp=1795364535&osig=AAAAAAAAAAAAAAAAAAAAAHCgOcaIabIJYjdwW3W62_HtiEyW9XWIeeQJKVEt1Ty8&signer=media-rpc&token=AAIAAU0AJGJlNTYwZDkyLTc1Y2EtNDZiNS05YjYwLTU0MDFmMDZiYjZmZQAAAAABogQQutgNWcStdY10PjAAi_A3y4fR7_adzNSMDG_pgZ5pByqp2w&x-canva-quality=thumbnail"]'
+        run: |
+          python3 -m pip install --user Pillow
+          python3 - <<'PY'
+          import os, json, io, urllib.request, time
+          from PIL import Image, ImageFilter
+          from pathlib import Path
+          urls=json.loads(os.environ["IMAGE_URLS"])
+          frames=[]
+          for index,original in enumerate(urls,1):
+              candidates=[original.replace("height:200","height:900").replace("width:200","width:900").replace("&x-canva-quality=thumbnail",""),original]
+              data=None
+              for candidate in candidates:
+                  try:
+                      req=urllib.request.Request(candidate,headers={"User-Agent":"Mozilla/5.0"})
+                      with urllib.request.urlopen(req,timeout=25) as response:data=response.read()
+                      image=Image.open(io.BytesIO(data))
+                      image.load()
+                      print(f"Image {index}: downloaded {image.size}")
+                      break
+                  except Exception as exc:
+                      print(f"Image {index}: candidate unavailable: {exc}")
+                      data=None
+              if data is None:
+                  raise SystemExit(f"Image {index} unavailable: abort without placeholder.")
+              im=Image.open(io.BytesIO(data)).convert("RGB").resize((720,720),Image.Resampling.LANCZOS)
+              frames.append(im)
+          atlas=Image.new("RGB",(1440,1440),"white")
+          for i,im in enumerate(frames):atlas.paste(im,((i%2)*720,(i//2)*720))
+          path=Path("assets/images/sc-patrimoniale-dashboards.webp")
+          path.parent.mkdir(parents=True,exist_ok=True)
+          atlas.save(path,"WEBP",quality=84,method=6)
+          print(f"Saved {path} ({path.stat().st_size} bytes)")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/sc-patrimoniale-dashboards.webp
+          git commit -m "Add four S-COMODO patrimomiale dashboard images"
+          git push origin HEAD:main
