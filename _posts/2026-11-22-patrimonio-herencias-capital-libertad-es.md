@@ -180,7 +180,7 @@ sources:
   accessed: 22 de noviembre de 2026
   kind: fonte-amministrativa
 ---
-<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122">
+<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122-mobile2">
 <div class="scpat-kicker"><span>INVESTIGACIÓN ECONÓMICA · 22 NOVIEMBRE 2026</span><span>ITALIA / ESPAÑA · 22 FUENTES</span></div>
 <div class="scpat-deck">Propiedad, herencias, empresas y libertad económica: una investigación documentada sobre los impuestos a la riqueza.</div>
 
