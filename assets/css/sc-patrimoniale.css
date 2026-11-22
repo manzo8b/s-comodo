@@ -1,145 +1,109 @@
-
-/* S-COMODO · Patrimoniale 2026 · Dossier fotografico IT / ES */
-.article:has(.scpat-kicker){max-width:860px;margin-top:16px;color:#18232d}
-.article:has(.scpat-kicker)>header{max-width:800px;margin-inline:auto}
-.article:has(.scpat-kicker)>header h1{font-family:Georgia,serif;font-size:clamp(2.6rem,5.4vw,4.5rem);line-height:1.08;letter-spacing:-.048em;color:#15212b;text-wrap:balance}
-.article:has(.scpat-kicker) .article-standfirst{color:#334755;font-size:clamp(1.05rem,1.8vw,1.27rem);line-height:1.55}
-.article:has(.scpat-kicker)>.article-body{font-size:clamp(1.06rem,1.45vw,1.21rem);line-height:1.79;color:#202a33;max-width:800px;margin-inline:auto}
-.scpat-kicker{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 18px;padding:15px 0;margin-bottom:20px;border-block:2px solid #1a3344;font:700 11px/1.45 system-ui,Arial,sans-serif;letter-spacing:.11em;color:#263e50}
-.scpat-deck{font:400 clamp(1.35rem,2.9vw,2.05rem)/1.45 Georgia,serif;color:#244154;margin:0 0 36px;padding-left:21px;border-left:5px solid #ab2838}
-.article:has(.scpat-kicker) .article-body h2{font-family:Georgia,serif;font-size:clamp(1.75rem,3vw,2.48rem);line-height:1.2;color:#172d3b;letter-spacing:-.04em;margin:2.05em 0 .62em}
-.article:has(.scpat-kicker) .article-body p{margin:0 0 1.17em}
-.article:has(.scpat-kicker) .article-body a{color:#8e1a2a;text-decoration-thickness:1.25px}
-.article:has(.scpat-kicker) .article-body a:hover{color:#183f60}
-.article:has(.scpat-kicker) .article-body strong{color:#172b39}
-.article:has(.scpat-kicker) .article-body table{width:100%;border-collapse:collapse;min-width:650px;font:500 14px/1.5 system-ui,Arial,sans-serif}
-.article:has(.scpat-kicker) .article-body table th{background:#153449;color:#fff;font-weight:700;text-align:left}
-.article:has(.scpat-kicker) .article-body table th,.article:has(.scpat-kicker) .article-body table td{padding:13px 12px;border:1px solid #d4e0e7}
-.article:has(.scpat-kicker) .article-body table tr:nth-child(even) td{background:#f4f7f9}
-.article:has(.scpat-kicker) .article-body table td:last-child{font-weight:700;white-space:nowrap}
-.article:has(.scpat-kicker) .article-body table{display:block;overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
-.scpat-figure{width:min(900px,calc(100vw - 32px));max-width:none!important;position:relative;left:50%;transform:translateX(-50%);margin:3.2rem 0 3.7rem!important;padding:clamp(12px,2.6vw,25px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(18px,3.4vw,38px);align-items:center;background:#f3f7fa;border:1px solid #d7e2ea;border-radius:20px;box-shadow:0 24px 58px -48px rgba(8,32,50,.42)}
-.scpat-figure--reverse .scpat-photo{order:2}
-.scpat-photo{width:100%;aspect-ratio:1;background-image:url('/s-comodo/assets/images/sc-patrimoniale-dashboards.webp');background-repeat:no-repeat;background-size:200% 200%;border:1px solid #c1d0dc;border-radius:14px;box-shadow:0 12px 32px rgba(13,35,49,.17);background-color:#edf3f7}
-.scpat-photo--01{background-position:left top}.scpat-photo--02{background-position:right top}.scpat-photo--03{background-position:left bottom}.scpat-photo--04{background-position:right bottom}
-.scpat-figtext{display:flex;flex-direction:column;gap:14px;margin:0!important;font:400 15px/1.6 system-ui,Arial,sans-serif;color:#354957}
-.scpat-figtext strong{display:block;font:700 clamp(1.5rem,3vw,2.25rem)/1.14 Georgia,serif!important;letter-spacing:-.035em;color:#183146!important}
-.scpat-number{font:800 10px/1.4 system-ui,Arial,sans-serif;letter-spacing:.17em;color:#a22736}
-.scpat-figtext small{font:500 12px/1.55 system-ui,Arial,sans-serif;color:#455b68;border-top:1px solid #c6d7e0;padding-top:12px}
-.article:has(.scpat-kicker) .article-body>p:nth-last-of-type(2){border-top:2px solid #1c3a4d;padding-top:30px;margin-top:2.2rem;font:700 clamp(1.3rem,2.4vw,1.66rem)/1.48 Georgia,serif;color:#153449}
-.article:has(.scpat-kicker) .article-body>p:last-of-type{font:italic 400 clamp(1.22rem,2.35vw,1.53rem)/1.56 Georgia,serif;color:#244052;border-left:4px solid #a62332;background:#f6f8fa;padding:20px 24px;margin:24px 0 42px}
-.article:has(.scpat-kicker) .sources{border-top:2px solid #153449;margin-top:54px}
-.article:has(.scpat-kicker) .sources a{color:#922033}
-.article:has(.scpat-kicker) a:focus-visible{outline:3px solid #185c89;outline-offset:3px}
-@media(max-width:700px){.article:has(.scpat-kicker){width:100%}.scpat-figure{grid-template-columns:1fr;padding:12px;gap:16px}.scpat-figure--reverse .scpat-photo{order:0}.scpat-photo{max-width:480px;margin:auto}.scpat-figtext{padding:6px 9px 12px}.scpat-figtext strong{font-size:1.7rem!important}.scpat-kicker{font-size:10px}.article:has(.scpat-kicker) .article-body table{font-size:13px}}
-@media(prefers-reduced-motion:reduce){.scpat-figure,.scpat-photo{animation:none!important;transition:none!important}}
-
-
-/* SC-PATRIMONIALE mobile Safari correction — 2026-11-22 */
-/*
- * The generic reading-edition mobile stylesheet makes figure elements
- * position:static and width:100%, but the SC-PATRIMONIALE figure retained its
- * desktop transform:translateX(-50%). On iOS that shifted the entire figure,
- * photograph and caption half a column to the LEFT, leaving white space on
- * the right and creating apparent horizontal cropping.
- * Fix only this dossier on narrow screens; keep the desktop editorial layout.
- */
-@media screen and (max-width: 760px) {
-  .article:has(.scpat-kicker) {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-  }
-  .article:has(.scpat-kicker) > header,
-  .article:has(.scpat-kicker) > .article-body {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  .article:has(.scpat-kicker) .article-body figure.scpat-figure {
-    position: static !important;
-    inset: auto !important;
-    transform: none !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    margin: 26px 0 38px !important;
-    padding: 12px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-    background: #f3f7fa !important;
-    border: 1px solid #cfdde6 !important;
-    border-radius: 16px !important;
-    box-shadow: 0 12px 27px -23px rgba(8,32,50,.5);
-    box-sizing: border-box !important;
-    overflow: hidden;
-  }
-  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-photo {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    height: auto;
-    aspect-ratio: 1;
-    flex: none;
-    order: 0 !important;
-    margin: 0;
-    background-size: 200% 200%;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  .article:has(.scpat-kicker) .article-body figure.scpat-figure figcaption.scpat-figtext {
-    display: flex !important;
-    flex-direction: column;
-    width: 100%;
-    min-width: 0;
-    gap: 9px;
-    padding: 17px 6px 8px !important;
-    margin: 0 !important;
-    box-sizing: border-box;
-    color: #304756 !important;
-    overflow-wrap: break-word;
-    text-align: start;
-  }
-  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-figtext strong {
-    font-size: clamp(1.52rem, 6.3vw, 1.9rem) !important;
-    line-height: 1.18;
-    overflow-wrap: break-word;
-  }
-  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-figtext small {
-    font-size: 12px;
-    line-height: 1.5;
-    color: #405666 !important;
-    overflow-wrap: break-word;
-  }
-  .article:has(.scpat-kicker) > .article-body {
-    font-size: 17px;
-    line-height: 1.72;
-  }
-  .article:has(.scpat-kicker) .article-body > p,
-  .article:has(.scpat-kicker) .article-body li {
-    overflow-wrap: break-word;
-    word-break: normal;
-    hyphens: auto;
-  }
-  .article:has(.scpat-kicker) .article-body h2 {
-    font-size: clamp(1.7rem, 7vw, 2.1rem);
-    line-height: 1.22;
-    overflow-wrap: break-word;
-    hyphens: auto;
-  }
-  .article:has(.scpat-kicker) .article-body table {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+/* S-COMODO / Patrimoniale 2026 — stable reading edition v3.
+   This stylesheet is intentionally scoped to this dossier only. */
+.article:has(.scpat-kicker){
+  display:block !important;
+  width:100%;max-width:860px;min-width:0;
+  margin:24px auto 70px;box-sizing:border-box;
+  color:#192c39;
 }
-
+.article:has(.scpat-kicker)>header,
+.article:has(.scpat-kicker)>.article-body,
+.article:has(.scpat-kicker)>.reading-index,
+.article:has(.scpat-kicker)>section,
+.article:has(.scpat-kicker)>nav:not(.article-return){
+  display:block;position:static;grid-column:auto;grid-row:auto;
+  width:100%;min-width:0;max-width:760px;
+  margin-left:auto;margin-right:auto;box-sizing:border-box;
+}
+.article:has(.scpat-kicker)>.reading-index[hidden]{display:none!important}
+.article:has(.scpat-kicker)>header{padding-bottom:22px}
+.article:has(.scpat-kicker) h1{font:700 clamp(2.45rem,5vw,4.35rem)/1.08 Georgia,serif;letter-spacing:-.038em;color:#172d3b;text-wrap:balance;max-width:760px}
+.article:has(.scpat-kicker) .article-standfirst{color:#344f61;font:400 clamp(1.13rem,1.8vw,1.36rem)/1.52 Georgia,serif;max-width:740px}
+.article:has(.scpat-kicker)>.reading-index{
+  top:auto;max-height:none;overflow:visible;padding:14px 0;
+  border-top:1px solid #b6c5cf;border-bottom:1px solid #b6c5cf;
+  margin-top:0;margin-bottom:28px;background:#fff;
+}
+.article:has(.scpat-kicker)>.reading-index summary{position:static;color:#243e51;font-weight:700;background:transparent}
+.article:has(.scpat-kicker)>.reading-index a{color:#35546b}
+.article:has(.scpat-kicker)>.article-body{font:400 19px/1.76 Georgia,serif;color:#26343e;overflow-wrap:break-word}
+.article:has(.scpat-kicker) .article-body>p:first-of-type{font-size:19px;line-height:1.76}
+.article:has(.scpat-kicker) .article-body p{margin:0 0 1.18em;hyphens:none;word-break:normal}
+.article:has(.scpat-kicker) .article-body h2{font:700 clamp(1.8rem,3.1vw,2.5rem)/1.22 Georgia,serif;letter-spacing:-.028em;color:#183346;margin:1.9em 0 .6em;padding:0;border:0;hyphens:none;overflow-wrap:break-word}
+.article:has(.scpat-kicker) .article-body h3{color:#1b4051}
+.article:has(.scpat-kicker) .article-body strong{color:#172d3b}
+.article:has(.scpat-kicker) .article-body a{color:#8b1d2e;text-decoration-thickness:1.2px}
+.article:has(.scpat-kicker) a:focus-visible{outline:3px solid #145c8a;outline-offset:3px}
+.scpat-kicker{display:flex;justify-content:space-between;flex-wrap:wrap;gap:7px 14px;border-block:2px solid #193e53;padding:13px 0;margin:0 0 23px;font:700 11px/1.45 system-ui,Arial,sans-serif;letter-spacing:.10em;color:#213f53}
+.scpat-deck{font:400 clamp(1.28rem,2.5vw,1.95rem)/1.43 Georgia,serif;color:#254458;margin:0 0 36px;padding:0 0 0 18px;border-left:4px solid #a9283c;max-width:100%;overflow-wrap:break-word}
+/* Keep article illustrations in normal flow: never let them intrude into TOC. */
+.article:has(.scpat-kicker) .article-body figure.scpat-figure{
+  display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  align-items:center;gap:22px;
+  position:static!important;left:auto!important;right:auto!important;
+  transform:none!important;float:none!important;
+  width:100%!important;max-width:100%!important;min-width:0;
+  margin:34px 0 40px!important;padding:17px!important;
+  background:#f1f5f8!important;border:1px solid #cad7e0!important;
+  border-radius:14px!important;box-shadow:0 12px 30px -24px #163b50;
+  box-sizing:border-box!important;overflow:hidden;
+}
+.article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-photo{
+  display:block;width:100%;min-width:0;height:auto;aspect-ratio:1;
+  flex:none;order:0;box-sizing:border-box;
+  background-image:url('/s-comodo/assets/images/sc-patrimoniale-dashboards.webp');
+  background-size:200% 200%;background-repeat:no-repeat;
+  border:1px solid #aebfc9;border-radius:10px;background-color:#e6edf1;
+}
+.scpat-photo--01{background-position:left top}.scpat-photo--02{background-position:right top}.scpat-photo--03{background-position:left bottom}.scpat-photo--04{background-position:right bottom}
+.article:has(.scpat-kicker) .article-body figure.scpat-figure--reverse .scpat-photo{order:2}
+.article:has(.scpat-kicker) .article-body figure.scpat-figure figcaption.scpat-figtext{
+  display:flex!important;flex-direction:column;gap:10px;
+  min-width:0;width:100%;box-sizing:border-box;
+  margin:0!important;padding:0!important;
+  font:400 15px/1.55 system-ui,Arial,sans-serif!important;
+  color:#324958!important;overflow-wrap:break-word;
+}
+.article:has(.scpat-kicker) .scpat-figtext strong{font:700 clamp(1.52rem,2.75vw,2.03rem)/1.16 Georgia,serif!important;letter-spacing:-.024em;color:#183447!important}
+.article:has(.scpat-kicker) .scpat-number{font:800 10px/1.45 system-ui,Arial,sans-serif;letter-spacing:.15em;color:#972437}
+.article:has(.scpat-kicker) .scpat-figtext small{display:block;font:500 12px/1.55 system-ui,Arial,sans-serif;color:#425a68;padding-top:10px;border-top:1px solid #c7d5de}
+/* Restrict overflow to tables, not the whole article. */
+.article:has(.scpat-kicker) .article-body table{display:block;width:100%;max-width:100%;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;border-collapse:collapse;font:500 14px/1.55 system-ui,Arial,sans-serif}
+.article:has(.scpat-kicker) .article-body table th,.article:has(.scpat-kicker) .article-body table td{min-width:115px;padding:11px;border:1px solid #cbd9e2}
+.article:has(.scpat-kicker) .article-body table th{background:#173b52;color:white;text-align:left}
+.article:has(.scpat-kicker) .article-body table tr:nth-child(even) td{background:#f1f6f8}
+.article:has(.scpat-kicker) .article-body>p:nth-last-of-type(2){border-top:2px solid #1c3a4d;padding-top:28px;margin-top:35px;font:700 clamp(1.3rem,2.3vw,1.62rem)/1.48 Georgia,serif;color:#153449}
+.article:has(.scpat-kicker) .article-body>p:last-of-type{font:italic 400 clamp(1.18rem,2.15vw,1.44rem)/1.55 Georgia,serif;color:#254357;border-left:4px solid #a62332;background:#f2f6f8;padding:19px 23px;margin:25px 0 40px}
+.article:has(.scpat-kicker) .sources{border-top:2px solid #183c52;margin-top:48px}
+.article:has(.scpat-kicker) .sources a{color:#891f31}
+@media(max-width:760px){
+  .article:has(.scpat-kicker){max-width:100%;width:100%;min-width:0;margin:15px auto 40px}
+  .article:has(.scpat-kicker)>header,.article:has(.scpat-kicker)>.article-body,.article:has(.scpat-kicker)>.reading-index,.article:has(.scpat-kicker)>section,.article:has(.scpat-kicker)>nav:not(.article-return){max-width:100%;width:100%;min-width:0}
+  .article:has(.scpat-kicker)>.article-body{font-size:17px;line-height:1.73}
+  .article:has(.scpat-kicker) .article-body>p:first-of-type{font-size:17px;line-height:1.73}
+  .article:has(.scpat-kicker) h1{font-size:clamp(2rem,8vw,2.55rem);line-height:1.13}
+  .article:has(.scpat-kicker) .article-standfirst{font-size:18px}
+  .article:has(.scpat-kicker) .article-body h2{font-size:clamp(1.65rem,7vw,2rem);line-height:1.24}
+  .scpat-deck{font-size:clamp(1.24rem,5.1vw,1.54rem);padding-left:14px;margin-bottom:25px}
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure{
+    display:flex!important;flex-direction:column!important;align-items:stretch!important;
+    width:100%!important;max-width:100%!important;min-width:0;
+    padding:12px!important;margin:28px 0 34px!important;gap:0!important;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-photo{
+    display:block;order:0!important;width:100%;max-width:100%;min-width:0;
+    height:auto;aspect-ratio:1;background-size:200% 200%;margin:0;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure figcaption.scpat-figtext{
+    display:flex!important;order:1;width:100%;min-width:0;
+    padding:15px 4px 6px!important;gap:9px;
+    font-size:14px!important;line-height:1.55;
+  }
+  .article:has(.scpat-kicker) .scpat-figtext strong{font-size:1.6rem!important}
+  .article:has(.scpat-kicker) .article-body p{hyphens:none;overflow-wrap:break-word}
+  .article:has(.scpat-kicker) .article-body table{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.scpat-figure,.scpat-photo{animation:none!important;transition:none!important}}
 
 /* SC-PATRIMONIALE image clarity upgrade — 2026-11-22 */
 /* Dedicated, full-resolution photos replace the old 2x2 compressed mosaic.

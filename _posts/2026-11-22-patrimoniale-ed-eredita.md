@@ -181,7 +181,7 @@ sources:
   accessed: 22 novembre 2026
   kind: fonte-amministrativa
 ---
-<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122-sharp3">
+<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122-layout4">
 <div class="scpat-kicker"><span>INCHIESTA ECONOMICA · 22 NOVEMBRE 2026</span><span>ITALIA / SPAGNA · 22 FONTI</span></div>
 <div class="scpat-deck">Proprietà, eredità, imprese e libertà economica: una lettura documentata delle imposte sulla ricchezza.</div>
 ## La nonna, dodici milioni di euro e una domanda sullo Stato
