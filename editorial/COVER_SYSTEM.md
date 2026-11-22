@@ -16,12 +16,12 @@ Produzione: immagine esclusiva per storia; dimensioni target 1440×810 o 1280×7
 - SC-REPORT-UOVA-2026 — uova e documenti per verifica.
 - SC-SPAGNA-2026 — urna e istituzioni, scena simbolica.
 - SC021 — memoria, album e ambiente di cura: pubblicata come fotografia IA, non paziente reale.
+- SC020 — consultazione medica simbolica: fotografia IA originale, dispositivo generico non identificabile come prodotto commerciale.
 - SC016 — già dotato di una copertina fotografica sintetica: controllare eventuale duplicazione e coerenza alle prossime revisioni.
 
 ## Coda di produzione, priorità decrescente
 | Storia / riferimento | Direzione fotografica originale | Nota |
 |---|---|---|
-| SC020 · Ozempic | Scrivania medica luminosa, appunti, strumenti di consultazione; nessun packaging o marchio inventato | Evitare suggerimenti clinici nell'immagine |
 | SC019 · Midterm USA | Seggio e schede elettorali generiche, architettura istituzionale non identificata | Non fingere foto di eventi reali |
 | SC018 · ueno bank audit (IT/ES/EN) | Documenti bancari, calcolatrice, fogli di verifica e lente, senza loghi né dati fittizi leggibili | Distinta da SC017 |
 | SC017 · Crisi bancaria Paraguay (IT/ES/EN) | Architettura bancaria generica con documenti economici in primo piano | Non insinuare prove con una foto |
@@ -68,6 +68,6 @@ Il controllo **non inventa fotografie e non verifica visivamente il contenuto de
 - possibili copertine tipografiche con il titolo all'interno;
 - SVG legacy da ricontrollare prima di assegnare lo stato «fotografica approvata».
 
-Stato produzione successivo: è stata preparata una nuova fotografia editoriale 16:9 per **SC020 · Ozempic** (consultazione medica simbolica, nessun marchio, nessuna funzione clinica attribuibile al dispositivo). Fino al caricamento effettivo del WebP nel repository e all'aggiornamento del front matter, la copertina pubblicata resta quella precedente. Gli output non fotografici per SC017/SC018/SC013/SC015 sono stati scartati; non vanno usati come copertine.
+Stato produzione: la fotografia editoriale 16:9 di **SC020 · Ozempic** è stata caricata nel repository e associata al front matter. Il dispositivo è generico: la fotografia non raffigura un prodotto commerciale né fornisce istruzioni cliniche. Gli output non fotografici per SC017/SC018/SC013/SC015 sono stati scartati; non vanno usati come copertine.
 
 Non modificare mai `image` puntando a una risorsa inesistente. Mantenere invariati i testi, i link, le fonti e le traduzioni durante la migrazione delle fotografie.
