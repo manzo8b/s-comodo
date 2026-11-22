@@ -23,11 +23,19 @@ permalink: /es/
       <a class="nsp-hero__link" href="{{ lead_post.url | relative_url }}">LEER EL ARTÍCULO <span aria-hidden="true">→</span></a>
       <p class="nsp-hero__meta">{{ lead_post.author | default: site.author_label | escape }} · {{ lead_post.date | date: '%d.%m.%Y' }}</p>
     </div>
+    {% assign hero_cover = lead_post.cover_image | default: lead_post.image %}
+    {% if hero_cover %}
+    <aside class="nsp-hero__aside nsp-hero__aside--cover" aria-label="Imagen de portada">
+      <a class="nsp-hero__photo" href="{{ lead_post.url | relative_url }}" aria-label="Leer: {{ lead_post.title | escape }}"><img src="{{ hero_cover | relative_url }}" alt="{{ lead_post.cover_image_alt | default: lead_post.image_alt | default: '' | escape }}" width="1280" height="720" fetchpriority="high"></a>
+      <p class="nsp-hero__photo-caption">Composición editorial creada con IA, no fotografía documental</p>
+    </aside>
+    {% else %}
     <aside class="nsp-hero__aside" aria-label="NUESTRO MÉTODO">
       <span class="nsp-hero__stamp">S-COMODO / NUESTRO MÉTODO</span>
       <p class="nsp-hero__manifesto">Entender los hechos.<br><em>Antes de decidir</em> qué pensar.</p>
       <p class="nsp-hero__small">NO PEDIMOS FE CIEGA. OFRECEMOS FUENTES Y ARGUMENTOS.</p>
     </aside>
+    {% endif %}
   </section>
   {% endif %}
   <section aria-labelledby="nsp-latest">
@@ -38,8 +46,9 @@ permalink: /es/
         {% if post.url != lead_post.url and card_count < 3 %}
           <article class="nsp-card">
             <a href="{{ post.url | relative_url }}" class="nsp-card__visual" aria-label="Leer: {{ post.title | escape }}">
-              {% if post.image %}
-                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: '' | escape }}" loading="lazy">
+              {% assign card_cover = post.cover_image | default: post.image %}
+              {% if card_cover %}
+                <img src="{{ card_cover | relative_url }}" alt="{{ post.cover_image_alt | default: post.image_alt | default: '' | escape }}" width="1280" height="720" loading="lazy">
               {% else %}<span aria-hidden="true">S-COMODO</span>{% endif %}
             </a>
             <p class="nsp-card__meta">{{ post.rubrica | escape }} {% if post.formato %} · {% include format-label.html value=post.formato lang=post.lang %}{% endif %}</p>

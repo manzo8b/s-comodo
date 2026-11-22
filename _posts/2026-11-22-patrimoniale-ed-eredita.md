@@ -177,6 +177,8 @@ sources:
   url: https://www1.agenziaentrate.gov.it/servizi/scadenzario/main.php/main.php?chi=3991&come=514&cosa=11515&entroil=30-06-2026&op=4&vista=1
   accessed: 22 novembre 2026
   kind: fonte-amministrativa
+cover_image: "/assets/images/covers/sc-patrimoniale-2026.webp"
+cover_image_alt: "Documenti ereditari, chiavi e una bilancia: composizione editoriale sulla proprietà e sul fisco"
 ---
 <div class="scpat-kicker"><span>INCHIESTA ECONOMICA · 22 NOVEMBRE 2026</span><span>ITALIA / SPAGNA · 22 FONTI</span></div>
 <div class="scpat-deck">Proprietà, eredità, imprese e libertà economica: una lettura documentata delle imposte sulla ricchezza.</div>

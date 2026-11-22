@@ -15,9 +15,9 @@ reviewed: true
 editorial_status: pubblicato
 ai_assisted: true
 ai_disclosure: "Dossier elaborato con assistenza dell'intelligenza artificiale e verifica redazionale sulle fonti elencate. Il quadro probatorio distingue documenti, interpretazioni storiografiche e valutazioni politiche. Le schede interattive non attribuiscono punteggi alle persone. La domanda ai lettori funziona localmente nel browser: il sito non memorizza voti, commenti, selezioni o statistiche della partecipazione. La ricostruzione è aggiornabile in presenza di documenti nuovi."
-image: /assets/images/sc-giovanni-gentile-dossier.svg
-image_alt: "Copertina tipografica originale S-COMODO: Giovanni Gentile, filosofia, fascismo e memoria, con anni 1875, 1923, 1944, 2026"
-image_caption: "Illustrazione editoriale originale S-COMODO. Non è una fotografia documentaria."
+image: "/assets/images/covers/sc-gentile-2026.webp"
+image_alt: "Ricostruzione fotografica editoriale di un intellettuale del Novecento, non ritratto storico autentico di Giovanni Gentile"
+image_caption: "Ricostruzione editoriale generata con IA; non è una fotografia storica di Giovanni Gentile."
 sources:
   - author: "Camera dei deputati"
     title: "Resoconto stenografico, seduta n. 747, pagine 63–68 e votazione finale"
@@ -72,6 +72,8 @@ sources:
   - author: "Istituto della Enciclopedia Italiana"
     title: "Scuola: la riforma Gentile e il riordino del 1923"
     url: "https://www.treccani.it/enciclopedia/scuola/"
+cover_image: "/assets/images/covers/sc-gentile-2026.webp"
+cover_image_alt: "Ricostruzione fotografica editoriale di un intellettuale del Novecento, non ritratto storico autentico di Giovanni Gentile"
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/sc-giovanni-gentile.css' | relative_url }}">

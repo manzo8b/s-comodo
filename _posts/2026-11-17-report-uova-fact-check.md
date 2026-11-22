@@ -15,9 +15,9 @@ reviewed: true
 editorial_status: pubblicato
 ai_assisted: true
 ai_disclosure: "Ricerca, redazione e visualizzazioni sviluppate con supporto di intelligenza artificiale e verifica editoriale. Il dossier confronta documenti pubblici e fonti giornalistiche; non rappresenta una perizia, un'indagine giudiziaria o una verifica forense delle registrazioni originali. Le affermazioni e le attribuzioni di responsabilità restano aggiornabili in presenza di nuovi documenti. Le visualizzazioni non contengono percentuali di affidabilità inventate."
-image: /assets/images/sc-report-uova-evidenze.svg
-image_alt: "Grafica editoriale astratta su sfondo bianco con due richiami documentati e una sezione distinta dedicata alle accuse da verificare; non riproduce fatti o stabilimenti"
-image_caption: "Grafica originale S-COMODO: distinzione fra documenti pubblici e questioni ancora aperte. Non è una fotografia documentaria."
+image: "/assets/images/covers/sc-report-uova-2026.webp"
+image_alt: "Uova e documenti sottoposti a verifica, composizione fotografica editoriale"
+image_caption: "Fotografia editoriale generata con IA, non documentazione del servizio televisivo."
 sources:
   - author: "RaiPlay · Report"
     title: "I peli nell'uovo, servizio del 15 novembre 2026"
@@ -54,6 +54,8 @@ sources:
     title: "Cesena, inchiesta di Report e casi di salmonella"
     date: "17/11/2026"
     url: "https://www.corriereromagna.it/cesena/cesena-inchiesta-di-report-e-casi-di-salmonella-ritirati-135-quintali-di-albume-d-uovo-prodotti-a-calisese-YX2330166"
+cover_image: "/assets/images/covers/sc-report-uova-2026.webp"
+cover_image_alt: "Uova e documenti sottoposti a verifica, composizione fotografica editoriale"
 ---
 <link rel="stylesheet" href="{{ '/assets/css/sc-factcheck-uova.css' | relative_url }}">
 
