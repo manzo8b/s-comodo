@@ -6,8 +6,8 @@ description: "Investigación documentada sobre herencias, grandes patrimonios, i
 date: '2026-11-22 12:00:00 +0100'
 permalink: /es/patrimonial-herencias-capital-y-libertad/
 lang: es
-rubrica: "Economía y sociedad"
-topic_id: societa-comunita
+rubrica: "Economía e instituciones"
+topic_id: economia-istituzioni
 format: Investigación
 author: Redazione S-COMODO
 editorial_status: pubblicato
@@ -177,7 +177,6 @@ sources:
   accessed: 22 de noviembre de 2026
   kind: fonte-amministrativa
 ---
-<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122-sidebar5">
 <div class="scpat-kicker"><span>INVESTIGACIÓN ECONÓMICA · 22 NOVIEMBRE 2026</span><span>ITALIA / ESPAÑA · 22 FUENTES</span></div>
 <div class="scpat-deck">Propiedad, herencias, empresas y libertad económica: una investigación documentada sobre los impuestos a la riqueza.</div>
 

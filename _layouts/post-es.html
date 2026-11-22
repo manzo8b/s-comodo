@@ -4,7 +4,7 @@ layout: default
 <nav class="article-return" aria-label="Navegación del artículo"><a href="{{ '/es/' | relative_url }}"><span aria-hidden="true">←</span> Volver al inicio</a></nav>
 <article class="article" itemscope itemtype="https://schema.org/BlogPosting">
 <header>
-<p class="section-tag"><a class="category-link" href="{{ '/es/temas/' | relative_url }}#{{ page.topic_id | escape }}">{{ page.rubrica | escape }}</a></p>
+<p class="section-tag"><a class="category-link" href="{{ '/es/temas/' | relative_url }}#{{ page.topic_id | escape }}">{{ page.rubrica | escape }}</a>{% if page.formato %} <span class="article-format-divider" aria-hidden="true">·</span> {% include format-label.html value=page.formato lang=page.lang %}{% endif %}</p>
 <h1>{{ page.title | escape }}</h1>
 {% if page.subtitle %}<p class="article-standfirst">{{ page.subtitle | escape }}</p>{% endif %}
 <p class="card-foot">{{ page.author | default: site.author_label }} · {{ page.date | date: '%d/%m/%Y' }}{% if page.reading_minutes %} · {{ page.reading_minutes }} min de lectura{% endif %}</p>

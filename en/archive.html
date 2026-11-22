@@ -8,9 +8,9 @@ permalink: /en/archive/
 <div class="page-body">
 <p class="section-tag">S-COMODO · ARTICLES IN ENGLISH</p>
 <h1>Archive</h1>
-<p>Essays and historical reflections, newest first.</p>
+<p>Verified reporting, opinion and analysis, newest first.</p>
 <div class="list-articles">
-{% assign posts_en = site.posts | where: 'lang', 'en' | sort: 'date' | reverse %}
+{% assign posts_en = site.posts | where: 'lang', 'en' | where: 'editorial_status', 'pubblicato' | sort: 'date' | reverse %}
 {% for p in posts_en %}
 <article class="article-teaser">
 <p class="card-meta">{{ p.date | date: '%d %B %Y' }} · <a href="{{ '/en/topics/' | relative_url }}#{{ p.topic_id | escape }}">{{ p.rubrica | escape }}</a></p>
