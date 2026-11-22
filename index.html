@@ -1,141 +1,85 @@
 ---
 layout: default
+lang: it
 title: Home
-description: "S-COMODO: giornalismo indipendente, analisi e dossier documentati. Il presente ha una storia. Noi la cerchiamo."
+description: "S-COMODO: giornale indipendente, verifiche, opinioni e analisi documentate per capire i fatti."
 permalink: /
 ---
 {% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'it' | sort: 'date' | reverse %}
-{% assign lead_post = published_posts | first %}
-<div class="front-edition-strip" aria-label="Informazioni sull'edizione">
-  <span>GIORNALE INDIPENDENTE · INCHIESTE, ANALISI, CONTESTO</span>
-  {% if lead_post %}<span>ULTIMO ARTICOLO · {{ lead_post.date | date: '%d.%m.%Y' }}</span>{% endif %}
-  <span class="front-edition-langs"><a href="{{ '/en/' | relative_url }}" lang="en">ENGLISH</a><span aria-hidden="true">/</span><a href="{{ '/es/' | relative_url }}" lang="es">ESPAÑOL</a></span>
-</div>
-{% if lead_post %}
-<section class="front-lead{% unless lead_post.image %} front-lead--text-only{% endunless %}" aria-label="Articolo di apertura">
-  <div class="front-lead-copy">
-    <p class="front-eyebrow"><span>IN PRIMO PIANO</span> · {{ lead_post.rubrica | escape }}</p>
-    <h1><a href="{{ lead_post.url | relative_url }}">{{ lead_post.title | escape }}</a></h1>
-    <p class="front-lead-standfirst">{{ lead_post.subtitle | escape }}</p>
-    <p class="front-lead-summary">{{ lead_post.description | default: lead_post.excerpt | strip_html | normalize_whitespace | truncatewords: 43 | escape }}</p>
-    <a class="front-read" href="{{ lead_post.url | relative_url }}">LEGGI IL DOSSIER <span aria-hidden="true">→</span></a>
-    <p class="front-byline">{{ lead_post.author | default: site.author_label | escape }} · {{ lead_post.date | date: '%d.%m.%Y' }}{% if lead_post.reading_minutes %} · {{ lead_post.reading_minutes }} min{% endif %}</p>
+{% assign lead_id = site.data.homepage_leads.it %}
+{% assign lead_candidates = published_posts | where: 'article_id', lead_id %}
+{% assign lead_post = lead_candidates | first | default: published_posts.first %}
+<div class="nsp-front">
+  <div class="nsp-edition" aria-label="EDIZIONE ITALIANA">
+    <strong>GIORNALE INDIPENDENTE · FATTI, FONTI, COMPRENSIONE</strong>
+    <span>EDIZIONE ITALIANA · {{ site.time | date: '%Y' }}</span>
   </div>
-{% if lead_post.image %}
-  <figure class="front-lead-image">
-    <a href="{{ lead_post.url | relative_url }}" aria-label="Leggi: {{ lead_post.title | escape }}">
-      {% if lead_post.article_id == 'SC012' %}
-        <img src="{{ '/assets/images/editorial-city-day.svg' | relative_url }}" width="1400" height="740" alt="Illustrazione editoriale di una città in luce diurna, con edifici e una figura in lontananza; non è una fotografia documentaria" fetchpriority="high">
-      {% elsif lead_post.image %}
-        <img src="{{ lead_post.image | relative_url }}" alt="{{ lead_post.image_alt | default: 'Illustrazione editoriale' | escape }}" fetchpriority="high">
-      {% else %}
-        <span class="front-image-fallback">S-COMODO<span>IL PRESENTE HA UNA STORIA</span></span>
-      {% endif %}
-    </a>
-    <figcaption>Illustrazione editoriale · non fotografia documentaria</figcaption>
-  </figure>
-{% endif %}
-</section>
-{% endif %}
-<div class="front-newsboard">
-  <div class="front-news-main">
-    <section class="front-secondaries" aria-label="Ultimi articoli">
-      {% for post in published_posts offset:1 limit:3 %}
-      <article class="front-secondary">
-        <p class="front-kicker">{{ post.rubrica | upcase | escape }}{% if post.lang != 'it' %} · {{ post.lang | upcase }}{% endif %}</p>
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-        <p class="front-secondary-intro">{{ post.subtitle | escape | truncatewords: 25 }}</p>
-        <a href="{{ post.url | relative_url }}" class="front-secondary-image" aria-label="Leggi: {{ post.title | escape }}">
-          {% if post.image %}<img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="lazy">{% else %}<span class="front-secondary-fallback">S-COMODO</span>{% endif %}
-        </a>
-        <p class="front-secondary-date">{{ post.date | date: '%d.%m.%Y' }}</p>
-      </article>
-      {% endfor %}
-    </section>
-    <section class="front-explainer" aria-labelledby="front-explainer-title">
-      <div class="front-explainer-art" aria-hidden="true">
-        <span class="front-explainer-heading">STESSI DATI</span>
-        <span class="front-explainer-track"><span class="front-explainer-on"></span><span class="front-explainer-off"></span></span>
-        <span class="front-explainer-scale"><span>80 puntuali</span><span>20 in ritardo</span></span>
-        <span class="front-explainer-foot">SU 100 TRENI · ESEMPIO IPOTETICO</span>
-      </div>
-      <div class="front-explainer-content">
-        <p class="front-kicker">IL CONTESTO</p>
-        <h2 id="front-explainer-title">Dati, parole, interpretazioni</h2>
-        <p>«Un treno su cinque è in ritardo» e «quattro treni su cinque sono puntuali» descrivono lo stesso esempio ipotetico. La differenza sta nella cornice narrativa: che cosa mette in evidenza?</p>
-        <a class="front-read" href="{{ '/le-parole-prima-dei-fatti/' | relative_url }}">SCOPRI COME FUNZIONA <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
-    <section class="front-archive" aria-labelledby="front-archive-title">
-      <div class="front-section-heading"><h2 id="front-archive-title">Articoli pubblicati</h2><a href="{{ '/archivio/' | relative_url }}">TUTTO L’ARCHIVIO <span aria-hidden="true">→</span></a></div>
-      <div class="front-archive-list">
-        {% for post in published_posts offset:4 limit:7 %}
-        <article class="front-archive-entry">
-          {% if post.image %}<a class="front-archive-thumb" href="{{ post.url | relative_url }}" aria-label="Apri {{ post.title | escape }}"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: 'Illustrazione editoriale' | escape }}" loading="lazy"></a>{% endif %}
-          <div class="front-archive-text">
-            <p class="front-kicker">{{ post.rubrica | upcase | escape }}{% if post.lang != 'it' %} · {{ post.lang | upcase }}{% endif %}</p>
+  {% if lead_post %}
+  <section class="nsp-hero" aria-label="IN PRIMO PIANO">
+    <div class="nsp-hero__main">
+      <p class="nsp-eyebrow">IN PRIMO PIANO / {{ lead_post.rubrica | escape }} {% if lead_post.formato %} · {% include format-label.html value=lead_post.formato lang=lead_post.lang %}{% endif %}</p>
+      <h1><a href="{{ lead_post.url | relative_url }}">{{ lead_post.title | escape }}</a></h1>
+      <p class="nsp-hero__standfirst">{{ lead_post.subtitle | default: lead_post.description | escape }}</p>
+      <a class="nsp-hero__link" href="{{ lead_post.url | relative_url }}">LEGGI L’ARTICOLO <span aria-hidden="true">→</span></a>
+      <p class="nsp-hero__meta">{{ lead_post.author | default: site.author_label | escape }} · {{ lead_post.date | date: '%d.%m.%Y' }}</p>
+    </div>
+    <aside class="nsp-hero__aside" aria-label="IL METODO">
+      <span class="nsp-hero__stamp">S-COMODO / IL METODO</span>
+      <p class="nsp-hero__manifesto">Capire i fatti.<br><em>Prima di scegliere</em> da che parte stare.</p>
+      <p class="nsp-hero__small">NON CHIEDIAMO FIDUCIA CIECA. OFFRIAMO FONTI E ARGOMENTI.</p>
+    </aside>
+  </section>
+  {% endif %}
+  <section aria-labelledby="nsp-latest">
+    <div class="nsp-sectionbar"><h2 id="nsp-latest">Le storie</h2><a href="{{ '/archivio/' | relative_url }}">TUTTO L’ARCHIVIO →</a></div>
+    <div class="nsp-triple">
+      {% assign card_count = 0 %}
+      {% for post in published_posts %}
+        {% if post.url != lead_post.url and card_count < 3 %}
+          <article class="nsp-card">
+            <a href="{{ post.url | relative_url }}" class="nsp-card__visual" aria-label="Leggi: {{ post.title | escape }}">
+              {% if post.image %}
+                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: '' | escape }}" loading="lazy">
+              {% else %}<span aria-hidden="true">S-COMODO</span>{% endif %}
+            </a>
+            <p class="nsp-card__meta">{{ post.rubrica | escape }} {% if post.formato %} · {% include format-label.html value=post.formato lang=post.lang %}{% endif %}</p>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-            <p>{{ post.subtitle | escape | truncatewords: 20 }}</p>
-          </div>
-          <time class="front-archive-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%d.%m' }}</time>
-        </article>
-        {% endfor %}
-      </div>
-    </section>
-  </div>
-  <aside class="front-rail" aria-label="Approfondimenti e navigazione editoriale">
-    <section class="front-rail-block front-rail-number">
-      <p class="front-rail-label">IN TRE PASSAGGI</p>
-      <div class="front-rail-big">03</div>
-      <p>Un titolo può attivare <strong>attenzione</strong>, suggerire un <strong>divario di conoscenza</strong> e proporre una <strong>certezza</strong>. Non è una sequenza universale: è un esercizio di lettura critica.</p>
-      <a href="{{ '/le-parole-prima-dei-fatti/' | relative_url }}">LEGGI L’ANALISI →</a>
-    </section>
-    <section class="front-rail-block front-rail-guide">
-      <p class="front-rail-label">LEGGERE OLTRE IL TITOLO</p>
-      <h2>Tre domande prima di condividere</h2>
-      <ol>
-        <li><strong>Il fatto.</strong> Quale affermazione è verificabile?</li>
-        <li><strong>Le parole.</strong> Quale emozione vuole evocare il titolo?</li>
-        <li><strong>Le fonti.</strong> Dove si trova una conferma indipendente?</li>
-      </ol>
-      <a href="{{ '/metodo/' | relative_url }}">IL NOSTRO METODO →</a>
-    </section>
-    <section class="front-rail-block front-rail-topics">
-      <p class="front-rail-label">LE RUBRICHE</p>
-      <ul>
-      {% for topic in site.data.topics %}
-        <li><a href="{{ '/temi/' | relative_url }}#{{ topic.id | escape }}">{{ topic.label_it | escape }} <span aria-hidden="true">↗</span></a></li>
+            <p class="nsp-card__excerpt">{{ post.subtitle | default: post.description | strip_html | truncatewords: 25 | escape }}</p>
+            <p class="nsp-card__date">{{ post.date | date: '%d.%m.%Y' }}</p>
+          </article>
+          {% assign card_count = card_count | plus: 1 %}
+        {% endif %}
       {% endfor %}
+    </div>
+  </section>
+  <section class="nsp-methods" aria-label="Tre modi di raccontare">
+    <div class="nsp-method"><span>01 / dossier</span><h3>Verifica</h3><p>Controlliamo affermazioni, atti e documenti. Distinguiamo ciò che è provato da ciò che resta aperto.</p></div>
+    <div class="nsp-method"><span>02 / saggio</span><h3>Opinione</h3><p>Argomentiamo una tesi, presentiamo le obiezioni migliori e separiamo fatti e interpretazioni.</p></div>
+    <div class="nsp-method"><span>03 / contesto</span><h3>Analisi</h3><p>Spieghiamo temi complessi con parole comprensibili, esempi e fonti verificabili.</p></div>
+  </section>
+  <div class="nsp-columns">
+    <section aria-labelledby="nsp-more">
+      <div class="nsp-sectionbar"><h2 id="nsp-more">Da leggere</h2><a href="{{ '/archivio/' | relative_url }}">TUTTO L’ARCHIVIO →</a></div>
+      <ol class="nsp-latest">
+      {% assign other_count = 0 %}
+      {% for post in published_posts %}
+        {% if post.url != lead_post.url %}
+          {% assign other_count = other_count | plus: 1 %}
+          {% if other_count > 3 and other_count < 10 %}
+            <li><p class="nsp-latest__meta">{{ post.rubrica | escape }} · {{ post.date | date: '%d.%m.%Y' }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p>{{ post.subtitle | escape | truncatewords: 20 }}</p></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      </ol>
+    </section>
+    <aside aria-labelledby="nsp-topics">
+      <div class="nsp-sectionbar"><h2 id="nsp-topics">Esplora le rubriche</h2></div>
+      <ul class="nsp-topics">
+        {% for topic in site.data.topics %}
+          <li><a href="{{ '/temi/' | relative_url }}#{{ topic.id | escape }}">{{ topic.label_it | escape }}<span aria-hidden="true">→</span></a></li>
+        {% endfor %}
       </ul>
-    </section>
-    <section class="front-rail-block front-rail-note">
-      <p class="front-rail-label">TRASPARENZA</p>
-      <h2>Le fonti vengono prima delle conclusioni</h2>
-      <p>Ogni dossier conserva i riferimenti documentali e segnala l'uso dell'IA. Le correzioni sono pubbliche.</p>
-      <a href="{{ '/rettifiche/' | relative_url }}">SEGNALA UNA RETTIFICA →</a>
-    </section>
-  </aside>
-</div>
-{% assign queue_size = 0 %}
-{% for p in site.data.editorial_queue %}
-  {% assign published_match = published_posts | where: 'article_id', p.article_id | first %}
-  {% unless published_match %}{% assign queue_size = queue_size | plus: 1 %}{% endunless %}
-{% endfor %}
-{% if queue_size > 0 %}
-<section class="front-upcoming" aria-labelledby="front-upcoming-title">
-  <div class="front-section-heading"><h2 id="front-upcoming-title">In preparazione</h2><span>Bozze non ancora pubblicate</span></div>
-  <div class="front-upcoming-items">
-    {% for p in site.data.editorial_queue %}
-      {% assign published_match = published_posts | where: 'article_id', p.article_id | first %}
-      {% unless published_match %}
-      <div class="front-upcoming-item"><p class="front-kicker">{{ p.rubrica | escape }}</p><h3>{{ p.title | escape }}</h3><p>{{ p.description | escape }}</p><span>{{ p.status | escape }}</span></div>
-      {% endunless %}
-    {% endfor %}
+    </aside>
   </div>
-</section>
-{% endif %}
-<section class="front-manifesto" aria-labelledby="front-manifesto-title">
-  <p class="front-kicker">LA NOSTRA IDEA</p>
-  <h2 id="front-manifesto-title">Il presente ha una storia.<br><em>Noi la cerchiamo.</em></h2>
-  <div><p>Partiamo da un fatto, risaliamo ai documenti e verifichiamo il contesto. La forza di un titolo non sostituisce la forza delle prove.</p><a class="front-read" href="{{ '/metodo/' | relative_url }}">COME LAVORIAMO <span aria-hidden="true">→</span></a></div>
-</section>
+  <section class="nsp-cta" aria-label="IL METODO"><div><h2>I fatti prima delle conclusioni</h2><p>Ogni articolo riporta le fonti in fondo alla pagina. Le correzioni sono pubbliche e le questioni aperte non diventano certezze.</p></div><a href="{{ '/metodo/' | relative_url }}">IL NOSTRO METODO →</a></section>
+</div>

@@ -52,24 +52,33 @@
 <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
 <link rel="alternate" hreflang="{{ page.translation_lang }}" href="{{ page.translation_url | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ '/patrimoniale-ed-eredita-quanto-puo-tassare-lo-stato/' | absolute_url }}">
+{% if page.image %}
 <meta property="og:image" content="{{ page.image | absolute_url | escape }}">
 <meta property="og:image:alt" content="{{ page.image_alt | escape }}">
 <meta name="twitter:card" content="summary_large_image">
 {% endif %}
+{% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/sc-newspaper-2026.css' | relative_url }}?v=20261122-launch1">
 </head>
-<body>
+<body class="sc-newspaper">
 <a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
 <header class="site-header"><div class="container">
 <div class="site-meta"><span>{% if is_spanish %}REVISTA INDEPENDIENTE{% elsif is_english %}INDEPENDENT JOURNAL{% else %}BLOG INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
 <div class="editorial-contact-strip"><a href="mailto:marcelo2020.it@gmail.com" aria-label="{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact and services{% else %}Contatti e servizi{% endif %}: marcelo2020.it@gmail.com"><span>{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact &amp; services{% else %}Contatti e servizi{% endif %}</span><strong>marcelo2020.it@gmail.com</strong></a></div>
 <div class="site-masthead" role="banner">
-  <div class="masthead-side masthead-side--left" aria-hidden="true"><span>INCHIESTE</span><span>ANALISI</span><span>CONTESTO</span><span>STORIA</span></div>
+  <div class="masthead-side masthead-side--left" aria-hidden="true"><span>{% if is_spanish %}HECHOS{% elsif is_english %}FACTS{% else %}FATTI{% endif %}</span><span>{% if is_spanish %}IDEAS{% elsif is_english %}IDEAS{% else %}IDEE{% endif %}</span><span>{% if is_spanish %}ANÁLISIS{% elsif is_english %}ANALYSIS{% else %}ANALISI{% endif %}</span></div>
   <div class="masthead-center">
-    <a class="site-logo" href="{% if is_spanish %}{{ '/es/' | relative_url }}{% elsif is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage"><img src="{{ '/assets/brand/scomodo-wordmark.svg' | relative_url }}" alt="S-COMODO" width="820" height="128"></a>
-    <p class="masthead-tagline">{% if is_spanish %}El presente tiene una historia. Nosotros la investigamos.{% elsif is_english %}The present has a history. We look for it.{% else %}Il presente ha una storia. Noi la cerchiamo.{% endif %}</p>
+    <a class="site-logo" href="{% if is_spanish %}{{ '/es/' | relative_url }}{% elsif is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage">S-COMODO</a>
+    <p class="masthead-tagline">{% if is_spanish %}Los hechos, sin atajos{% elsif is_english %}Facts, without shortcuts{% else %}I fatti, senza scorciatoie{% endif %}</p>
   </div>
-  <div class="masthead-side masthead-side--right" aria-hidden="true"><span>SOCIETÀ</span><span>POLITICA</span><span>POTERE</span><span>CITTÀ</span></div>
+  <div class="masthead-side masthead-side--right" aria-hidden="true"><span>{% if is_spanish %}VERIFICA{% elsif is_english %}VERIFY{% else %}VERIFICA{% endif %}</span><span>{% if is_spanish %}ENTIENDE{% elsif is_english %}UNDERSTAND{% else %}COMPRENDI{% endif %}</span><span>{% if is_spanish %}DECIDE{% elsif is_english %}DECIDE{% else %}DECIDI{% endif %}</span></div>
 </div>
+<nav class="newspaper-topics" aria-label="{% if is_spanish %}Secciones editoriales{% elsif is_english %}Editorial sections{% else %}Rubriche editoriali{% endif %}">
+{% for topic in site.data.topics %}
+{% unless forloop.first %}<span class="topic-separator" aria-hidden="true">/</span>{% endunless %}
+<a href="{% if is_spanish %}{{ '/es/temas/' | relative_url }}{% elsif is_english %}{{ '/en/topics/' | relative_url }}{% else %}{{ '/temi/' | relative_url }}{% endif %}#{{ topic.id | escape }}">{% if is_spanish %}{{ topic.label_es | escape }}{% elsif is_english %}{{ topic.label_en | escape }}{% else %}{{ topic.label_it | escape }}{% endif %}</a>
+{% endfor %}
+</nav>
 <nav class="site-navigation" aria-label="{% if is_spanish %}Navegación principal{% elsif is_english %}Main navigation{% else %}Menu principale{% endif %}">
 <div class="site-links">
 {% if is_spanish %}
@@ -84,13 +93,13 @@
 <main id="contenuto" class="container">{{ content }}</main>
 <footer class="site-footer"><div class="container footer-grid">
 {% if is_spanish %}
-<div><strong>S-COMODO.</strong><p>El presente tiene una historia. Nosotros la investigamos.</p><p class="footer-owner">Proyecto editorial independiente de {{ site.owner }}.</p></div>
+<div><strong>S-COMODO.</strong><p>Hechos, fuentes y argumentos: sin atajos.</p><p class="footer-owner">Proyecto editorial independiente de {{ site.owner }}.</p></div>
 <div class="footer-disclosure"><p>Los artículos e ilustraciones pueden elaborarse con asistencia de IA. Toda publicación requiere aprobación humana.</p><div class="footer-links"><a href="{{ '/es/uso-de-ia/' | relative_url }}">Uso de IA</a><a href="{{ '/es/comentarios/' | relative_url }}">Comentarios</a><a href="{{ '/es/rectificaciones/' | relative_url }}">Rectificaciones</a><a href="{{ '/es/privacidad/' | relative_url }}">Privacidad</a></div></div>
 {% elsif is_english %}
-<div><strong>S-COMODO.</strong><p>The present has a history. We look for it.</p><p class="footer-owner">Independent journal curated by {{ site.owner }}.</p></div>
+<div><strong>S-COMODO.</strong><p>Facts, sources and arguments: no shortcuts.</p><p class="footer-owner">Independent journal curated by {{ site.owner }}.</p></div>
 <div class="footer-disclosure"><p>Articles and illustrations may be created with AI assistance. Every publication requires human review and approval.</p><div class="footer-links"><a href="{{ '/en/ai-use/' | relative_url }}">AI use</a><a href="{{ '/en/comments/' | relative_url }}">Comments</a><a href="{{ '/en/corrections/' | relative_url }}">Corrections</a><a href="{{ '/en/privacy/' | relative_url }}">Privacy</a></div></div>
 {% else %}
-<div><strong>S-COMODO.</strong><p>Il presente ha una storia. Noi la cerchiamo.</p><p class="footer-owner">Blog indipendente di {{ site.owner }}.</p></div>
+<div><strong>S-COMODO.</strong><p>Fatti, fonti, argomenti: senza scorciatoie.</p><p class="footer-owner">Blog indipendente di {{ site.owner }}.</p></div>
 <div class="footer-disclosure"><p>Articoli e illustrazioni possono essere elaborati con intelligenza artificiale. Ogni pubblicazione richiede revisione e approvazione umana.</p><div class="footer-links"><a href="{{ '/uso-ia/' | relative_url }}">Uso dell'IA</a><a href="{{ '/politica-commenti/' | relative_url }}">Commenti</a><a href="{{ '/rettifiche/' | relative_url }}">Rettifiche</a><a href="{{ '/privacy/' | relative_url }}">Privacy</a></div></div>
 {% endif %}
 <div class="manzo-footer-credit"><a href="https://manzo8b.github.io/manzo-ai/" target="_blank" rel="noopener noreferrer" aria-label="MANZO AI — ecosistema creativo e digitale"><img src="{{ '/assets/images/manzo-ai-mark.svg' | relative_url }}" width="34" height="33" alt="" aria-hidden="true" loading="lazy"><span>{% if is_spanish %}Proyecto independiente · Ecosistema MANZO AI{% elsif is_english %}Independent project · MANZO AI ecosystem{% else %}Progetto indipendente · Ecosistema MANZO AI{% endif %}</span></a></div>

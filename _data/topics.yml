@@ -18,3 +18,9 @@
   label_it: "Tecnologia e risorse"
   label_en: "Technology & Resources"
   description: "Intelligenza artificiale, infrastrutture digitali, energia, acqua, costi e responsabilità economiche."
+
+- id: economia-istituzioni
+  label_es: "Economía e instituciones"
+  label_it: "Economia e istituzioni"
+  label_en: "Economy & Institutions"
+  description: "Fiscalità, imprese, mercati, finanza, conti pubblici e istituzioni economiche."
