@@ -33,3 +33,109 @@
 .article:has(.scpat-kicker) a:focus-visible{outline:3px solid #185c89;outline-offset:3px}
 @media(max-width:700px){.article:has(.scpat-kicker){width:100%}.scpat-figure{grid-template-columns:1fr;padding:12px;gap:16px}.scpat-figure--reverse .scpat-photo{order:0}.scpat-photo{max-width:480px;margin:auto}.scpat-figtext{padding:6px 9px 12px}.scpat-figtext strong{font-size:1.7rem!important}.scpat-kicker{font-size:10px}.article:has(.scpat-kicker) .article-body table{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.scpat-figure,.scpat-photo{animation:none!important;transition:none!important}}
+
+
+/* SC-PATRIMONIALE mobile Safari correction — 2026-11-22 */
+/*
+ * The generic reading-edition mobile stylesheet makes figure elements
+ * position:static and width:100%, but the SC-PATRIMONIALE figure retained its
+ * desktop transform:translateX(-50%). On iOS that shifted the entire figure,
+ * photograph and caption half a column to the LEFT, leaving white space on
+ * the right and creating apparent horizontal cropping.
+ * Fix only this dossier on narrow screens; keep the desktop editorial layout.
+ */
+@media screen and (max-width: 760px) {
+  .article:has(.scpat-kicker) {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .article:has(.scpat-kicker) > header,
+  .article:has(.scpat-kicker) > .article-body {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 26px 0 38px !important;
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    background: #f3f7fa !important;
+    border: 1px solid #cfdde6 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 27px -23px rgba(8,32,50,.5);
+    box-sizing: border-box !important;
+    overflow: hidden;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-photo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: 1;
+    flex: none;
+    order: 0 !important;
+    margin: 0;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure figcaption.scpat-figtext {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    gap: 9px;
+    padding: 17px 6px 8px !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    color: #304756 !important;
+    overflow-wrap: break-word;
+    text-align: start;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-figtext strong {
+    font-size: clamp(1.52rem, 6.3vw, 1.9rem) !important;
+    line-height: 1.18;
+    overflow-wrap: break-word;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-figtext small {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #405666 !important;
+    overflow-wrap: break-word;
+  }
+  .article:has(.scpat-kicker) > .article-body {
+    font-size: 17px;
+    line-height: 1.72;
+  }
+  .article:has(.scpat-kicker) .article-body > p,
+  .article:has(.scpat-kicker) .article-body li {
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+  }
+  .article:has(.scpat-kicker) .article-body h2 {
+    font-size: clamp(1.7rem, 7vw, 2.1rem);
+    line-height: 1.22;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  .article:has(.scpat-kicker) .article-body table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
