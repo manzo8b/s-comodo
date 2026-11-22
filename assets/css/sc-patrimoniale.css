@@ -139,3 +139,79 @@
     -webkit-overflow-scrolling: touch;
   }
 }
+
+
+/* SC-PATRIMONIALE image clarity upgrade — 2026-11-22 */
+/* Dedicated, full-resolution photos replace the old 2x2 compressed mosaic.
+   Each photo is a real image element for responsive scaling and native zoom. */
+.article:has(.scpat-kicker) .article-body figure.scpat-figure > a.scpat-photo-link {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  max-width:100%;
+  align-self:stretch;
+  text-decoration:none;
+  color:#173c52;
+  border:1px solid #c1d0dc;
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 12px 32px rgba(13,35,49,.12);
+  overflow:hidden;
+}
+.article:has(.scpat-kicker) .article-body figure.scpat-figure--reverse > a.scpat-photo-link {order:2}
+.article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-photo-link img.scpat-photo-image {
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio:1;
+  object-fit:contain;
+  image-rendering:auto;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+}
+.article:has(.scpat-kicker) .scpat-photo-link .scpat-zoom-label {
+  display:block;
+  width:100%;
+  padding:11px 13px;
+  background:#e9f2f7;
+  color:#153f5b;
+  font:700 12px/1.4 system-ui,Arial,sans-serif;
+  letter-spacing:.015em;
+  text-align:center;
+  border-top:1px solid #c8d8e2;
+}
+.article:has(.scpat-kicker) .scpat-photo-link:hover .scpat-zoom-label {background:#dcebf4}
+.article:has(.scpat-kicker) .scpat-photo-link:focus-visible {
+  outline:3px solid #155b93;
+  outline-offset:3px;
+}
+@media screen and (max-width:760px) {
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure > a.scpat-photo-link {
+    display:flex!important;
+    flex-direction:column!important;
+    order:0!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    margin:0!important;
+    flex:none;
+    border-radius:10px;
+    box-sizing:border-box;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-photo-link img.scpat-photo-image{
+    width:100%!important;
+    height:auto!important;
+    max-width:100%!important;
+    max-height:none!important;
+    aspect-ratio:1!important;
+    object-fit:contain!important;
+    position:static!important;
+  }
+  .article:has(.scpat-kicker) .article-body figure.scpat-figure .scpat-zoom-label{
+    padding:12px 8px;
+    font-size:13px;
+  }
+}

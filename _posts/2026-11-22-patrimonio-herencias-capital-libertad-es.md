@@ -17,7 +17,7 @@ ai_disclosure: "Investigación preparada con asistencia de inteligencia artifici
 article_id: SC-PATRIMONIALE-2026
 translation_url: /patrimoniale-ed-eredita-quanto-puo-tassare-lo-stato/
 translation_lang: it
-image: /assets/images/sc-patrimoniale-dashboards.webp
+image: /assets/images/patrimoniale/sc021-eredita-e-proprieta.webp
 image_alt: "Cuatro pantallas analíticas sobre herencias, empresas, liquidez y fiscalidad"
 image_caption: "Representaciones editoriales elaboradas con IA; no son documentos estadísticos oficiales."
 reading_minutes: 22
@@ -180,7 +180,7 @@ sources:
   accessed: 22 de noviembre de 2026
   kind: fonte-amministrativa
 ---
-<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122-mobile2">
+<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122-sharp3">
 <div class="scpat-kicker"><span>INVESTIGACIÓN ECONÓMICA · 22 NOVIEMBRE 2026</span><span>ITALIA / ESPAÑA · 22 FUENTES</span></div>
 <div class="scpat-deck">Propiedad, herencias, empresas y libertad económica: una investigación documentada sobre los impuestos a la riqueza.</div>
 
@@ -198,7 +198,7 @@ El Frente Amplio justifica su propuesta como una forma de frenar la concentraci�
 
 **¿Cuándo gravar una herencia supone una contribución razonable a la sociedad y cuándo puede limitar de manera excesiva la libertad de transmitir la propiedad?**
 
-<figure class="scpat-figure"><div class="scpat-photo scpat-photo--01" role="img" aria-label="Pantalla con tarjetas conectadas sobre herencias, umbrales y tipos marginales"></div><figcaption class="scpat-figtext"><span class="scpat-number">01 / 04 · S-COMODO VISUAL LAB</span><strong>Herencia y propiedad</strong><span>Una reforma sucesoria no es lo mismo que un impuesto anual sobre el patrimonio.</span><small>Visualización generada con IA: no es un documento tributario oficial.</small></figcaption></figure>
+<figure class="scpat-figure"><a class="scpat-photo-link" href="{{ '/assets/images/patrimoniale/sc021-eredita-e-proprieta.webp' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Aprir imagen en alta resolución 01"><img class="scpat-photo-image" src="{{ '/assets/images/patrimoniale/sc021-eredita-e-proprieta.webp' | relative_url }}" alt="Pantalla con tarjetas conectadas sobre herencias, umbrales y tipos marginales" width="960" height="960" loading="lazy" decoding="async"><span class="scpat-zoom-label" aria-hidden="true">Toca para ampliar la imagen ↗</span></a><figcaption class="scpat-figtext"><span class="scpat-number">01 / 04 · S-COMODO VISUAL LAB</span><strong>Herencia y propiedad</strong><span>Una reforma sucesoria no es lo mismo que un impuesto anual sobre el patrimonio.</span><small>Visualización generada con IA: no es un documento tributario oficial.</small></figcaption></figure>
 
 ## Primera distinción: patrimonio y sucesiones no son el mismo impuesto
 
@@ -210,7 +210,7 @@ Tampoco deben confundirse **patrimonio, renta y liquidez**. El patrimonio es el 
 
 Una persona puede ser propietaria de una empresa valorada en diez millones y tener muy pocos ahorros personales. Otra puede poseer diez millones en instrumentos financieros fácilmente vendibles. Aunque ambas tuvieran la misma base imponible, no necesariamente dispondrían de la misma capacidad para pagar el impuesto.
 
-<figure class="scpat-figure scpat-figure--reverse"><div class="scpat-photo scpat-photo--04" role="img" aria-label="Panel que diferencia los impuestos existentes en Italia"></div><figcaption class="scpat-figtext"><span class="scpat-number">04 / 04 · S-COMODO VISUAL LAB</span><strong>¿Qué impuestos existen?</strong><span>Inmuebles, activos financieros, patrimonio en el extranjero y sucesiones: hechos imponibles diferentes.</span><small>Visualización ilustrativa generada con IA; no contiene datos oficiales.</small></figcaption></figure>
+<figure class="scpat-figure scpat-figure--reverse"><a class="scpat-photo-link" href="{{ '/assets/images/patrimoniale/sc021-imposte-italiane.webp' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Aprir imagen en alta resolución 04"><img class="scpat-photo-image" src="{{ '/assets/images/patrimoniale/sc021-imposte-italiane.webp' | relative_url }}" alt="Panel que diferencia los impuestos existentes en Italia" width="960" height="960" loading="lazy" decoding="async"><span class="scpat-zoom-label" aria-hidden="true">Toca para ampliar la imagen ↗</span></a><figcaption class="scpat-figtext"><span class="scpat-number">04 / 04 · S-COMODO VISUAL LAB</span><strong>¿Qué impuestos existen?</strong><span>Inmuebles, activos financieros, patrimonio en el extranjero y sucesiones: hechos imponibles diferentes.</span><small>Visualización ilustrativa generada con IA; no contiene datos oficiales.</small></figcaption></figure>
 
 ## ¿Cuánto pagaría el nieto en Italia?
 
@@ -238,7 +238,7 @@ Un estudio publicado en julio de 2026 en *Review of Income and Wealth* estima qu
 
 Estas cifras señalan un problema distributivo real, pero **no determinan por sí solas qué impuesto habría que aprobar**. Una reforma puede actuar sobre las herencias, los rendimientos del capital, los inmuebles, las ventajas fiscales o el patrimonio neto. Cada alternativa tiene efectos distintos.
 
-<figure class="scpat-figure"><div class="scpat-photo scpat-photo--03" role="img" aria-label="Panel conceptual que diferencia patrimonio neto, renta periódica y liquidez"></div><figcaption class="scpat-figtext"><span class="scpat-number">03 / 04 · S-COMODO VISUAL LAB</span><strong>Patrimonio, renta y liquidez</strong><span>Poseer activos valiosos no implica disponer del efectivo necesario para pagar un impuesto.</span><small>Imagen ilustrativa generada con IA; no es una estadística.</small></figcaption></figure>
+<figure class="scpat-figure"><a class="scpat-photo-link" href="{{ '/assets/images/patrimoniale/sc021-patrimonio-reddito-liquidita.webp' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Aprir imagen en alta resolución 03"><img class="scpat-photo-image" src="{{ '/assets/images/patrimoniale/sc021-patrimonio-reddito-liquidita.webp' | relative_url }}" alt="Panel conceptual que diferencia patrimonio neto, renta periódica y liquidez" width="960" height="960" loading="lazy" decoding="async"><span class="scpat-zoom-label" aria-hidden="true">Toca para ampliar la imagen ↗</span></a><figcaption class="scpat-figtext"><span class="scpat-number">03 / 04 · S-COMODO VISUAL LAB</span><strong>Patrimonio, renta y liquidez</strong><span>Poseer activos valiosos no implica disponer del efectivo necesario para pagar un impuesto.</span><small>Imagen ilustrativa generada con IA; no es una estadística.</small></figcaption></figure>
 
 ## Las propuestas italianas: ¿a quién afectarían?
 
@@ -268,7 +268,7 @@ La pregunta para alguien con un patrimonio de diez millones no es solo cuánto p
 
 Por eso, el diseño de una ley debe aclarar cómo se valoran las empresas no cotizadas y qué ocurre cuando un contribuyente tiene un patrimonio elevado, pero escasa liquidez.
 
-<figure class="scpat-figure scpat-figure--reverse"><div class="scpat-photo scpat-photo--02" role="img" aria-label="Pantalla de análisis sobre capital, empresas, inversión y empleo"></div><figcaption class="scpat-figtext"><span class="scpat-number">02 / 04 · S-COMODO VISUAL LAB</span><strong>Capital, empresas y trabajo</strong><span>Una carga fiscal puede modificar las decisiones empresariales, aunque no existe un efecto automático sobre el empleo.</span><small>Composición generada con IA; no representa cifras oficiales.</small></figcaption></figure>
+<figure class="scpat-figure scpat-figure--reverse"><a class="scpat-photo-link" href="{{ '/assets/images/patrimoniale/sc021-capitale-impresa-lavoro.webp' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Aprir imagen en alta resolución 02"><img class="scpat-photo-image" src="{{ '/assets/images/patrimoniale/sc021-capitale-impresa-lavoro.webp' | relative_url }}" alt="Pantalla de análisis sobre capital, empresas, inversión y empleo" width="960" height="960" loading="lazy" decoding="async"><span class="scpat-zoom-label" aria-hidden="true">Toca para ampliar la imagen ↗</span></a><figcaption class="scpat-figtext"><span class="scpat-number">02 / 04 · S-COMODO VISUAL LAB</span><strong>Capital, empresas y trabajo</strong><span>Una carga fiscal puede modificar las decisiones empresariales, aunque no existe un efecto automático sobre el empleo.</span><small>Composición generada con IA; no representa cifras oficiales.</small></figcaption></figure>
 
 ## ¿Puede un impuesto patrimonial provocar despidos?
 

@@ -18,7 +18,7 @@ ai_disclosure: "Inchiesta elaborata con assistenza di intelligenza artificiale; 
 article_id: SC-PATRIMONIALE-2026
 translation_url: /es/patrimonial-herencias-capital-y-libertad/
 translation_lang: es
-image: /assets/images/sc-patrimoniale-dashboards.webp
+image: /assets/images/patrimoniale/sc021-eredita-e-proprieta.webp
 image_alt: "Quattro fotografie-dashboard editoriali sulle eredità, le imprese, la liquidità e le imposte"
 image_caption: "Visualizzazioni illustrative realizzate con IA, non riproduzioni di dati o interfacce ufficiali."
 reading_minutes: 21
@@ -181,7 +181,7 @@ sources:
   accessed: 22 novembre 2026
   kind: fonte-amministrativa
 ---
-<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122-mobile2">
+<link rel="stylesheet" href="{{ '/assets/css/sc-patrimoniale.css' | relative_url }}?v=20261122-sharp3">
 <div class="scpat-kicker"><span>INCHIESTA ECONOMICA · 22 NOVEMBRE 2026</span><span>ITALIA / SPAGNA · 22 FONTI</span></div>
 <div class="scpat-deck">Proprietà, eredità, imprese e libertà economica: una lettura documentata delle imposte sulla ricchezza.</div>
 ## La nonna, dodici milioni di euro e una domanda sullo Stato
@@ -199,7 +199,7 @@ Il Frente Amplio giustifica la misura con un obiettivo politico dichiarato: cont
 **Quando tassare un'eredità significa chiedere un contributo alla collettività e quando rischia di comprimere in modo eccessivo il diritto di trasmettere la proprietà?**
 
 
-<figure class="scpat-figure"><div class="scpat-photo scpat-photo--01" role="img" aria-label="Schermo con schede collegate che confrontano eredità, franchigie, eccedenze e aliquote"></div><figcaption class="scpat-figtext"><span class="scpat-number">01 / 04 · S-COMODO VISUAL LAB</span><strong>Eredità e proprietà</strong><span>La proposta successoria spagnola non coincide con un'imposta patrimoniale annuale.</span><small>Ricostruzione illustrativa con IA: non è un documento fiscale né una statistica ufficiale.</small></figcaption></figure>
+<figure class="scpat-figure"><a class="scpat-photo-link" href="{{ '/assets/images/patrimoniale/sc021-eredita-e-proprieta.webp' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Apri la fotografia ad alta risoluzione 01"><img class="scpat-photo-image" src="{{ '/assets/images/patrimoniale/sc021-eredita-e-proprieta.webp' | relative_url }}" alt="Schermo con schede collegate che confrontano eredità, franchigie, eccedenze e aliquote" width="960" height="960" loading="lazy" decoding="async"><span class="scpat-zoom-label" aria-hidden="true">Tocca per ingrandire l'immagine ↗</span></a><figcaption class="scpat-figtext"><span class="scpat-number">01 / 04 · S-COMODO VISUAL LAB</span><strong>Eredità e proprietà</strong><span>La proposta successoria spagnola non coincide con un'imposta patrimoniale annuale.</span><small>Ricostruzione illustrativa con IA: non è un documento fiscale né una statistica ufficiale.</small></figcaption></figure>
 
 ## Prima distinzione: patrimoniale e successione non sono la stessa imposta
 
@@ -212,7 +212,7 @@ Anche le parole *patrimonio*, *reddito* e *liquidità* indicano cose diverse. Il
 Una persona può possedere un'azienda valutata dieci milioni e avere pochi risparmi personali. Un'altra può detenere dieci milioni in strumenti finanziari facilmente vendibili. A parità di base imponibile, il conto fiscale potrebbe essere uguale; la facilità di pagarlo, no.
 
 
-<figure class="scpat-figure scpat-figure--reverse"><div class="scpat-photo scpat-photo--04" role="img" aria-label="Pannello di schede illustrate sulle imposte già presenti in Italia"></div><figcaption class="scpat-figtext"><span class="scpat-number">04 / 04 · S-COMODO VISUAL LAB</span><strong>Le imposte già esistenti</strong><span>IMU, imposta di bollo, IVIE, IVAFE, successioni: forme differenti di imposizione.</span><small>Ricostruzione illustrativa con IA: non è un documento fiscale né una statistica ufficiale.</small></figcaption></figure>
+<figure class="scpat-figure scpat-figure--reverse"><a class="scpat-photo-link" href="{{ '/assets/images/patrimoniale/sc021-imposte-italiane.webp' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Apri la fotografia ad alta risoluzione 04"><img class="scpat-photo-image" src="{{ '/assets/images/patrimoniale/sc021-imposte-italiane.webp' | relative_url }}" alt="Pannello di schede illustrate sulle imposte già presenti in Italia" width="960" height="960" loading="lazy" decoding="async"><span class="scpat-zoom-label" aria-hidden="true">Tocca per ingrandire l'immagine ↗</span></a><figcaption class="scpat-figtext"><span class="scpat-number">04 / 04 · S-COMODO VISUAL LAB</span><strong>Le imposte già esistenti</strong><span>IMU, imposta di bollo, IVIE, IVAFE, successioni: forme differenti di imposizione.</span><small>Ricostruzione illustrativa con IA: non è un documento fiscale né una statistica ufficiale.</small></figcaption></figure>
 
 ## In Italia, quanto pagherebbe il nipote?
 
@@ -241,7 +241,7 @@ Un'altra ricerca, pubblicata nel luglio 2026 sulla *Review of Income and Wealth*
 Queste evidenze sollevano un problema reale: persone con ricchezze molto differenti possono sostenere carichi fiscali effettivi proporzionalmente diversi. Non indicano, da sole, quale imposta sia la soluzione migliore. Si potrebbe intervenire su successioni, redditi da capitale, immobili, agevolazioni o patrimonio netto. Cambierebbero destinatari, incentivi e gettito.
 
 
-<figure class="scpat-figure"><div class="scpat-photo scpat-photo--03" role="img" aria-label="Dashboard che distingue patrimonio, reddito periodico e denaro immediatamente disponibile"></div><figcaption class="scpat-figtext"><span class="scpat-number">03 / 04 · S-COMODO VISUAL LAB</span><strong>Patrimonio, reddito, liquidità</strong><span>Possedere un bene non significa avere il contante necessario per pagarne la tassazione.</span><small>Ricostruzione illustrativa con IA: non è un documento fiscale né una statistica ufficiale.</small></figcaption></figure>
+<figure class="scpat-figure"><a class="scpat-photo-link" href="{{ '/assets/images/patrimoniale/sc021-patrimonio-reddito-liquidita.webp' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Apri la fotografia ad alta risoluzione 03"><img class="scpat-photo-image" src="{{ '/assets/images/patrimoniale/sc021-patrimonio-reddito-liquidita.webp' | relative_url }}" alt="Dashboard che distingue patrimonio, reddito periodico e denaro immediatamente disponibile" width="960" height="960" loading="lazy" decoding="async"><span class="scpat-zoom-label" aria-hidden="true">Tocca per ingrandire l'immagine ↗</span></a><figcaption class="scpat-figtext"><span class="scpat-number">03 / 04 · S-COMODO VISUAL LAB</span><strong>Patrimonio, reddito, liquidità</strong><span>Possedere un bene non significa avere il contante necessario per pagarne la tassazione.</span><small>Ricostruzione illustrativa con IA: non è un documento fiscale né una statistica ufficiale.</small></figcaption></figure>
 
 ## Le proposte italiane: una tassa per circa cinquantamila contribuenti?
 
@@ -272,7 +272,7 @@ Il dato importante non è soltanto *quanto* dovrebbe pagare una persona con diec
 Chi decide le aliquote dovrebbe perciò chiarire anche come valutare le aziende non quotate, quali beni esentare e se prevedere pagamenti rateali o altre salvaguardie per i contribuenti con poca liquidità.
 
 
-<figure class="scpat-figure scpat-figure--reverse"><div class="scpat-photo scpat-photo--02" role="img" aria-label="Schermo con mappa degli investimenti, risorse aziendali e conseguenze sull'occupazione"></div><figcaption class="scpat-figtext"><span class="scpat-number">02 / 04 · S-COMODO VISUAL LAB</span><strong>Capitale, imprese e lavoro</strong><span>Gli effetti economici sono possibili, ma dipendono dalle regole e dai comportamenti.</span><small>Ricostruzione illustrativa con IA: non è un documento fiscale né una statistica ufficiale.</small></figcaption></figure>
+<figure class="scpat-figure scpat-figure--reverse"><a class="scpat-photo-link" href="{{ '/assets/images/patrimoniale/sc021-capitale-impresa-lavoro.webp' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Apri la fotografia ad alta risoluzione 02"><img class="scpat-photo-image" src="{{ '/assets/images/patrimoniale/sc021-capitale-impresa-lavoro.webp' | relative_url }}" alt="Schermo con mappa degli investimenti, risorse aziendali e conseguenze sull'occupazione" width="960" height="960" loading="lazy" decoding="async"><span class="scpat-zoom-label" aria-hidden="true">Tocca per ingrandire l'immagine ↗</span></a><figcaption class="scpat-figtext"><span class="scpat-number">02 / 04 · S-COMODO VISUAL LAB</span><strong>Capitale, imprese e lavoro</strong><span>Gli effetti economici sono possibili, ma dipendono dalle regole e dai comportamenti.</span><small>Ricostruzione illustrativa con IA: non è un documento fiscale né una statistica ufficiale.</small></figcaption></figure>
 
 ## Una patrimoniale può far perdere posti di lavoro?
 
