@@ -63,7 +63,7 @@
 <body class="sc-newspaper">
 <a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
 <header class="site-header"><div class="container">
-<div class="site-meta"><span>{% if is_spanish %}REVISTA INDEPENDIENTE{% elsif is_english %}INDEPENDENT JOURNAL{% else %}BLOG INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
+<div class="site-meta"><span>{% if is_spanish %}REVISTA INDEPENDIENTE{% elsif is_english %}INDEPENDENT JOURNAL{% else %}GIORNALE INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
 <div class="editorial-contact-strip"><a href="mailto:marcelo2020.it@gmail.com" aria-label="{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact and services{% else %}Contatti e servizi{% endif %}: marcelo2020.it@gmail.com"><span>{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact &amp; services{% else %}Contatti e servizi{% endif %}</span><strong>marcelo2020.it@gmail.com</strong></a></div>
 <div class="site-masthead" role="banner">
   <div class="masthead-side masthead-side--left" aria-hidden="true"><span>{% if is_spanish %}HECHOS{% elsif is_english %}FACTS{% else %}FATTI{% endif %}</span><span>{% if is_spanish %}IDEAS{% elsif is_english %}IDEAS{% else %}IDEE{% endif %}</span><span>{% if is_spanish %}ANÁLISIS{% elsif is_english %}ANALYSIS{% else %}ANALISI{% endif %}</span></div>
@@ -99,9 +99,10 @@
 <div><strong>S-COMODO.</strong><p>Facts, sources and arguments: no shortcuts.</p><p class="footer-owner">Independent journal curated by {{ site.owner }}.</p></div>
 <div class="footer-disclosure"><p>Articles and illustrations may be created with AI assistance. Every publication requires human review and approval.</p><div class="footer-links"><a href="{{ '/en/ai-use/' | relative_url }}">AI use</a><a href="{{ '/en/comments/' | relative_url }}">Comments</a><a href="{{ '/en/corrections/' | relative_url }}">Corrections</a><a href="{{ '/en/privacy/' | relative_url }}">Privacy</a></div></div>
 {% else %}
-<div><strong>S-COMODO.</strong><p>Fatti, fonti, argomenti: senza scorciatoie.</p><p class="footer-owner">Blog indipendente di {{ site.owner }}.</p></div>
+<div><strong>S-COMODO.</strong><p>Fatti, fonti, argomenti: senza scorciatoie.</p><p class="footer-owner">Progetto editoriale indipendente di {{ site.owner }}.</p></div>
 <div class="footer-disclosure"><p>Articoli e illustrazioni possono essere elaborati con intelligenza artificiale. Ogni pubblicazione richiede revisione e approvazione umana.</p><div class="footer-links"><a href="{{ '/uso-ia/' | relative_url }}">Uso dell'IA</a><a href="{{ '/politica-commenti/' | relative_url }}">Commenti</a><a href="{{ '/rettifiche/' | relative_url }}">Rettifiche</a><a href="{{ '/privacy/' | relative_url }}">Privacy</a></div></div>
 {% endif %}
+<div class="sc-footer-contact"><a href="mailto:marcelo2020.it@gmail.com">{% if is_spanish %}Contacto editorial{% elsif is_english %}Editorial contact{% else %}Contatti editoriali{% endif %}</a></div>
 <div class="manzo-footer-credit"><a href="https://manzo8b.github.io/manzo-ai/" target="_blank" rel="noopener noreferrer" aria-label="MANZO AI — ecosistema creativo e digitale"><img src="{{ '/assets/images/manzo-ai-mark.svg' | relative_url }}" width="34" height="33" alt="" aria-hidden="true" loading="lazy"><span>{% if is_spanish %}Proyecto independiente · Ecosistema MANZO AI{% elsif is_english %}Independent project · MANZO AI ecosystem{% else %}Progetto indipendente · Ecosistema MANZO AI{% endif %}</span></a></div>
 </div></footer>
 </body></html>

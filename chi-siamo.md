@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Chi siamo
+description: "Il progetto editoriale indipendente S-COMODO: verifiche, opinioni e analisi documentate per capire i fatti."
 permalink: /chi-siamo/
 ---
 <div class="page-body" markdown="1">
@@ -8,28 +9,33 @@ permalink: /chi-siamo/
 
 # Chi siamo
 
-**S-COMODO è un blog indipendente curato da Marcelo Fernandez.**
+**S-COMODO è un progetto editoriale indipendente, curato da Marcelo Fernandez.** Raccontiamo temi che meritano di essere verificati, spiegati o discussi, attraverso fonti riconoscibili e una scrittura accessibile.
 
-Partiamo da un fatto documentato, cerchiamo un precedente storico o filosofico e verifichiamo se il confronto regge. Ci interessano le somiglianze, ma anche le differenze che impediscono di trasformare la storia in uno slogan.
+Non abbiamo una periodicità obbligatoria e non cerchiamo un parallelo storico in ogni articolo. La storia, la filosofia, l'economia e la scienza sono strumenti da usare quando aiutano a comprendere, non vincoli narrativi.
 
-Non pubblichiamo per rispettare un calendario. Un articolo esce quando la documentazione è sufficiente e il testo ha superato la revisione.
+## Un giornale per lettori diversi
+
+Vogliamo che una persona giovane, una pensionata e un professionista possano leggere **lo stesso articolo** e comprenderne il nucleo. I termini tecnici vengono spiegati al primo utilizzo, senza sacrificare il rigore.
+
+## Tre formati editoriali
+
+- **Verifica:** controlla fatti, affermazioni e documenti; separa quanto risulta provato da quanto resta da accertare.
+- **Opinione:** sostiene una tesi, indica le fonti e affronta obiezioni serie.
+- **Analisi:** chiarisce temi complessi senza chiedere al lettore di aderire a una posizione.
+
+Ogni pezzo appartiene a una rubrica tematica, indipendentemente dal suo formato.
 
 ## Chi firma
 
-Gli articoli sono firmati **Redazione S-COMODO**. È il nome della voce editoriale del blog; non indica una redazione composta da più giornalisti. La scelta dei temi e l'approvazione finale spettano al curatore, Marcelo Fernandez.
+La firma **Redazione S-COMODO** identifica la voce del progetto, **non** una squadra di giornalisti o una redazione separata. La scelta degli argomenti e l'approvazione finale spettano al curatore.
 
-## Come lavoriamo
+## Fonti, IA e correzioni
 
-Le date, le citazioni e le affermazioni centrali devono poter essere ricondotte a fonti identificabili. Le opinioni restano distinguibili dai fatti, e un confronto storico non costituisce di per sé una prova di equivalenza.
+Dati, norme, statistiche e citazioni importanti devono essere rintracciabili. **Le fonti sono raccolte alla fine di ogni articolo.** Se una questione non è risolta, lo dichiariamo.
 
-Usiamo strumenti di intelligenza artificiale per alcune fasi di ricerca preliminare, stesura, traduzione e illustrazione. I modelli non sono fonti. Il controllo editoriale umano è obbligatorio prima della pubblicazione.
+Gli strumenti di IA possono assistere ricerca preliminare, scrittura e traduzione. **I modelli non sono fonti documentali** e non sostituiscono il controllo editoriale umano. Le correzioni sostanziali vengono rese pubbliche.
 
-La lingua principale è l'italiano. Alcuni testi potranno avere edizioni in spagnolo e inglese.
+Per approfondire: [Metodo e fonti]({{ '/metodo/' | relative_url }}) · [Uso dell'IA]({{ '/uso-ia/' | relative_url }}) · [Rettifiche]({{ '/rettifiche/' | relative_url }}).
 
-<hr class="page-divider">
-
-**Per approfondire:** [Metodo e fonti]({{ '/metodo/' | relative_url }}) · [Uso dell'IA]({{ '/uso-ia/' | relative_url }}) · [Rettifiche]({{ '/rettifiche/' | relative_url }}).
-
-Per segnalare un errore fattuale puoi utilizzare il [modulo pubblico di rettifica](https://github.com/manzo8b/s-comodo/issues/new?template=rettifica.yml). Non usarlo per comunicazioni riservate o richieste che contengono dati personali.
-
+Per richieste editoriali riservate: [contatta S-COMODO](mailto:marcelo2020.it@gmail.com).
 </div>

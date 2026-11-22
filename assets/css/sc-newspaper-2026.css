@@ -232,3 +232,12 @@ body.sc-newspaper {background:#fff;color:#111;font-family:var(--sc-body);overflo
  .sc-newspaper .article>.article-body{font-size:12pt!important}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+/* Accessible footer contact and strictly monochrome/red interactive states */
+.sc-newspaper .site-footer .sc-footer-contact{grid-column:1/-1;padding:12px 0;border-top:1px solid #111}
+.sc-newspaper .site-footer .sc-footer-contact a{font:800 12px/1.5 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#841022!important}
+.sc-newspaper .site-footer .manzo-footer-credit a:hover{background:#fff!important;color:#111!important;border-color:#a51224!important}
+.sc-newspaper .topic-index .topic-section,.sc-newspaper .topic-index .topic-article-list,.sc-newspaper .topic-index .article-teaser{background:#fff!important;color:#111!important}
+.sc-newspaper .topic-index .topic-section h2,.sc-newspaper .topic-index .topic-section h3{color:#111!important}
+.sc-newspaper .page-body a{color:#841022}
+.sc-newspaper .page-body h1,.sc-newspaper .page-body h2,.sc-newspaper .page-body h3{color:#111!important}

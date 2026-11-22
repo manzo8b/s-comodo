@@ -2,23 +2,30 @@
 layout: default
 title: "About"
 lang: en
-description: "About S-COMODO, an independent historical and cultural journal."
+description: "S-COMODO is an independent editorial project focused on verification, opinion and accessible analysis."
 permalink: /en/about/
 ---
 <div class="page-body" markdown="1">
-<p class="page-eyebrow">S-COMODO / ABOUT</p>
 
 # About S-COMODO
 
-**S-COMODO is an independent editorial project curated by Marcelo Fernandez.** We look at events and contemporary questions through history, culture and documented sources. Our aim is not to make the past a slogan.
+**S-COMODO is an independent editorial project curated by Marcelo Fernandez.** We examine public-interest questions through verifiable sources and clear writing, without demanding that readers adopt a particular position.
 
-Articles signed **Redazione S-COMODO** represent the editorial voice of the project; the name does not imply a separate team of journalists.
+We publish when a story deserves attention, **not according to a fixed weekly schedule**. Historical parallels are optional tools, never a required formula.
 
-## How we work
+## Three editorial formats
 
-Historical parallels are comparisons, not proof that different events or cultures are identical. We distinguish established facts from interpretations and identify the sources of important claims.
+- **Verification:** tests claims and documents, distinguishing established facts from unresolved questions.
+- **Opinion:** presents a reasoned position and its strongest counterarguments.
+- **Analysis:** explains complex subjects with concrete examples and clear definitions.
 
-Some research assistance, translation, drafting and illustrations use AI tools. **AI-generated text is not a source**. Each published essay requires human editorial review and approval.
+Each story has a subject area. A format label is added only after editorial classification.
 
-We publish in Italian and, for selected essays, English. More details are available on our [method page]({{ '/en/method/' | relative_url }}). Readers can flag errors via our [corrections process]({{ '/en/corrections/' | relative_url }}).
+## Editorial responsibility
+
+Articles signed **Redazione S-COMODO** represent the editorial voice of the project; they do not imply a separate staff of journalists. The curator retains final responsibility for publication.
+
+AI may assist with preliminary research, drafting and translation, but **AI is not a source**. References appear at the end of each article. Substantive corrections are published.
+
+Read our [method]({{ '/en/method/' | relative_url }}) and [corrections policy]({{ '/en/corrections/' | relative_url }}). For private enquiries, [contact us](mailto:marcelo2020.it@gmail.com).
 </div>
