@@ -51,3 +51,23 @@ Produzione: immagine esclusiva per storia; dimensioni target 1440×810 o 1280×7
 8. Il deploy GitHub Pages deve essere completato prima di dichiarare la pubblicazione.
 
 Questo registro è operativo, non un calendario: la pubblicazione di nuovi articoli non ha cadenza obbligatoria.
+
+
+## Verifica tecnica automatizzabile — aggiornamento 22 novembre 2026
+
+Da questa revisione è disponibile `scripts/check_covers.py`, eseguibile dal checkout del repository con:
+
+```bash
+python3 scripts/check_covers.py
+python3 scripts/check_covers.py --json
+```
+
+Il controllo **non inventa fotografie e non verifica visivamente il contenuto delle immagini**; segnala:
+- copertina o file locale mancanti;
+- testo alternativo e didascalia assenti;
+- possibili copertine tipografiche con il titolo all'interno;
+- SVG legacy da ricontrollare prima di assegnare lo stato «fotografica approvata».
+
+Stato produzione successivo: è stata preparata una nuova fotografia editoriale 16:9 per **SC020 · Ozempic** (consultazione medica simbolica, nessun marchio, nessuna funzione clinica attribuibile al dispositivo). Fino al caricamento effettivo del WebP nel repository e all'aggiornamento del front matter, la copertina pubblicata resta quella precedente. Gli output non fotografici per SC017/SC018/SC013/SC015 sono stati scartati; non vanno usati come copertine.
+
+Non modificare mai `image` puntando a una risorsa inesistente. Mantenere invariati i testi, i link, le fonti e le traduzioni durante la migrazione delle fotografie.
