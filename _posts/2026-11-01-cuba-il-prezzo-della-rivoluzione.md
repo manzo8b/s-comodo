@@ -8,7 +8,7 @@ permalink: /cuba-il-prezzo-della-rivoluzione/
 article_id: SC013
 lang: it
 author: Redazione S-COMODO
-rubrica: Democrazia e diritti
+rubrica: "Politica e democrazia"
 topic_id: democrazia-diritti
 format: Dossier d’inchiesta
 editorial_status: pubblicato
@@ -164,6 +164,8 @@ sources:
 cover_image: /assets/images/covers/sc013-cuba-dossier-cover-clean.svg
 cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
 cover_image_alt: "Composizione astratta di barre cromatiche, senza dati numerici"
+editorial_focus: "Democrazia e diritti"
+formato: dossier
 ---
 
 *Inchiesta documentata · 1 novembre 2026 · Le infografiche illustrano i dati disponibili e riportano la fonte e l’anno di riferimento.*

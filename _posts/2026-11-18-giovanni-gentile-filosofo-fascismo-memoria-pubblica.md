@@ -8,8 +8,8 @@ permalink: /giovanni-gentile-filosofo-fascismo-memoria-pubblica/
 lang: it
 author: "Redazione S-COMODO"
 article_id: SC-GENTILE-2026
-rubrica: "Storia, politica e fact-check"
-topic_id: societa-comunita
+rubrica: "Storia e cultura"
+topic_id: storia-identita
 reading_minutes: 17
 reviewed: true
 editorial_status: pubblicato
@@ -74,6 +74,8 @@ sources:
     url: "https://www.treccani.it/enciclopedia/scuola/"
 cover_image: "/assets/images/covers/sc-gentile-2026.webp"
 cover_image_alt: "Ricostruzione fotografica editoriale di un intellettuale del Novecento, non ritratto storico autentico di Giovanni Gentile"
+editorial_focus: "Storia, politica e fact-check"
+formato: contesto
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/sc-giovanni-gentile.css' | relative_url }}">

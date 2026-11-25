@@ -7,7 +7,7 @@ subtitle: 'La libertà di espressione si difende soprattutto quando a parlare è
 date: 2026-10-24
 article_id: SC001
 permalink: /la-democrazia-non-e-il-diritto-di-zittire-gli-altri/
-rubrica: Democrazia e diritti
+rubrica: "Politica e democrazia"
 topic_id: democrazia-diritti
 format: Dossier
 lang: it
@@ -89,6 +89,8 @@ sources:
   url: https://www.unesco.org/en/articles/silenced-voices-why-freedom-expression-receding-worldwide
   accessed: 24 ottobre 2026
   kind: primaria
+editorial_focus: "Democrazia e diritti"
+formato: dossier
 ---
 
 C'è una parola che attraversa ogni discussione politica, compare nei discorsi dei leader e riempie gli striscioni delle manifestazioni: democrazia.

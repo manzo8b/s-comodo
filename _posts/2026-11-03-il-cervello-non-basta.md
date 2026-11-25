@@ -8,8 +8,8 @@ permalink: /il-cervello-non-basta/
 article_id: SC015
 lang: it
 author: Redazione S-COMODO
-rubrica: Società e comunità
-topic_id: societa-comunita
+rubrica: "Scienza e salute"
+topic_id: scienza-salute
 format: Divulgazione scientifica e giochi editoriali
 editorial_status: pubblicato
 reviewed: true
@@ -79,6 +79,8 @@ sources:
 cover_image: /assets/images/covers/sc015-copertina-il-dubbio-clean.svg
 cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
 cover_image_alt: "Figura classica stilizzata con cerchio rosso e punto interrogativo"
+editorial_focus: "Società e comunità"
+formato: contesto
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/sc015-lab.css' | relative_url }}">

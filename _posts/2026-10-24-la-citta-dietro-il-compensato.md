@@ -5,7 +5,7 @@ subtitle: Milano, 24 ottobre 2026. Vetrine protette con pannelli di legno, negoz
   Venticinque anni fa, prima del G8 di Genova, un’altra città si preparava in modo simile.
 date: 2026-10-24
 article_id: SC002
-rubrica: Società e comunità
+rubrica: "Società e comunità"
 topic_id: societa-comunita
 format: Dossier
 lang: it
@@ -95,6 +95,7 @@ sources:
   url: https://www.senato.it/istituzione/la-costituzione/parte-i/titolo-i/articolo-17
   accessed: 24 ottobre 2026
   kind: 'primaria: normativa'
+formato: dossier
 ---
 
 *Cronaca redatta il 24 ottobre 2026 sulla base delle informazioni disponibili durante la giornata. Non costituisce un bilancio conclusivo delle manifestazioni.*

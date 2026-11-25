@@ -8,8 +8,8 @@ permalink: /intelligenza-artificiale-e-medicina/
 lang: it
 author: "Redazione S-COMODO"
 article_id: SC-AI-MEDICINA-2026
-rubrica: "Tecnologia e risorse"
-topic_id: tecnologia-risorse
+rubrica: "Scienza e salute"
+topic_id: scienza-salute
 formato: contesto
 format: Dossier scientifico
 reading_minutes: 12
@@ -129,6 +129,7 @@ sources:
     title: "Ethics and governance of artificial intelligence for health: large multi-modal models"
     publisher: "OMS, 2024"
     url: "https://www.who.int/publications/b/70584"
+editorial_focus: "Tecnologia e risorse"
 ---
 
 L'immagine più convincente dell'intelligenza artificiale in medicina non è quella del medico robot. È quella di una **lente d'ingrandimento**: un sistema capace di cercare segnali deboli in immagini radiologiche, vetrini istologici, sequenze genetiche e strutture molecolari. In laboratorio può suggerire quali composti meritino di essere studiati; in ospedale può indicare dove concentrare l'attenzione.

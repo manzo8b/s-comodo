@@ -10,7 +10,7 @@ article_id: SC011
 author: Redazione S-COMODO
 permalink: /brasile-2026-urne-giudice-legittimita/
 lang: it
-rubrica: Democrazia e diritti
+rubrica: "Politica e democrazia"
 topic_id: democrazia-diritti
 format: Inchiesta
 editorial_status: pubblicato
@@ -508,6 +508,8 @@ sources:
   kind: fonte istituzionale risultato e cronologia
 cover_image: /assets/images/covers/sc011-brasile-voto-e-giustizia-clean.svg
 cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
+editorial_focus: "Democrazia e diritti"
+formato: dossier
 ---
 
 *Il 25 ottobre 2026 il Brasile ha rieletto Luiz Inácio Lula da Silva. Poche ore prima della proclamazione, una decisione urgente del Supremo Tribunal Federal aveva cambiato l'orario di voto in un Paese già polarizzato. Per capire quanto pesi quell'episodio bisogna leggere i provvedimenti, confrontare i numeri e distinguere la legittimità di un risultato dalla qualità delle istituzioni che lo amministrano.*

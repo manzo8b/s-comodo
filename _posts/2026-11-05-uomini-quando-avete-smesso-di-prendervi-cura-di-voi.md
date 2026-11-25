@@ -8,7 +8,7 @@ permalink: /uomini-prendersi-cura-di-se/
 article_id: SC016
 lang: it
 author: Redazione S-COMODO
-rubrica: Società e comunità
+rubrica: "Società e comunità"
 topic_id: societa-comunita
 format: Analisi sociale e commento documentato
 editorial_status: pubblicato
@@ -61,6 +61,7 @@ sources:
   publisher: "WHO fact sheet"
   date: "3 giugno 2026"
   url: "https://www.who.int/news-room/fact-sheets/detail/self-care-health-interventions"
+formato: saggio
 ---
 
 Ci sono uomini che lavorano in fabbrica, nei cantieri, nelle officine e nel commercio. Altri trascorrono le giornate davanti a un computer, lavorano in multinazionali tecnologiche, esercitano professioni specializzate o dirigono aziende.

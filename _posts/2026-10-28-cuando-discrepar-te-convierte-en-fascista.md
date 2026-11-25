@@ -8,7 +8,7 @@ article_id: SC008
 author: "Redacción S-COMODO"
 permalink: /es/cuando-discrepar-te-convierte-en-fascista/
 lang: es
-rubrica: "Democracia y derechos"
+rubrica: "Política y democracia"
 topic_id: democrazia-diritti
 format: Dossier
 editorial_status: pubblicato
@@ -113,6 +113,8 @@ sources:
     kind: ensayo-academico-conceptual
 cover_image: /assets/images/covers/sc008-debate-es-clean.svg
 cover_image_caption: "Ilustración editorial original de S-COMODO; no es una fotografía documental."
+editorial_focus: "Democracia y derechos"
+formato: dossier
 ---
 
 *«Si no piensas como yo, eres fascista». La frase puede cerrar una conversación antes de que empiece. Y cuando la discusión se sustituye por una etiqueta, la democracia pierde algo más que cortesía: pierde precisión.*

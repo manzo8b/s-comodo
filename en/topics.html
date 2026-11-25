@@ -8,11 +8,13 @@ permalink: /en/topics/
 <div class="page-body topic-index"><p class="section-tag">S-COMODO · EXPLORE</p><h1>Topics</h1>
 <p>Categories are a way to find connected stories, not a substitute for context or evidence.</p>
 {% for topic in site.data.topics %}
-{% assign group = site.posts | where: 'topic_id', topic.id | where: 'lang', 'en' | where: 'editorial_status', 'pubblicato' | sort: 'date' | reverse %}
-<section class="topic-section" id="{{ topic.id | escape }}">
-<h2>{{ topic.label_en | escape }}</h2>
+{% assign group = site.posts | where: 'topic_id', topic.id | where: 'lang', 'en' | where: 'editorial_status', 'pubblicato' %}
+<section class="topic-section" id="{{ topic.id | escape }}" aria-labelledby="topic-heading-{{ topic.id | escape }}">
+<h2 id="topic-heading-{{ topic.id | escape }}">{{ topic.label_en | escape }}</h2>
+<p class="card-meta">{{ group.size }} {% if group.size == 1 %}article{% else %}articles{% endif %}</p>
+<p>{{ topic.description_en | escape }}</p>
 {% if group.size > 0 %}
-{% for p in group %}<article class="article-teaser"><p class="card-meta">{{ p.date | date: '%d %B %Y' }}</p><h3><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></h3><p>{{ p.subtitle | escape }}</p></article>{% endfor %}
+{% for p in group %}<article class="article-teaser"><p class="card-meta">{{ p.date | date: '%d %B %Y' }} · {% include format-label.html value=p.formato lang=p.lang %}</p><h3><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></h3><p>{{ p.subtitle | escape }}</p></article>{% endfor %}
 {% else %}<p class="empty-state">More English-language essays are coming.</p>{% endif %}
 </section>
 {% endfor %}

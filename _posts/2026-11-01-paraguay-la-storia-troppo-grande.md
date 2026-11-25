@@ -8,7 +8,7 @@ permalink: /paraguay-la-storia-troppo-grande/
 article_id: SC014
 lang: it
 author: Redazione S-COMODO
-rubrica: Storia e identità
+rubrica: "Storia e cultura"
 topic_id: storia-identita
 format: Grande dossier storico-economico
 editorial_status: pubblicato
@@ -140,6 +140,8 @@ sources:
 cover_image: /assets/images/covers/sc014-paraguay-waterfall-crop.svg
 cover_image_caption: "Dettaglio ritagliato da una composizione generata con IA ispirata al Salto Cristal; non fotografia documentale."
 cover_image_alt: "Cascata e vegetazione tropicale, dettaglio di una composizione illustrativa"
+editorial_focus: "Storia e identità"
+formato: contesto
 ---
 
 *Grande dossier S-COMODO · Otto atti · 29 fonti · Dati aggiornati all’autunno 2026*

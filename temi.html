@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Temi
-description: "Le categorie editoriali di S-COMODO: democrazia, società, storia, tecnologia, economia e istituzioni."
+description: "Le sette categorie editoriali di S-COMODO: politica, economia, società, storia, scienza, tecnologia e media."
 permalink: /temi/
 ---
 <div class="page-body topic-index">
@@ -9,16 +9,16 @@ permalink: /temi/
   <h1>Temi</h1>
   <p>Le nostre categorie servono a esplorare storie e idee affini, non a chiuderle in etichette rigide. Ogni articolo conserva il proprio contesto e le proprie fonti.</p>
   {% for topic in site.data.topics %}
-    {% assign group = site.posts | where: 'topic_id', topic.id | where: 'editorial_status', 'pubblicato' | where: 'lang', 'it' | sort: 'date' | reverse %}
+    {% assign group = site.posts | where: 'topic_id', topic.id | where: 'editorial_status', 'pubblicato' | where: 'lang', 'it' %}
     <section class="topic-section" id="{{ topic.id | escape }}" aria-labelledby="topic-heading-{{ topic.id | escape }}">
-      <p class="topic-en">{{ topic.label_en | escape }}</p>
       <h2 id="topic-heading-{{ topic.id | escape }}">{{ topic.label_it | escape }}</h2>
+      <p class="card-meta">{{ group.size }} {% if group.size == 1 %}articolo{% else %}articoli{% endif %}</p>
       <p>{{ topic.description | escape }}</p>
       {% if group.size > 0 %}
         <div class="topic-article-list">
           {% for p in group %}
             <article class="article-teaser">
-              <p class="card-meta">{{ p.date | date: '%d/%m/%Y' }} · {{ p.lang | upcase }}</p>
+              <p class="card-meta">{{ p.date | date: '%d/%m/%Y' }} · {{ p.lang | upcase }} · {% include format-label.html value=p.formato lang=p.lang %}</p>
               <h3><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></h3>
               <p>{{ p.subtitle | escape }}</p>
             </article>

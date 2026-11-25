@@ -8,7 +8,7 @@ permalink: /chi-ha-rovinato-italia-aritmetica-delle-colpe/
 lang: it
 author: "Redazione S-COMODO"
 article_id: SC-ARITMETICA-COLPE-2026
-rubrica: "Politica e storia"
+rubrica: "Politica e democrazia"
 topic_id: democrazia-diritti
 formato: dossier
 format: Inchiesta
@@ -92,6 +92,7 @@ sources:
     publisher: "Enciclopedia"
     url: "https://www.treccani.it/enciclopedia/italia/"
     accessed: "23 novembre 2026"
+editorial_focus: "Politica e storia"
 ---
 
 *Fact-check storico · Politica italiana · Dati, contesto e responsabilità*

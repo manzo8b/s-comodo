@@ -8,8 +8,8 @@ permalink: /report-uova-fact-check/
 lang: it
 author: "Redazione S-COMODO"
 article_id: SC-REPORT-UOVA-2026
-rubrica: "Fact-check e servizio pubblico"
-topic_id: societa-comunita
+rubrica: "Media e informazione"
+topic_id: media-informazione
 reading_minutes: 11
 reviewed: true
 editorial_status: pubblicato
@@ -56,6 +56,8 @@ sources:
     url: "https://www.corriereromagna.it/cesena/cesena-inchiesta-di-report-e-casi-di-salmonella-ritirati-135-quintali-di-albume-d-uovo-prodotti-a-calisese-YX2330166"
 cover_image: "/assets/images/covers/sc-report-uova-2026.webp"
 cover_image_alt: "Uova e documenti sottoposti a verifica, composizione fotografica editoriale"
+editorial_focus: "Fact-check e servizio pubblico"
+formato: dossier
 ---
 <link rel="stylesheet" href="{{ '/assets/css/sc-factcheck-uova.css' | relative_url }}">
 

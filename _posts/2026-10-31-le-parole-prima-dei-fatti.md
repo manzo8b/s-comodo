@@ -8,8 +8,8 @@ permalink: /le-parole-prima-dei-fatti/
 article_id: SC012
 lang: it
 author: Redazione S-COMODO
-rubrica: Società e comunità
-topic_id: societa-comunita
+rubrica: "Media e informazione"
+topic_id: media-informazione
 format: Dossier educativo
 editorial_status: pubblicato
 reviewed: true
@@ -91,6 +91,8 @@ sources:
   publisher: Applied Cognitive Psychology
   date: '2024'
   url: https://onlinelibrary.wiley.com/doi/full/10.1002/acp.4195
+editorial_focus: "Società e comunità"
+formato: contesto
 ---
 
 *Un titolo può raccontare un fatto reale e, nello stesso tempo, portarci a una conclusione che il fatto non dimostra. La differenza spesso comincia da una parola.*

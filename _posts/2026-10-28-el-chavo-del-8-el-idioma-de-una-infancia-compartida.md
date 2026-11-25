@@ -8,7 +8,7 @@ article_id: SC009
 author: "Redacción S-COMODO"
 permalink: /es/el-chavo-del-8-el-idioma-de-una-infancia-compartida/
 lang: es
-rubrica: "Historia e identidad"
+rubrica: "Historia y cultura"
 topic_id: storia-identita
 format: Ensayo cultural
 editorial_status: pubblicato
@@ -99,6 +99,8 @@ sources:
     kind: interpretacion-literaria
 cover_image: /assets/images/covers/sc009-vecindad-memoria-es-clean.svg
 cover_image_caption: "Ilustración editorial original de S-COMODO; no es una fotografía documental."
+editorial_focus: "Historia e identidad"
+formato: saggio
 ---
 
 *Hay series que recordamos por sus historias. Y hay otras que recordamos por la manera en que hablaban sus personajes. A veces basta oír una frase, una entonación o una disculpa imposible para regresar, sin movernos del sitio, a una tarde de la infancia.*

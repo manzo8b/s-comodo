@@ -78,6 +78,7 @@ sources:
     kind: institutional-report
 cover_image: /assets/images/covers/sc005-the-lost-art-of-belonging-clean.svg
 cover_image_caption: "Original S-COMODO editorial illustration; not a documentary photograph."
+formato: saggio
 ---
 
 *You can book a table in seconds. You cannot book the feeling of belonging.*

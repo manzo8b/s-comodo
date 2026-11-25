@@ -8,7 +8,7 @@ article_id: SC010
 author: "Redazione S-COMODO"
 permalink: /linfanzia-che-stava-in-una-strada-paraguay-anni-ottanta/
 lang: it
-rubrica: "Storia e identità"
+rubrica: "Storia e cultura"
 topic_id: storia-identita
 format: Cronaca di memoria
 editorial_status: pubblicato
@@ -73,6 +73,8 @@ sources:
     kind: "memoria-y-derechos-humanos"
 cover_image: /assets/images/covers/sc010-infanzia-paraguay-it-clean.svg
 cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
+editorial_focus: "Storia e identità"
+formato: contesto
 ---
 
 *C'erano pomeriggi in cui il mondo di un bambino sembrava finire all'angolo della strada. Non perché al di là non esistesse niente, ma perché tutto ciò che contava pareva trovarsi lì: gli amici, un pallone, un albero, la promessa di tornare a casa e, al centro della famiglia, una nonna.*

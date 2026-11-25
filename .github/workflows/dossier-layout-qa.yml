@@ -4,6 +4,14 @@ on:
     branches: [main]
     paths:
       - '_posts/**'
+      - '_data/**'
+      - 'index.html'
+      - 'es/index.html'
+      - 'en/index.html'
+      - 'temi.html'
+      - 'es/temas.html'
+      - 'en/topics.html'
+      - 'scripts/check-taxonomy.py'
       - '_layouts/**'
       - 'assets/css/**'
       - 'scripts/dossier-layout-smoke.py'
@@ -29,6 +37,7 @@ jobs:
       - run: python3 scripts/check_covers.py
       - run: bundle exec jekyll build --trace
       - run: python3 scripts/audit-built-articles.py
+      - run: python3 scripts/check-taxonomy.py
       - run: |
           python3 -m pip install playwright==1.55.0
           python3 -m playwright install --with-deps chromium

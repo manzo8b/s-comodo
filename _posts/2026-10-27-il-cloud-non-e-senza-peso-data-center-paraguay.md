@@ -8,7 +8,7 @@ article_id: SC006
 author: "Redazione S-COMODO"
 permalink: /il-cloud-non-e-senza-peso-data-center-paraguay/
 lang: it
-rubrica: "Tecnologia e risorse"
+rubrica: "Tecnologia e innovazione"
 topic_id: tecnologia-risorse
 format: Dossier
 editorial_status: pubblicato
@@ -127,6 +127,8 @@ sources:
     kind: "cronaca-istituzionale-dibattito-tariffario"
 cover_image: /assets/images/covers/sc006-cloud-data-center-paraguay-clean.svg
 cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
+editorial_focus: "Tecnologia e risorse"
+formato: contesto
 ---
 
 *Il cloud sembra invisibile finché non si accende una centrale, non si costruisce una sottostazione o non si deve raffreddare un server. A quel punto l'intelligenza artificiale torna sulla terra: richiede cavi, acqua, cemento, soldi e decisioni pubbliche.*

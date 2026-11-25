@@ -6,7 +6,7 @@ subtitle: 'La nascita delle libertà democratiche e dei diritti sociali non coin
 date: '2026-10-25'
 article_id: SC003
 permalink: /i-diritti-non-hanno-una-tessera-di-partito/
-rubrica: Democrazia e diritti
+rubrica: "Politica e democrazia"
 topic_id: democrazia-diritti
 format: Dossier
 lang: it
@@ -130,6 +130,8 @@ sources:
   kind: primaria
 cover_image: /assets/images/covers/sc003-diritti-senza-tessera-clean.svg
 cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
+editorial_focus: "Democrazia e diritti"
+formato: dossier
 ---
 
 ## Una discussione che cambia improvvisamente argomento

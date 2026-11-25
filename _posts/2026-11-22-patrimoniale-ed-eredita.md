@@ -7,7 +7,7 @@ description: 'Una verifica sui grandi patrimoni, le successioni, le proposte spa
 date: '2026-11-22 12:00:00 +0100'
 permalink: /patrimoniale-ed-eredita-quanto-puo-tassare-lo-stato/
 lang: it
-rubrica: Economia e istituzioni
+rubrica: "Economia e finanza"
 topic_id: economia-istituzioni
 format: Inchiesta
 author: Redazione S-COMODO
@@ -180,6 +180,8 @@ sources:
 cover_image: "/assets/images/covers/sc-patrimoniale-2026.webp"
 cover_image_alt: "Documenti ereditari, chiavi e una bilancia: composizione editoriale sulla proprietà e sul fisco"
 cover_image_caption: "Composizione fotografica editoriale generata con IA; non fotografia documentale."
+editorial_focus: "Economia e istituzioni"
+formato: dossier
 ---
 <div class="scpat-kicker"><span>INCHIESTA ECONOMICA · 22 NOVEMBRE 2026</span><span>ITALIA / SPAGNA · 22 FONTI</span></div>
 <div class="scpat-deck">Proprietà, eredità, imprese e libertà economica: una lettura documentata delle imposte sulla ricchezza.</div>

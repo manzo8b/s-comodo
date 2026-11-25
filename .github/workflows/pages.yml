@@ -35,6 +35,8 @@ jobs:
           fi
       - name: Validate structured metadata and international links
         run: python3 scripts/seo-contract.py
+      - name: Validate seven-category editorial taxonomy
+        run: python3 scripts/check-taxonomy.py
       - name: Validate Google Search Console verification file
         run: |
           test -s _site/googlee8540704606dd6ec.html

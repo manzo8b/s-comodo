@@ -6,7 +6,7 @@ subtitle: 'Dalle radici guaraní alle guerre, da Madame Lynch ad Augusto Roa Bas
 date: '2026-10-25'
 article_id: SC004
 permalink: /paraguay-il-paese-che-non-si-racconta-in-una-sola-lingua/
-rubrica: Storia e identità
+rubrica: "Storia e cultura"
 topic_id: storia-identita
 format: Dossier
 lang: it
@@ -168,6 +168,8 @@ sources:
   url: https://elpais.com/america-futura/2023-08-25/el-guarani-paraguayo-la-lengua-de-la-resistencia.html
   accessed: 25 ottobre 2026
   kind: secondaria, reportage
+editorial_focus: "Storia e identità"
+formato: contesto
 ---
 
 *Per capire il Paraguay bisogna ascoltarne le voci: il guaraní e il castigliano, la memoria delle guerre, le pagine degli scrittori, la guarania e le conversazioni intorno al tereré. È una storia più grande di qualsiasi leggenda nazionale.*
