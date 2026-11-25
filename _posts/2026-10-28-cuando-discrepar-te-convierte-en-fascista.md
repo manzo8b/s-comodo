@@ -111,6 +111,8 @@ sources:
     url: https://doi.org/10.5117/FASC2026.1.002.GRI
     accessed: "28 de octubre de 2026"
     kind: ensayo-academico-conceptual
+cover_image: /assets/images/covers/sc008-debate-es-clean.svg
+cover_image_caption: "Ilustración editorial original de S-COMODO; no es una fotografía documental."
 ---
 
 *«Si no piensas como yo, eres fascista». La frase puede cerrar una conversación antes de que empiece. Y cuando la discusión se sustituye por una etiqueta, la democracia pierde algo más que cortesía: pierde precisión.*

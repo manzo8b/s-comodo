@@ -97,6 +97,8 @@ sources:
     url: https://www.jstor.org/stable/j.ctv1gm03cg.7
     accessed: "28 de octubre de 2026"
     kind: interpretacion-literaria
+cover_image: /assets/images/covers/sc009-vecindad-memoria-es-clean.svg
+cover_image_caption: "Ilustración editorial original de S-COMODO; no es una fotografía documental."
 ---
 
 *Hay series que recordamos por sus historias. Y hay otras que recordamos por la manera en que hablaban sus personajes. A veces basta oír una frase, una entonación o una disculpa imposible para regresar, sin movernos del sitio, a una tarde de la infancia.*

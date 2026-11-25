@@ -76,6 +76,8 @@ sources:
     url: https://www.who.int/publications/i/item/978240112360
     accessed: "25 October 2026"
     kind: institutional-report
+cover_image: /assets/images/covers/sc005-the-lost-art-of-belonging-clean.svg
+cover_image_caption: "Original S-COMODO editorial illustration; not a documentary photograph."
 ---
 
 *You can book a table in seconds. You cannot book the feeling of belonging.*

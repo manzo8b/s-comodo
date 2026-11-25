@@ -161,6 +161,9 @@ sources:
   title: 'El País, profilo documentato di Sandro Castro, 20/07/2025'
   publisher: 'Registro documentale S-COMODO'
   url: 'https://english.elpais.com/international/2025-07-20/sandro-castro-fidels-grandson-is-an-influencer.html'
+cover_image: /assets/images/covers/sc013-cuba-dossier-cover-clean.svg
+cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
+cover_image_alt: "Composizione astratta di barre cromatiche, senza dati numerici"
 ---
 
 *Inchiesta documentata · 1 novembre 2026 · Le infografiche illustrano i dati disponibili e riportano la fonte e l’anno di riferimento.*

@@ -156,6 +156,8 @@ sources:
   url: https://www.coe.int/it/web/echr-toolkit/la-liberte-de-reunion-et-dassociation
   accessed: 28 ottobre 2026
   kind: guida-istituzionale-convenzione-europea
+cover_image: /assets/images/covers/sc007-parole-e-dissenso-clean.svg
+cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
 ---
 
 *«Non sono d’accordo con te» dovrebbe essere l’inizio di una discussione democratica. A volte ne diventa la fine: basta una parola pronunciata al posto di un argomento. Fascista.*

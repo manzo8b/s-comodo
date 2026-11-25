@@ -76,6 +76,9 @@ sources:
   publisher: 'Annual Review of Psychology, vol. 78 (in anticipo di pubblicazione)'
   date: '17 agosto 2026, online'
   url: 'https://doi.org/10.1146/annurev-psych-020226-034154'
+cover_image: /assets/images/covers/sc015-copertina-il-dubbio-clean.svg
+cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
+cover_image_alt: "Figura classica stilizzata con cerchio rosso e punto interrogativo"
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/sc015-lab.css' | relative_url }}">

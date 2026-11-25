@@ -71,6 +71,8 @@ sources:
     url: https://www.portalguarani.com/detalles_museos_otras_detalles.php?id=84&id_otras=275
     accessed: "28 de octubre de 2026"
     kind: "memoria-y-derechos-humanos"
+cover_image: /assets/images/covers/sc010-infanzia-paraguay-it-clean.svg
+cover_image_caption: "Ilustración editorial original de S-COMODO; no es una fotografía documental."
 ---
 
 *Había tardes en que el mundo de un niño podía terminar en la esquina de la calle. No porque no existiera nada más allá, sino porque todo lo importante parecía estar allí: los amigos, una pelota, un árbol, la promesa de regresar a casa y, en el centro de la familia, una abuela.*

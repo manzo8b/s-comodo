@@ -71,6 +71,8 @@ sources:
     url: https://www.portalguarani.com/detalles_museos_otras_detalles.php?id=84&id_otras=275
     accessed: "28 ottobre 2026"
     kind: "memoria-y-derechos-humanos"
+cover_image: /assets/images/covers/sc010-infanzia-paraguay-it-clean.svg
+cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
 ---
 
 *C'erano pomeriggi in cui il mondo di un bambino sembrava finire all'angolo della strada. Non perché al di là non esistesse niente, ma perché tutto ciò che contava pareva trovarsi lì: gli amici, un pallone, un albero, la promessa di tornare a casa e, al centro della famiglia, una nonna.*

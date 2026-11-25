@@ -179,6 +179,7 @@ sources:
   kind: fonte-amministrativa
 cover_image: "/assets/images/covers/sc-patrimoniale-2026.webp"
 cover_image_alt: "Documenti ereditari, chiavi e una bilancia: composizione editoriale sulla proprietà e sul fisco"
+cover_image_caption: "Composizione fotografica editoriale generata con IA; non fotografia documentale."
 ---
 <div class="scpat-kicker"><span>INCHIESTA ECONOMICA · 22 NOVEMBRE 2026</span><span>ITALIA / SPAGNA · 22 FONTI</span></div>
 <div class="scpat-deck">Proprietà, eredità, imprese e libertà economica: una lettura documentata delle imposte sulla ricchezza.</div>

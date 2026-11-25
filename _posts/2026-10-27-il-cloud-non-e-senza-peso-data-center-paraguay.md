@@ -125,6 +125,8 @@ sources:
     url: https://www.ip.gov.py/ip/2026/02/02/acuerdan-cuarto-intermedio-para-implementacion-de-tarifas-especiales-para-industrias-electrointensivas/
     accessed: "27 ottobre 2026"
     kind: "cronaca-istituzionale-dibattito-tariffario"
+cover_image: /assets/images/covers/sc006-cloud-data-center-paraguay-clean.svg
+cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
 ---
 
 *Il cloud sembra invisibile finché non si accende una centrale, non si costruisce una sottostazione o non si deve raffreddare un server. A quel punto l'intelligenza artificiale torna sulla terra: richiede cavi, acqua, cemento, soldi e decisioni pubbliche.*

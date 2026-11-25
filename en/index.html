@@ -21,13 +21,21 @@ permalink: /en/
       <h1><a href="{{ lead_post.url | relative_url }}">{{ lead_post.title | escape }}</a></h1>
       <p class="nsp-hero__standfirst">{{ lead_post.subtitle | default: lead_post.description | escape }}</p>
       <a class="nsp-hero__link" href="{{ lead_post.url | relative_url }}">READ THE STORY <span aria-hidden="true">→</span></a>
-      <p class="nsp-hero__meta">{{ lead_post.author | default: site.author_label | escape }} · {{ lead_post.date | date: '%d.%m.%Y' }}</p>
+      <p class="nsp-hero__meta">{% assign lead_author = lead_post.author | default: site.author_label %}{% if lead_author == 'Redazione S-COMODO' %}S-COMODO editorial team{% else %}{{ lead_author | escape }}{% endif %} · {{ lead_post.date | date: '%d.%m.%Y' }}</p>
     </div>
+    {% assign hero_cover = lead_post.cover_image | default: lead_post.image %}
+    {% if hero_cover %}
+    <aside class="nsp-hero__aside nsp-hero__aside--cover" aria-label="Cover image">
+      <a class="nsp-hero__photo" href="{{ lead_post.url | relative_url }}" aria-label="Read: {{ lead_post.title | escape }}"><img src="{{ hero_cover | relative_url }}" alt="{{ lead_post.cover_image_alt | default: lead_post.image_alt | default: '' | escape }}" width="1280" height="720" fetchpriority="high"></a>
+      <p class="nsp-hero__photo-caption">{{ lead_post.cover_image_caption | default: lead_post.image_caption | default: "Editorial illustration, not a documentary photograph." | escape }}</p>
+    </aside>
+    {% else %}
     <aside class="nsp-hero__aside" aria-label="OUR APPROACH">
-      <span class="nsp-hero__stamp">S-COMODO / OUR APPROACH</span>
+      <span class="nsp-hero__stamp">S-COMODO / NUESTRO MÉTODO</span>
       <p class="nsp-hero__manifesto">Understand the facts.<br><em>Before deciding</em> what to believe.</p>
       <p class="nsp-hero__small">NOT BLIND TRUST. EVIDENCE, SOURCES AND CLEAR ARGUMENTS.</p>
     </aside>
+    {% endif %}
   </section>
   {% endif %}
   <section aria-labelledby="nsp-latest">
@@ -38,8 +46,7 @@ permalink: /en/
         {% if post.url != lead_post.url and card_count < 3 %}
           <article class="nsp-card">
             <a href="{{ post.url | relative_url }}" class="nsp-card__visual" aria-label="Read: {{ post.title | escape }}">
-              {% if post.image %}
-                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: '' | escape }}" loading="lazy">
+              {% assign card_cover = post.cover_image | default: post.image %}{% if card_cover %}<img src="{{ card_cover | relative_url }}" alt="{{ post.cover_image_alt | default: post.image_alt | default: '' | escape }}" width="1280" height="720" loading="lazy">
               {% else %}<span aria-hidden="true">S-COMODO</span>{% endif %}
             </a>
             <p class="nsp-card__meta">{{ post.rubrica | escape }} {% if post.formato %} · {% include format-label.html value=post.formato lang=post.lang %}{% endif %}</p>
@@ -54,8 +61,8 @@ permalink: /en/
   </section>
   <section class="nsp-methods" aria-label="Three ways to read">
     <div class="nsp-method"><span>01 / dossier</span><h3>Verification</h3><p>We check claims and documents, distinguishing what is proven from what remains uncertain.</p></div>
-    <div class="nsp-method"><span>02 / saggio</span><h3>Opinion</h3><p>We argue a position fairly and present the strongest objections, keeping facts separate from interpretation.</p></div>
-    <div class="nsp-method"><span>03 / contesto</span><h3>Analysis</h3><p>We make complex issues understandable, with clear examples and traceable sources.</p></div>
+    <div class="nsp-method"><span>02 / essay</span><h3>Opinion</h3><p>We argue a position fairly and present the strongest objections, keeping facts separate from interpretation.</p></div>
+    <div class="nsp-method"><span>03 / context</span><h3>Analysis</h3><p>We make complex issues understandable, with clear examples and traceable sources.</p></div>
   </section>
   <div class="nsp-columns">
     <section aria-labelledby="nsp-more">

@@ -128,6 +128,8 @@ sources:
   url: https://www.senato.it/istituzione/la-costituzione/parte-i/titolo-i/articolo-21
   accessed: 25 ottobre 2026
   kind: primaria
+cover_image: /assets/images/covers/sc003-diritti-senza-tessera-clean.svg
+cover_image_caption: "Illustrazione editoriale originale S-COMODO, non fotografia documentale."
 ---
 
 ## Una discussione che cambia improvvisamente argomento

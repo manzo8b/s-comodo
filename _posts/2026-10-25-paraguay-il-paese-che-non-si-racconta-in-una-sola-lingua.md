@@ -170,8 +170,6 @@ sources:
   kind: secondaria, reportage
 ---
 
-# Paraguay, il Paese che non si racconta in una sola lingua
-
 *Per capire il Paraguay bisogna ascoltarne le voci: il guaraní e il castigliano, la memoria delle guerre, le pagine degli scrittori, la guarania e le conversazioni intorno al tereré. È una storia più grande di qualsiasi leggenda nazionale.*
 
 ## La prima parola non è «guerra»

@@ -137,6 +137,9 @@ sources:
   title: 'INE, Idioma guaraní, differenze territoriali, 25 agosto 2025.'
   publisher: 'Registro documentale S-COMODO'
   url: 'https://www.ine.gov.py/noticias/2538/25-de-agosto-dia-del-idioma-guarani-namombarete-nane-ne-guarani-nane-rembiapope-ha-nane-rekove-pukukue'
+cover_image: /assets/images/covers/sc014-paraguay-waterfall-crop.svg
+cover_image_caption: "Dettaglio ritagliato da una composizione generata con IA ispirata al Salto Cristal; non fotografia documentale."
+cover_image_alt: "Cascata e vegetazione tropicale, dettaglio di una composizione illustrativa"
 ---
 
 *Grande dossier S-COMODO · Otto atti · 29 fonti · Dati aggiornati all’autunno 2026*

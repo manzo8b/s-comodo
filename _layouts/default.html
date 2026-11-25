@@ -20,25 +20,15 @@
 <meta name="theme-color" content="#ffffff">
 <meta name="description" content="{{ page.description | default: site.description | strip_html | escape }}">
 <title>{% if page.title and page.title != 'Home' %}{{ page.title | escape }} | {% endif %}{{ site.title }}</title>
-{% if page.article_id == 'SC010' %}
-<link rel="alternate" hreflang="it" href="{{ '/linfanzia-che-stava-in-una-strada-paraguay-anni-ottanta/' | absolute_url }}">
-<link rel="alternate" hreflang="es" href="{{ '/es/la-infancia-que-cabia-en-una-calle/' | absolute_url }}">
-{% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {% if page.article_id == 'SC019' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc019-midterm.css' | relative_url }}?v=20261106">
 {% endif %}
 {% if page.article_id == 'SC017' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc017-integrated.css' | relative_url }}?v=20261125">
-<link rel="alternate" hreflang="it" href="{{ '/ueno-bank-anatomia-crisi/' | absolute_url }}">
-<link rel="alternate" hreflang="es" href="{{ '/es/ueno-bank-anatomia-crisis/' | absolute_url }}">
-<link rel="alternate" hreflang="en" href="{{ '/en/ueno-bank-anatomy-crisis/' | absolute_url }}">
 {% endif %}
 {% if page.article_id == 'SC018' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc018-audit.css' | relative_url }}?v=20261106-2">
-<link rel="alternate" hreflang="it" href="{{ '/ueno-bank-audit-macro/' | absolute_url }}">
-<link rel="alternate" hreflang="es" href="{{ '/es/ueno-bank-auditoria-macro/' | absolute_url }}">
-<link rel="alternate" hreflang="en" href="{{ '/en/ueno-bank-macro-audit/' | absolute_url }}">
 {% endif %}
 
 <link rel="stylesheet" href="{{ '/assets/css/editorial-colors.css' | relative_url }}">
@@ -49,22 +39,18 @@
 {% if page.article_id == 'SC020' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc020-ozempic.css' | relative_url }}?v=20261113">
 {% endif %}
-{% if page.article_id == 'SC-PATRIMONIALE-2026' %}
-<link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
-<link rel="alternate" hreflang="{{ page.translation_lang }}" href="{{ page.translation_url | absolute_url }}">
-<link rel="alternate" hreflang="x-default" href="{{ '/patrimoniale-ed-eredita-quanto-puo-tassare-lo-stato/' | absolute_url }}">
-{% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/sc-newspaper-2026.css' | relative_url }}?v=20261125-standard2">
+{% if page.article_id %}{% assign seo_editions = site.posts | where: 'article_id', page.article_id | where: 'editorial_status', 'pubblicato' %}{% if seo_editions.size > 1 %}{% for edition in seo_editions %}<link rel="alternate" hreflang="{{ edition.lang | escape }}" href="{{ edition.url | absolute_url }}">{% endfor %}{% endif %}{% elsif page.url == '/' or page.url == '/es/' or page.url == '/en/' %}<link rel="alternate" hreflang="it" href="{{ '/' | absolute_url }}"><link rel="alternate" hreflang="es" href="{{ '/es/' | absolute_url }}"><link rel="alternate" hreflang="en" href="{{ '/en/' | absolute_url }}"><link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">{% endif %}
 </head>
 <body class="sc-newspaper">
 <a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
 <header class="site-header"><div class="container">
-<div class="site-meta"><span>{% if is_spanish %}REVISTA INDEPENDIENTE{% elsif is_english %}INDEPENDENT JOURNAL{% else %}GIORNALE INDIPENDENTE{% endif %}</span><span class="site-credit">by {{ site.owner }}</span></div>
+<div class="site-meta"><span>{% if is_spanish %}REVISTA INDEPENDIENTE{% elsif is_english %}INDEPENDENT JOURNAL{% else %}GIORNALE INDIPENDENTE{% endif %}</span><span class="site-credit">{% if is_spanish %}por{% elsif is_english %}by{% else %}di{% endif %} {{ site.owner }}</span></div>
 <div class="editorial-contact-strip"><a href="mailto:marcelo2020.it@gmail.com" aria-label="{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact and services{% else %}Contatti e servizi{% endif %}: marcelo2020.it@gmail.com"><span>{% if is_spanish %}Contacto y servicios{% elsif is_english %}Contact &amp; services{% else %}Contatti e servizi{% endif %}</span><strong>marcelo2020.it@gmail.com</strong></a></div>
 <div class="site-masthead" role="banner">
   <div class="masthead-side masthead-side--left" aria-hidden="true"><span>{% if is_spanish %}HECHOS{% elsif is_english %}FACTS{% else %}FATTI{% endif %}</span><span>{% if is_spanish %}IDEAS{% elsif is_english %}IDEAS{% else %}IDEE{% endif %}</span><span>{% if is_spanish %}ANÁLISIS{% elsif is_english %}ANALYSIS{% else %}ANALISI{% endif %}</span></div>
   <div class="masthead-center">
-    <a class="site-logo" href="{% if is_spanish %}{{ '/es/' | relative_url }}{% elsif is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, homepage">S-COMODO</a>
+    <a class="site-logo" href="{% if is_spanish %}{{ '/es/' | relative_url }}{% elsif is_english %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="S-COMODO, {% if is_spanish %}inicio{% elsif is_english %}homepage{% else %}pagina iniziale{% endif %}">S-COMODO</a>
     <p class="masthead-tagline">{% if is_spanish %}Los hechos, sin atajos{% elsif is_english %}Facts, without shortcuts{% else %}I fatti, senza scorciatoie{% endif %}</p>
   </div>
   <div class="masthead-side masthead-side--right" aria-hidden="true"><span>{% if is_spanish %}VERIFICA{% elsif is_english %}VERIFY{% else %}VERIFICA{% endif %}</span><span>{% if is_spanish %}ENTIENDE{% elsif is_english %}UNDERSTAND{% else %}COMPRENDI{% endif %}</span><span>{% if is_spanish %}DECIDE{% elsif is_english %}DECIDE{% else %}DECIDI{% endif %}</span></div>
@@ -84,7 +70,8 @@
 {% else %}
 <a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/archivio/' | relative_url }}">Archivio</a><a href="{{ '/temi/' | relative_url }}">Temi</a><a href="{{ '/metodo/' | relative_url }}">Metodo e fonti</a><a href="{{ '/chi-siamo/' | relative_url }}">Chi siamo</a>
 {% endif %}</div>
-<span class="language-note">{% if is_spanish %}<strong>ES</strong> · <a href="{{ '/' | relative_url }}" lang="it">Italiano</a> · <a href="{{ '/en/' | relative_url }}" lang="en">English</a>{% elsif is_english %}<strong>EN</strong> · <a href="{{ '/' | relative_url }}" lang="it">Italiano</a> · <a href="{{ '/es/' | relative_url }}" lang="es">Español</a>{% else %}<strong>IT</strong> · <a href="{{ '/en/' | relative_url }}" lang="en">English</a> · <a href="{{ '/es/' | relative_url }}" lang="es">Español</a>{% endif %}</span>
+{% if page.article_id %}{% assign related_editions = site.posts | where: 'article_id', page.article_id | where: 'editorial_status', 'pubblicato' %}{% endif %}
+<span class="language-note">{% assign edition_lang = page.lang | default: site.lang %}{% assign edition_codes = 'it,es,en' | split: ',' %}{% for code in edition_codes %}{% unless forloop.first %} · {% endunless %}{% if code == edition_lang %}<strong aria-current="true">{{ code | upcase }}</strong>{% else %}{% assign translated = related_editions | where: 'lang', code | first %}{% if code == 'it' %}{% assign home_url = '/' %}{% assign language_name = 'Italiano' %}{% elsif code == 'es' %}{% assign home_url = '/es/' %}{% assign language_name = 'Español' %}{% else %}{% assign home_url = '/en/' %}{% assign language_name = 'English' %}{% endif %}<a href="{{ translated.url | default: home_url | relative_url }}" lang="{{ code }}"{% if translated %} hreflang="{{ code }}"{% else %} title="{% if edition_lang == 'es' %}Ir a la edición{% elsif edition_lang == 'en' %}Go to edition{% else %}Vai all’edizione{% endif %}"{% endif %}>{{ language_name }}</a>{% endif %}{% endfor %}</span>
 </nav></div></header>
 <main id="contenuto" class="container">{{ content }}</main>
 <footer class="site-footer"><div class="container footer-grid">
@@ -99,6 +86,6 @@
 <div class="footer-disclosure"><p>Articoli e illustrazioni possono essere elaborati con intelligenza artificiale. Ogni pubblicazione richiede revisione e approvazione umana.</p><div class="footer-links"><a href="{{ '/uso-ia/' | relative_url }}">Uso dell'IA</a><a href="{{ '/politica-commenti/' | relative_url }}">Commenti</a><a href="{{ '/rettifiche/' | relative_url }}">Rettifiche</a><a href="{{ '/privacy/' | relative_url }}">Privacy</a></div></div>
 {% endif %}
 <div class="sc-footer-contact"><a href="mailto:marcelo2020.it@gmail.com">{% if is_spanish %}Contacto editorial{% elsif is_english %}Editorial contact{% else %}Contatti editoriali{% endif %}</a></div>
-<div class="manzo-footer-credit"><a href="https://manzo8b.github.io/manzo-ai/" target="_blank" rel="noopener noreferrer" aria-label="MANZO AI — ecosistema creativo e digitale"><img src="{{ '/assets/images/manzo-ai-mark.svg' | relative_url }}" width="34" height="33" alt="" aria-hidden="true" loading="lazy"><span>{% if is_spanish %}Proyecto independiente · Ecosistema MANZO AI{% elsif is_english %}Independent project · MANZO AI ecosystem{% else %}Progetto indipendente · Ecosistema MANZO AI{% endif %}</span></a></div>
+<div class="manzo-footer-credit"><a href="https://manzo8b.github.io/manzo-ai/" target="_blank" rel="noopener noreferrer" aria-label="MANZO AI — {% if is_spanish %}ecosistema creativo y digital{% elsif is_english %}creative and digital ecosystem{% else %}ecosistema creativo e digitale{% endif %}"><img src="{{ '/assets/images/manzo-ai-mark.svg' | relative_url }}" width="34" height="33" alt="" aria-hidden="true" loading="lazy"><span>{% if is_spanish %}Proyecto independiente · Ecosistema MANZO AI{% elsif is_english %}Independent project · MANZO AI ecosystem{% else %}Progetto indipendente · Ecosistema MANZO AI{% endif %}</span></a></div>
 </div></footer>
 </body></html>

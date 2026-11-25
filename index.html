@@ -21,13 +21,13 @@ permalink: /
       <h1><a href="{{ lead_post.url | relative_url }}">{{ lead_post.title | escape }}</a></h1>
       <p class="nsp-hero__standfirst">{{ lead_post.subtitle | default: lead_post.description | escape }}</p>
       <a class="nsp-hero__link" href="{{ lead_post.url | relative_url }}">LEGGI L’ARTICOLO <span aria-hidden="true">→</span></a>
-      <p class="nsp-hero__meta">{{ lead_post.author | default: site.author_label | escape }} · {{ lead_post.date | date: '%d.%m.%Y' }}</p>
+      <p class="nsp-hero__meta">{% assign lead_author = lead_post.author | default: site.author_label %}{% if lead_author == 'Redazione S-COMODO' %}Redazione S-COMODO{% else %}{{ lead_author | escape }}{% endif %} · {{ lead_post.date | date: '%d.%m.%Y' }}</p>
     </div>
     {% assign hero_cover = lead_post.cover_image | default: lead_post.image %}
     {% if hero_cover %}
     <aside class="nsp-hero__aside nsp-hero__aside--cover" aria-label="Fotografia di copertina">
       <a class="nsp-hero__photo" href="{{ lead_post.url | relative_url }}" aria-label="Leggi: {{ lead_post.title | escape }}"><img src="{{ hero_cover | relative_url }}" alt="{{ lead_post.cover_image_alt | default: lead_post.image_alt | default: '' | escape }}" width="1280" height="720" fetchpriority="high"></a>
-      <p class="nsp-hero__photo-caption">Composizione editoriale generata con IA, non fotografia documentale</p>
+      <p class="nsp-hero__photo-caption">{{ lead_post.cover_image_caption | default: lead_post.image_caption | default: "Illustrazione editoriale, non fotografia documentale." | escape }}</p>
     </aside>
     {% else %}
     <aside class="nsp-hero__aside" aria-label="IL METODO">
