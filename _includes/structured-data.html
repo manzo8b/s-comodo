@@ -1,0 +1,25 @@
+{% assign canonical_url = page.url | absolute_url %}
+{% assign publisher_url = '/' | absolute_url %}
+{% assign author_name = page.author | default: site.author_label %}
+{% if author_name == site.author_label %}{% if is_spanish %}{% assign author_name = 'Redacción S-COMODO' %}{% elsif is_english %}{% assign author_name = 'S-COMODO editorial team' %}{% endif %}{% endif %}
+{% if is_article %}
+<script type="application/ld+json">{
+ "@context":"https://schema.org","@type":"Article",
+ "headline":{{ page.title | jsonify }},
+ "description":{{ seo_description | jsonify }},
+ "inLanguage":{{ page.lang | default: site.lang | jsonify }},
+ "mainEntityOfPage":{"@type":"WebPage","@id":{{ canonical_url | jsonify }}},
+ "url":{{ canonical_url | jsonify }},
+ "datePublished":{{ page.date | date_to_xmlschema | jsonify }},
+ {% if page.last_modified_at %}"dateModified":{{ page.last_modified_at | date_to_xmlschema | jsonify }},{% endif %}
+ {% if social_cover %}"image":{{ social_cover | absolute_url | jsonify }},{% endif %}
+ "articleSection":{{ page.rubrica | default: '' | jsonify }},
+ "author":{"@type":"{% if page.author == site.owner %}Person{% else %}Organization{% endif %}","name":{{ author_name | jsonify }}},
+ "publisher":{"@type":"Organization","name":"S-COMODO","url":{{ publisher_url | jsonify }}}
+}</script>
+{% elsif page.url == '/' or page.url == '/es/' or page.url == '/en/' %}
+<script type="application/ld+json">{
+ "@context":"https://schema.org","@type":"WebSite","name":"S-COMODO","url":{{ canonical_url | jsonify }},"inLanguage":{{ page.lang | default: site.lang | jsonify }},
+ "publisher":{"@type":"Organization","name":"S-COMODO","url":{{ publisher_url | jsonify }}}
+}</script>
+{% endif %}

@@ -8,7 +8,8 @@
  if(headings.length>=3){
   const details=document.createElement('details'),summary=document.createElement('summary'),list=document.createElement('ol');
   summary.textContent=labels.contents;details.open=matchMedia('(min-width:1101px)').matches;
-  headings.forEach((h,i)=>{if(!h.id)h.id='reading-section-'+(i+1);const li=document.createElement('li'),a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;li.append(a);list.append(li)});
+  const used=new Set([...document.querySelectorAll('[id]')].map(el=>el.id));
+  headings.forEach((h,i)=>{if(!h.id){let id='reading-section-'+(i+1);while(used.has(id))id+='-x';h.id=id;used.add(id);}const li=document.createElement('li'),a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;li.append(a);list.append(li)});
   details.append(summary,list);index.append(details);index.hidden=false;
   list.addEventListener('click',event=>{if(event.target.closest('a')&&matchMedia('(max-width:1100px)').matches)details.open=false});
  }
@@ -19,10 +20,10 @@
  // Tables keep every column, scrolling locally on narrow screens.
  body.querySelectorAll('table').forEach(table=>{
   const wrap=document.createElement('div'),hint=document.createElement('p');
-  wrap.className='reading-table';wrap.tabIndex=0;wrap.setAttribute('role','region');wrap.setAttribute('aria-label',lang==='es'?'Tabla desplazable':lang==='en'?'Scrollable table':'Tabella scorrevole');
+  wrap.className='reading-table';wrap.setAttribute('role','region');wrap.setAttribute('aria-label',lang==='es'?'Tabla desplazable':lang==='en'?'Scrollable table':'Tabella scorrevole');
   hint.className='reading-table-hint';hint.textContent=lang==='es'?'Desliza para leer toda la tabla ↔':lang==='en'?'Scroll to read the full table ↔':'Scorri per leggere tutta la tabella ↔';
   table.before(hint,wrap);wrap.append(table);
-  const update=()=>{hint.hidden=table.scrollWidth<=wrap.clientWidth+1};
-  if('ResizeObserver' in window)new ResizeObserver(update).observe(wrap);update();
+  const update=()=>{const overflow=wrap.scrollWidth>wrap.clientWidth+1;hint.hidden=!overflow;if(overflow)wrap.tabIndex=0;else wrap.removeAttribute('tabindex')};
+  if('ResizeObserver' in window){const observer=new ResizeObserver(update);observer.observe(wrap);observer.observe(table)}update();
  });
 })();

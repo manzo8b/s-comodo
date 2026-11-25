@@ -319,3 +319,17 @@ body.sc-newspaper {background:#fff;color:#111;font-family:var(--sc-body);overflo
  .sc-newspaper .sc018 .timeline{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @container (max-width:340px){.sc-newspaper .sc018 :is(.stats,.timeline){grid-template-columns:minmax(0,1fr)}}
+
+/* Quality CD: reserve cover geometry, improve keyboard visibility and respect motion preferences. */
+.sc-newspaper .article-image img{aspect-ratio:16/9;object-fit:contain;height:auto}
+.sc-newspaper .skip-link:focus{position:fixed;top:8px;left:8px;z-index:1000;color:#111;background:#fff;border:2px solid #a51224;max-width:calc(100% - 16px)}
+.sc-newspaper :is(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid #a51224;outline-offset:3px}
+.sc-newspaper .reading-index a:focus-visible{outline-color:#fff;outline-offset:-3px}
+.sc-newspaper .article-body .reading-table{max-width:100%;min-width:0;overflow-x:auto}
+.sc-newspaper .article-body .reading-table table{display:table!important;width:max-content;min-width:100%;max-width:none!important;overflow:visible!important}
+.sc-newspaper .article-body .reading-table:focus-visible{outline-offset:2px}
+.sc-newspaper [hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){
+ .sc-newspaper,.sc-newspaper *,.sc-newspaper *::before,.sc-newspaper *::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+@media(forced-colors:active){.sc-newspaper :focus-visible{outline:3px solid Highlight!important}}

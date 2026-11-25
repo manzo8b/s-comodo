@@ -13,11 +13,11 @@ permalink: /sitemap.xml
 {% endif %}
 {% endfor %}
 {% for post in site.posts %}
-{% if post.reviewed == true and post.editorial_status == 'pubblicato' or post.reviewed == true and post.editorial_status == 'published' %}
+{% if post.reviewed == true and post.seo_noindex != true %}{% if post.editorial_status == 'pubblicato' or post.editorial_status == 'published' %}
   <url>
     <loc>{{ post.url | absolute_url | xml_escape }}</loc>
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
   </url>
-{% endif %}
+{% endif %}{% endif %}
 {% endfor %}
 </urlset>

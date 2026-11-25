@@ -1,5 +1,14 @@
 name: Public SEO QA — S-COMODO
 on:
+  push:
+    branches: [main]
+    paths:
+      - "_layouts/**"
+      - "_includes/**"
+      - "_posts/**"
+      - "sitemap.xml"
+      - "scripts/seo-contract.py"
+      - ".github/workflows/seo-qa.yml"
   pull_request:
     paths:
       - '_layouts/default.html'
@@ -24,6 +33,7 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace
+      - run: python3 scripts/seo-contract.py
       - name: Validate generated SEO
         run: |
           python3 - <<'PY'

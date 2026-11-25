@@ -7,6 +7,9 @@ on:
       - '_layouts/**'
       - 'assets/css/**'
       - 'scripts/dossier-layout-smoke.py'
+      - 'scripts/quality-browser.py'
+      - '_includes/**'
+      - 'assets/js/**'
       - 'scripts/audit-built-articles.py'
       - 'scripts/check_covers.py'
       - '.github/workflows/dossier-layout-qa.yml'
@@ -39,3 +42,10 @@ jobs:
             sleep 1
           done
           python3 scripts/dossier-layout-smoke.py
+          python3 scripts/quality-browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-browser-report
+          path: quality-browser-report.json
+          if-no-files-found: ignore
