@@ -8,7 +8,7 @@ layout: default
 <h1>{{ page.title | escape }}</h1>
 {% if page.subtitle %}<p class="article-standfirst">{{ page.subtitle | escape }}</p>{% endif %}
 <p class="card-foot">{{ page.author | default: site.author_label }} · {{ page.date | date: '%d/%m/%Y' }}{% if page.reading_minutes %} · {{ page.reading_minutes }} min de lectura{% endif %}</p>
-{% if page.image %}<figure class="article-image"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>Ilustración editorial digital original. No es una fotografía documental ni un fotograma de una serie.</figcaption></figure>{% endif %}
+{% assign article_cover = page.cover_image | default: page.image %}{% if article_cover %}<figure class="article-image"><img src="{{ article_cover | relative_url }}" alt="{{ page.cover_image_alt | default: page.image_alt | escape }}" fetchpriority="high"><figcaption>{% if page.cover_image_caption %}{{ page.cover_image_caption | escape }}{% elsif page.cover_image %}Composición editorial generada con IA; no es una fotografía documental.{% elsif page.image_caption %}{{ page.image_caption | escape }}{% else %}Ilustración editorial digital; no es una fotografía documental.{% endif %}</figcaption></figure>{% endif %}
 </header>
 <nav class="reading-index" aria-label="{% if page.lang == 'es' %}Índice del artículo{% elsif page.lang == 'en' %}Article contents{% else %}Indice dell’articolo{% endif %}" hidden></nav>
 <div class="article-body">{{ content }}</div>

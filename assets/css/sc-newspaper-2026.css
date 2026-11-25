@@ -259,3 +259,45 @@ body.sc-newspaper {background:#fff;color:#111;font-family:var(--sc-body);overflo
 @media (max-width:860px){
   .sc-newspaper .nsp-hero__aside--cover{padding:0!important;margin-top:22px!important;border-top:0!important}
 }
+
+
+/* 2026-11-25: legacy dossier integration. Wide blocks belong to the reading
+   column, not the viewport; preserve the adjacent reading index. */
+.sc-newspaper .article-body :is(.spain-dossier,.sc021){min-width:0;max-width:100%;container-type:inline-size}
+.sc-newspaper .article-body :is(.spain-dossier .sd-wide,.sc021 .wide){
+  box-sizing:border-box!important;position:static!important;left:auto!important;
+  transform:none!important;width:100%!important;max-width:100%!important;
+  min-width:0!important;margin-inline:0!important;
+}
+.sc-newspaper .article-body :is(.spain-dossier,.sc021) *,
+.sc-newspaper .article-body :is(.spain-dossier,.sc021) *::before,
+.sc-newspaper .article-body :is(.spain-dossier,.sc021) *::after{box-sizing:border-box}
+.sc-newspaper .article-body :is(.sd-kpis,.sd-grid,.sd-timeline,.sd-bar,.sc-stats,.sc-truth,.care-grid,.s-timeline) > *{min-width:0;overflow-wrap:anywhere}
+.sc-newspaper .spain-dossier .sd-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sc-newspaper .spain-dossier .sd-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sc-newspaper .spain-dossier .sd-timeline{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sc-newspaper .spain-dossier .sd-bar{grid-template-columns:minmax(0,1.25fr) minmax(0,2fr) minmax(42px,.6fr)}
+.sc-newspaper .spain-dossier .sd-kpi small{color:#595959}
+.sc-newspaper .spain-dossier .sd-band{background:#fff;border:1px solid #ccc;border-top:5px solid #a51224;border-bottom:1px solid #ccc;text-align:left;padding:clamp(18px,4%,30px)}
+.sc-newspaper .spain-dossier .sd-band small{color:#841022}
+.sc-newspaper .spain-dossier .sd-lead{border-left-color:#a51224}
+.sc-newspaper .spain-dossier .sd-chart{background:#fff!important;color:#111!important;border:1px solid #ccc;border-top:4px solid #a51224;border-radius:6px;padding:clamp(14px,4%,26px)}
+.sc-newspaper .article-body .spain-dossier .sd-chart :is(h3,p,b){color:#111!important}
+.sc-newspaper .spain-dossier .sd-track{background:#e4e4e4}
+.sc-newspaper .spain-dossier .sd-track i{background:#a51224}
+.sc-newspaper .spain-dossier .sd-photo-figure{max-width:100%!important;width:100%!important}
+.sc-newspaper .article-body .sc021 .s-privacy,
+.sc-newspaper .article-body .sc019 .sc019-ending{background:#fff!important;color:#111!important;border:1px solid #ccc;border-left:5px solid #a51224}
+.sc-newspaper .article-body .sc021 .s-privacy :is(h3,p,li,strong),
+.sc-newspaper .article-body .sc019 .sc019-ending :is(p,strong){color:#111!important}
+.sc-newspaper .article-body .sc021 .s-privacy .label,
+.sc-newspaper .article-body .sc019 .sc019-ending span{color:#841022!important}
+@container (max-width:560px){
+  .sc-newspaper .spain-dossier .sd-grid,
+  .sc-newspaper .sc021 :is(.sc-stats,.sc-truth,.care-grid,.s-timeline,.sc-toc){grid-template-columns:minmax(0,1fr)}
+  .sc-newspaper .spain-dossier .sd-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container (max-width:330px){
+  .sc-newspaper .spain-dossier .sd-kpis{grid-template-columns:minmax(0,1fr)}
+  .sc-newspaper .spain-dossier .sd-timeline{grid-template-columns:minmax(0,1fr)}
+}

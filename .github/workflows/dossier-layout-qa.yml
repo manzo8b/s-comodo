@@ -1,0 +1,37 @@
+name: Dossier layout regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+      - '_layouts/**'
+      - 'assets/css/**'
+      - 'scripts/dossier-layout-smoke.py'
+      - '.github/workflows/dossier-layout-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - run: bundle exec jekyll build --trace
+      - run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+      - run: |
+          set -euo pipefail
+          mkdir -p .preview
+          ln -s "$GITHUB_WORKSPACE/_site" .preview/s-comodo
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory .preview >/tmp/dossier-preview.log 2>&1 &
+          for attempt in $(seq 1 15); do
+            curl -fsS http://127.0.0.1:8765/s-comodo/ >/dev/null && break
+            sleep 1
+          done
+          python3 scripts/dossier-layout-smoke.py

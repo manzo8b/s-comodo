@@ -11,6 +11,12 @@
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
 <meta property="og:description" content="{{ page.description | default: site.description | strip_html | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url | escape }}">
+{% assign social_cover = page.cover_image | default: page.image %}
+{% if social_cover %}
+<meta property="og:image" content="{{ social_cover | absolute_url | escape }}">
+<meta property="og:image:alt" content="{{ page.cover_image_alt | default: page.image_alt | escape }}">
+<meta name="twitter:card" content="summary_large_image">
+{% endif %}
 <meta name="theme-color" content="#ffffff">
 <meta name="description" content="{{ page.description | default: site.description | strip_html | escape }}">
 <title>{% if page.title and page.title != 'Home' %}{{ page.title | escape }} | {% endif %}{{ site.title }}</title>
@@ -21,9 +27,6 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {% if page.article_id == 'SC019' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc019-midterm.css' | relative_url }}?v=20261106">
-<meta property="og:image" content="{{ page.image | absolute_url | escape }}">
-<meta property="og:image:alt" content="{{ page.image_alt | escape }}">
-<meta name="twitter:card" content="summary_large_image">
 {% endif %}
 {% if page.article_id == 'SC018' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc018-audit.css' | relative_url }}?v=20261106-2">
@@ -37,28 +40,15 @@
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/brand/scomodo-favicon.svg' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/reading-edition.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script src="{{ '/assets/js/reading-edition.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
-{% if page.article_id == 'SC-GENTILE-2026' %}
-<meta property="og:image" content="{{ page.image | absolute_url | escape }}">
-<meta property="og:image:alt" content="{{ page.image_alt | escape }}">
-<meta name="twitter:card" content="summary_large_image">
-{% endif %}
 {% if page.article_id == 'SC020' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc020-ozempic.css' | relative_url }}?v=20261113">
-<meta property="og:image" content="{{ page.image | absolute_url | escape }}">
-<meta property="og:image:alt" content="{{ page.image_alt | escape }}">
-<meta name="twitter:card" content="summary_large_image">
 {% endif %}
 {% if page.article_id == 'SC-PATRIMONIALE-2026' %}
 <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
 <link rel="alternate" hreflang="{{ page.translation_lang }}" href="{{ page.translation_url | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ '/patrimoniale-ed-eredita-quanto-puo-tassare-lo-stato/' | absolute_url }}">
-{% if page.image %}
-<meta property="og:image" content="{{ page.image | absolute_url | escape }}">
-<meta property="og:image:alt" content="{{ page.image_alt | escape }}">
-<meta name="twitter:card" content="summary_large_image">
 {% endif %}
-{% endif %}
-<link rel="stylesheet" href="{{ '/assets/css/sc-newspaper-2026.css' | relative_url }}?v=20261122-hero2">
+<link rel="stylesheet" href="{{ '/assets/css/sc-newspaper-2026.css' | relative_url }}?v=20261125-dossier">
 </head>
 <body class="sc-newspaper">
 <a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>
