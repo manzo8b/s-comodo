@@ -29,6 +29,17 @@ with sync_playwright() as p:
             else:
                 page.keyboard.press("Enter")
                 if not page.locator("#contenuto:focus").count():errors.append("skip target not focused")
+            if route in ("/","/es/","/en/"):
+                def edition(r):
+                    return "/es/" if r.startswith("/es/") else "/en/" if r.startswith("/en/") else "/"
+                expected=[r for r in routes[3:] if edition(r)==route][:7]
+                actual=page.locator(".nsp-hero h1 a, .nsp-triple .nsp-card h3 a").evaluate_all("(els) => els.map(e => new URL(e.href).pathname.replace(/^\\/s-comodo/, ''))")
+                if actual!=expected:errors.append("homepage chronology or story count: "+str(actual))
+                more=page.locator(".nsp-latest h3 a").evaluate_all("(els) => els.map(e => e.href)")
+                if any(urlsplit(u).path.removeprefix("/s-comodo") in actual for u in more):errors.append("duplicate home story")
+                if width==1440 and len(expected)>4:
+                    tops=page.locator(".nsp-triple .nsp-card").evaluate_all("(els) => els.map(e => Math.round(e.getBoundingClientRect().top))")
+                    if len(set(tops[:3]))!=1 or tops[3]<=tops[0]:errors.append("desktop story row layout")
             data=page.evaluate("""() => {
               const resources=performance.getEntriesByType('resource');
               const nav=performance.getEntriesByType('navigation')[0];

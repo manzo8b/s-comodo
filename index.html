@@ -6,9 +6,7 @@ description: "S-COMODO: giornale indipendente, verifiche, opinioni e analisi doc
 permalink: /
 ---
 {% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'it' | sort: 'date' | reverse %}
-{% assign lead_id = site.data.homepage_leads.it %}
-{% assign lead_candidates = published_posts | where: 'article_id', lead_id %}
-{% assign lead_post = lead_candidates | first | default: published_posts.first %}
+{% assign lead_post = published_posts.first %}
 <div class="nsp-front">
   <div class="nsp-edition" aria-label="EDIZIONE ITALIANA">
     <strong>GIORNALE INDIPENDENTE · FATTI, FONTI, COMPRENSIONE</strong>
@@ -43,7 +41,7 @@ permalink: /
     <div class="nsp-triple">
       {% assign card_count = 0 %}
       {% for post in published_posts %}
-        {% if post.url != lead_post.url and card_count < 3 %}
+        {% if post.url != lead_post.url and card_count < 6 %}
           <article class="nsp-card">
             <a href="{{ post.url | relative_url }}" class="nsp-card__visual" aria-label="Leggi: {{ post.title | escape }}">
               {% assign card_cover = post.cover_image | default: post.image %}
@@ -66,21 +64,21 @@ permalink: /
     <div class="nsp-method"><span>02 / saggio</span><h3>Opinione</h3><p>Argomentiamo una tesi, presentiamo le obiezioni migliori e separiamo fatti e interpretazioni.</p></div>
     <div class="nsp-method"><span>03 / contesto</span><h3>Analisi</h3><p>Spieghiamo temi complessi con parole comprensibili, esempi e fonti verificabili.</p></div>
   </section>
-  <div class="nsp-columns">
-    <section aria-labelledby="nsp-more">
+  <div class="nsp-columns{% if published_posts.size <= 7 %} nsp-columns--topics-only{% endif %}">
+    {% if published_posts.size > 7 %}<section aria-labelledby="nsp-more">
       <div class="nsp-sectionbar"><h2 id="nsp-more">Da leggere</h2><a href="{{ '/archivio/' | relative_url }}">TUTTO L’ARCHIVIO →</a></div>
       <ol class="nsp-latest">
       {% assign other_count = 0 %}
       {% for post in published_posts %}
         {% if post.url != lead_post.url %}
           {% assign other_count = other_count | plus: 1 %}
-          {% if other_count > 3 and other_count < 10 %}
+          {% if other_count > 6 and other_count < 13 %}
             <li><p class="nsp-latest__meta">{{ post.rubrica | escape }} · {{ post.date | date: '%d.%m.%Y' }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p>{{ post.subtitle | escape | truncatewords: 20 }}</p></li>
           {% endif %}
         {% endif %}
       {% endfor %}
       </ol>
-    </section>
+    </section>{% endif %}
     <aside aria-labelledby="nsp-topics">
       <div class="nsp-sectionbar"><h2 id="nsp-topics">Esplora le rubriche</h2></div>
       <ul class="nsp-topics">

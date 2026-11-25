@@ -6,9 +6,7 @@ description: "S-COMODO en español: verificaciones, opiniones y análisis con fu
 permalink: /es/
 ---
 {% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'es' | sort: 'date' | reverse %}
-{% assign lead_id = site.data.homepage_leads.es %}
-{% assign lead_candidates = published_posts | where: 'article_id', lead_id %}
-{% assign lead_post = lead_candidates | first | default: published_posts.first %}
+{% assign lead_post = published_posts.first %}
 <div class="nsp-front">
   <div class="nsp-edition" aria-label="EDICIÓN EN ESPAÑOL">
     <strong>PERIODISMO INDEPENDIENTE · HECHOS, FUENTES, COMPRENSIÓN</strong>
@@ -43,7 +41,7 @@ permalink: /es/
     <div class="nsp-triple">
       {% assign card_count = 0 %}
       {% for post in published_posts %}
-        {% if post.url != lead_post.url and card_count < 3 %}
+        {% if post.url != lead_post.url and card_count < 6 %}
           <article class="nsp-card">
             <a href="{{ post.url | relative_url }}" class="nsp-card__visual" aria-label="Leer: {{ post.title | escape }}">
               {% assign card_cover = post.cover_image | default: post.image %}
@@ -66,21 +64,21 @@ permalink: /es/
     <div class="nsp-method"><span>02 / ensayo</span><h3>Opinión</h3><p>Defendemos una tesis, examinamos sus objeciones y distinguimos evidencia de interpretación.</p></div>
     <div class="nsp-method"><span>03 / contexto</span><h3>Análisis</h3><p>Explicamos cuestiones complejas con ejemplos y fuentes al alcance de cualquier lector.</p></div>
   </section>
-  <div class="nsp-columns">
-    <section aria-labelledby="nsp-more">
+  <div class="nsp-columns{% if published_posts.size <= 7 %} nsp-columns--topics-only{% endif %}">
+    {% if published_posts.size > 7 %}<section aria-labelledby="nsp-more">
       <div class="nsp-sectionbar"><h2 id="nsp-more">Para seguir leyendo</h2><a href="{{ '/es/archivo/' | relative_url }}">TODO EL ARCHIVO →</a></div>
       <ol class="nsp-latest">
       {% assign other_count = 0 %}
       {% for post in published_posts %}
         {% if post.url != lead_post.url %}
           {% assign other_count = other_count | plus: 1 %}
-          {% if other_count > 3 and other_count < 10 %}
+          {% if other_count > 6 and other_count < 13 %}
             <li><p class="nsp-latest__meta">{{ post.rubrica | escape }} · {{ post.date | date: '%d.%m.%Y' }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p>{{ post.subtitle | escape | truncatewords: 20 }}</p></li>
           {% endif %}
         {% endif %}
       {% endfor %}
       </ol>
-    </section>
+    </section>{% endif %}
     <aside aria-labelledby="nsp-topics">
       <div class="nsp-sectionbar"><h2 id="nsp-topics">Explorar secciones</h2></div>
       <ul class="nsp-topics">
