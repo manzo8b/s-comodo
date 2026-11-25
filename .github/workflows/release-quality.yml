@@ -1,0 +1,67 @@
+name: Release 1.0 — accessibility and Lighthouse
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+      - '_layouts/**'
+      - '_includes/**'
+      - 'assets/**'
+      - 'index.html'
+      - 'en/**'
+      - 'es/**'
+      - 'scripts/accessibility-audit.py'
+      - '.github/workflows/release-quality.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: bundle exec jekyll build --trace
+      - run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+          npm install --prefix "$RUNNER_TEMP/sc-quality" --no-audit --no-fund axe-core@4.14.1 lighthouse@12.8.2
+      - name: Start local site and run audits
+        run: |
+          set -euo pipefail
+          mkdir -p .preview quality-reports
+          ln -s "$GITHUB_WORKSPACE/_site" .preview/s-comodo
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory .preview >/tmp/quality-preview.log 2>&1 &
+          for attempt in $(seq 1 15); do
+            curl -fsS http://127.0.0.1:8765/s-comodo/ >/dev/null && break
+            sleep 1
+          done
+          export AXE_PATH="$RUNNER_TEMP/sc-quality/node_modules/axe-core/axe.min.js"
+          python3 scripts/accessibility-audit.py
+          export CHROME_PATH="$(command -v google-chrome || command -v chromium)"
+          LH="$RUNNER_TEMP/sc-quality/node_modules/.bin/lighthouse"
+          for item in "it-home:/" "es-home:/es/" "en-home:/en/" "dossier:/la-democrazia-non-ha-padroni/"; do
+            name="${item%%:*}"
+            route="${item#*:}"
+            "$LH" "http://127.0.0.1:8765/s-comodo$route" --chrome-flags="--headless --no-sandbox" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path="quality-reports/lighthouse-$name.json" --quiet
+          done
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for f in sorted(Path("quality-reports").glob("lighthouse-*.json")):
+              d=json.loads(f.read_text())
+              print(f.stem, {k:round(v["score"]*100) if v["score"] is not None else None for k,v in d["categories"].items()})
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: release-quality-reports
+          path: quality-reports/
+          if-no-files-found: warn

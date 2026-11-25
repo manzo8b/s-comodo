@@ -15,6 +15,7 @@ comments_enabled: true
 comments_endpoint: ""
 exclude:
   - README.md
+  - docs
   - Gemfile
   - Gemfile.lock
   - vendor

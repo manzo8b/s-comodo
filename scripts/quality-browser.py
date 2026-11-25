@@ -52,4 +52,5 @@ Path("quality-browser-report.json").write_text(json.dumps(report,ensure_ascii=Fa
 print(json.dumps({k:v for k,v in report.items() if k!="results"},indent=2))
 for row in rows:
     if row["issues"]:print(row["route"],row["width"],row["issues"])
-# Report all historical findings without blocking release for pre-existing layout issues.
+# Baseline 25 November 2026: all 70 checks passed. Fail on any regression.
+raise SystemExit(any(row['issues'] for row in rows))
