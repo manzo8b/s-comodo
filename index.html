@@ -5,7 +5,7 @@ title: Home
 description: "S-COMODO: giornale indipendente, verifiche, opinioni e analisi documentate per capire i fatti."
 permalink: /
 ---
-{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'it' | sort: 'date' | reverse %}
+{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'it' %}
 {% assign lead_post = published_posts.first %}
 <div class="nsp-front">
   <div class="nsp-edition" aria-label="EDIZIONE ITALIANA">

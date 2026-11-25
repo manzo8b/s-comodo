@@ -5,7 +5,7 @@ title: "English edition"
 description: "S-COMODO in English: documented verification, opinion and accessible analysis."
 permalink: /en/
 ---
-{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'en' | sort: 'date' | reverse %}
+{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'en' %}
 {% assign lead_post = published_posts.first %}
 <div class="nsp-front">
   <div class="nsp-edition" aria-label="ENGLISH EDITION">

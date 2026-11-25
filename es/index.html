@@ -5,7 +5,7 @@ title: "Edición en español"
 description: "S-COMODO en español: verificaciones, opiniones y análisis con fuentes comprobables."
 permalink: /es/
 ---
-{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'es' | sort: 'date' | reverse %}
+{% assign published_posts = site.posts | where: 'editorial_status', 'pubblicato' | where: 'lang', 'es' %}
 {% assign lead_post = published_posts.first %}
 <div class="nsp-front">
   <div class="nsp-edition" aria-label="EDICIÓN EN ESPAÑOL">
