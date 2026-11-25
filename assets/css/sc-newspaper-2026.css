@@ -301,3 +301,21 @@ body.sc-newspaper {background:#fff;color:#111;font-family:var(--sc-body);overflo
   .sc-newspaper .spain-dossier .sd-kpis{grid-template-columns:minmax(0,1fr)}
   .sc-newspaper .spain-dossier .sd-timeline{grid-template-columns:minmax(0,1fr)}
 }
+
+/* SC018: size its charts against the reading column, not the viewport. */
+.sc-newspaper .article-body .sc018{background:#fff;min-width:0;max-width:100%;container-type:inline-size}
+.sc-newspaper .article:has(>.reading-index:not([hidden])) .sc018 .toc{display:none}
+.sc-newspaper .sc018 .intro,.sc-newspaper .sc018 .intro aside,.sc-newspaper .sc018 .sources{background:#fff;border-color:#ccc}
+.sc-newspaper .sc018 .intro{border-left-color:#a51224}
+.sc-newspaper .sc018 .main .stats .stat,.sc-newspaper .sc018 .main .quiz{background:#fff;color:#111;border:1px solid #ccc;border-top:4px solid #a51224}
+.sc-newspaper .sc018 .main .stats .stat b{color:#841022}
+.sc-newspaper .sc018 .figure{margin-inline:0!important;padding:clamp(12px,3cqi,24px)}
+.sc-newspaper .sc018 :is(.stats,.timeline,.flow,.three-cols,.deposit,.credit)>*{min-width:0;overflow-wrap:anywhere}
+.sc-newspaper .sc018 .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sc-newspaper .sc018 .timeline{grid-template-columns:repeat(3,minmax(0,1fr))}
+@container (max-width:550px){
+ .sc-newspaper .sc018 :is(.flow,.three-cols,.deposit,.credit),.sc-newspaper .sc018 .main .quiz ol{grid-template-columns:minmax(0,1fr)}
+ .sc-newspaper .sc018 .flow .node:not(:last-child):after{content:"↓";left:45%;right:auto;top:auto;bottom:-20px}
+ .sc-newspaper .sc018 .timeline{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container (max-width:340px){.sc-newspaper .sc018 :is(.stats,.timeline){grid-template-columns:minmax(0,1fr)}}

@@ -28,6 +28,12 @@
 {% if page.article_id == 'SC019' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc019-midterm.css' | relative_url }}?v=20261106">
 {% endif %}
+{% if page.article_id == 'SC017' %}
+<link rel="stylesheet" href="{{ '/assets/css/sc017-integrated.css' | relative_url }}?v=20261125">
+<link rel="alternate" hreflang="it" href="{{ '/ueno-bank-anatomia-crisi/' | absolute_url }}">
+<link rel="alternate" hreflang="es" href="{{ '/es/ueno-bank-anatomia-crisis/' | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ '/en/ueno-bank-anatomy-crisis/' | absolute_url }}">
+{% endif %}
 {% if page.article_id == 'SC018' %}
 <link rel="stylesheet" href="{{ '/assets/css/sc018-audit.css' | relative_url }}?v=20261106-2">
 <link rel="alternate" hreflang="it" href="{{ '/ueno-bank-audit-macro/' | absolute_url }}">
@@ -48,7 +54,7 @@
 <link rel="alternate" hreflang="{{ page.translation_lang }}" href="{{ page.translation_url | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ '/patrimoniale-ed-eredita-quanto-puo-tassare-lo-stato/' | absolute_url }}">
 {% endif %}
-<link rel="stylesheet" href="{{ '/assets/css/sc-newspaper-2026.css' | relative_url }}?v=20261125-dossier">
+<link rel="stylesheet" href="{{ '/assets/css/sc-newspaper-2026.css' | relative_url }}?v=20261125-standard2">
 </head>
 <body class="sc-newspaper">
 <a class="skip-link" href="#contenuto">{% if is_spanish %}Saltar al contenido{% elsif is_english %}Skip to content{% else %}Vai al contenuto{% endif %}</a>

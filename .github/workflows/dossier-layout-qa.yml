@@ -7,13 +7,15 @@ on:
       - '_layouts/**'
       - 'assets/css/**'
       - 'scripts/dossier-layout-smoke.py'
+      - 'scripts/audit-built-articles.py'
+      - 'scripts/check_covers.py'
       - '.github/workflows/dossier-layout-qa.yml'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   browser-check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -21,7 +23,9 @@ jobs:
         with:
           ruby-version: '3.3'
           bundler-cache: true
+      - run: python3 scripts/check_covers.py
       - run: bundle exec jekyll build --trace
+      - run: python3 scripts/audit-built-articles.py
       - run: |
           python3 -m pip install playwright==1.55.0
           python3 -m playwright install --with-deps chromium

@@ -5,6 +5,12 @@ from playwright.sync_api import sync_playwright
 
 BASE = os.environ.get("SCOMODO_BASE", "http://127.0.0.1:8765/s-comodo").rstrip("/")
 ROUTES = {
+    "/ueno-bank-anatomia-crisi/": (None, None),
+    "/es/ueno-bank-anatomia-crisis/": (None, None),
+    "/en/ueno-bank-anatomy-crisis/": (None, None),
+    "/ueno-bank-audit-macro/": (None, None),
+    "/es/ueno-bank-auditoria-macro/": (None, None),
+    "/en/ueno-bank-macro-audit/": (None, None),
     "/la-democrazia-non-ha-padroni/": (".spain-dossier .sd-wide", ".spain-dossier .sd-chart"),
     "/malika-alzheimer-identita-transgender-privacy/": (".sc021 .wide", ".sc021 .s-privacy"),
     "/midterm-usa-2026-diversita-progressismo/": (None, ".sc019 .sc019-ending"),
@@ -23,6 +29,10 @@ with sync_playwright() as p:
             assert page.locator(".article-image img").count() == 1, (width, route, "cover")
             assert page.locator('meta[property="og:image"]').count() == 1, (width, route, "social cover")
             assert not page.evaluate("document.documentElement.scrollWidth > innerWidth + 2"), (width, route, "page overflow")
+            if "anatom" in route:
+                assert page.locator(".sc017 .sources li[id^=src]").count() == 27, (route, "sources")
+                assert page.locator(".site-masthead").count() == 1, (route, "shared masthead")
+                assert page.locator(".article-body .sc017 .legacy-copy").count() == 1
             if wide:
                 blocks = page.locator(wide)
                 assert blocks.count() > 0, (width, route, "missing blocks")

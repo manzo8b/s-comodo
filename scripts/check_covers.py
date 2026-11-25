@@ -36,7 +36,7 @@ def front_matter(path: Path) -> dict[str, str]:
 def check(path: Path) -> dict:
     fm = front_matter(path)
     lang = fm.get("lang", "it")
-    image = fm.get("image", "")
+    image = fm.get("cover_image") or fm.get("image", "")
     name = path.name
     problems: list[str] = []
     if not fm.get("editorial_status"):
@@ -51,11 +51,11 @@ def check(path: Path) -> dict:
             problems.append("missing_local_asset")
     else:
         problems.append("external_or_relative_cover_review")
-    if not fm.get("image_alt"):
+    if not (fm.get("cover_image_alt") or fm.get("image_alt")):
         problems.append("missing_alt")
-    if not fm.get("image_caption"):
+    if not (fm.get("cover_image_caption") or fm.get("image_caption")):
         problems.append("missing_caption")
-    alt = fm.get("image_alt", "").lower()
+    alt = (fm.get("cover_image_alt") or fm.get("image_alt", "")).lower()
     if any(token in alt for token in RISK_WORDS):
         problems.append("possible_title_inside_image_review")
     if image.lower().endswith(".svg"):
