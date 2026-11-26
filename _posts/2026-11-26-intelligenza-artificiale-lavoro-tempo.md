@@ -12,7 +12,7 @@ topic_id: "tecnologia-risorse"
 formato: "contesto"
 format: "Dossier di analisi tecnologica"
 reading_minutes: 9
-editorial_status: "pubblicato"
+editorial_status: pubblicato
 reviewed: true
 ai_assisted: true
 ai_disclosure: "Ricerca e redazione assistite da IA, a partire dal dossier Deep Research fornito dalla direzione. Revisione delle fonti primarie e integrazione editoriale assistite da IA; pubblicazione autorizzata dalla direzione S-COMODO. Copertina satirica generata con IA, non fotografia documentale."
